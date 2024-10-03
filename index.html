@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body background="icons\background.jpg">
+    <!-- Barra lateral con menú -->
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="sidebar">
+        <a href="#home"><img src="icons\sidebar\usuario.png" alt="About Icon" class="active" class="filter-btn"
+                data-target="about">About</a>
+        <a href="#resume-content"><img src="icons\sidebar\nota.png" alt="Resume Icon" class="filter-btn"
+                data-target="resume">Resume</a>
+        <a href="#works"><img src="icons\sidebar\maletin.png" alt="Works Icon" class="filter-btn"
+                data-target="works">Works</a>
+        <a href="#blogs"><img src="icons\sidebar\blog.png" alt="Blogs Icon" class="filter-btn"
+                data-target="blogs">Blogs</a>
+        <a href="#contact"><img src="icons\sidebar\directorio.png" alt="Contact Icon" class="filter-btn"
+                data-target="contact">Contact</a>
+    </nav>
+    <header class="home-profile" id="home-profile">
+        <!-- Perfil del usuario -->
+        <div class="profile">
+            <img alt="avatar" loading="lazy" width="120" height="160" decoding="async" data-nimg="1"
+                style="color:transparent" src="icons\foto-cv.jpg" class="profile-pic">
+            <!-- <img src="icons\foto-cv.jpg" alt="Profile Picture" class="profile-pic"> -->
+            <div class="info">
+                <h1>Katerinne Ramos</h1>
+                <p>Data Engineer</p>
+            </div>
+            <div class="social-icons">
+                <!-- <a href="#"><img src="icons/facebook-icon.png" alt="Facebook"></a> -->
+                <a href="#"><img src="icons\profile\github.png" alt="Github"></a>
+                <a href="#"><img src="icons\profile\instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="icons\profile\linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="contact-info">
+                <div class="contact-info1">
+                    <p><img src="icons\contact-info\celular.png" alt="Phone Icon">Phone <br> +54 9 351 528
+                        4410</p>
+                </div>
+                <div class="contact-info2">
+                    <p><img src="icons\contact-info\correo.png" alt="Email Icon">Email <br> katerinne.ramos.ar@gmail.com
+                    </p>
+                </div>
+                <div class="contact-info3">
+                    <p><img src="icons\contact-info\mapa.png" alt="Location Icon">Location <br> Córdoba, Argentina</p>
+                </div>
+            </div>
+            <button class="download-cv">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="17"
+                    height="14" fill="currentColor">
+                    <path
+                        d="M12.032,19a2.991,2.991,0,0,0,2.122-.878L18.073,14.2,16.659,12.79l-3.633,3.634L13,0,11,0l.026,16.408-3.62-3.62L5.992,14.2l3.919,3.919A2.992,2.992,0,0,0,12.032,19Z" />
+                    <path d="M22,16v5a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V16H0v5a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V16Z" />
+                </svg>
+
+                Download CV</button>
+        </div>
+    </header>
+    <!-- ***************************************************************** -->
+    <!-- Section Home | About  -->
+    <!-- ***************************************************************** -->
+    <section class="home" id="home">
+        <!-- Contenido principal -->
+        <div class="about-content">
+            <h2>About</h2>
+            <p>I am a passionate Data Engineer from Argentina with over 3 years of hands-on experience in designing and
+                optimizing data
+                systems. Currently pursuing a degree in Systems Engineering, I thrive on solving complex problems by
+                developing
+                efficient, performance-oriented solutions. <br>
+                <br>
+                One of my core strengths is my commitment to continuous learning. I am constantly exploring new
+                technologies and trends
+                in the industry, ensuring that I stay at the forefront of innovation. Whether it's diving into cloud
+                platforms,
+                mastering programming languages, or embracing emerging tools, I am always eager to expand my skill set.
+                <br>
+                <br>
+                My goal is to create data-driven architectures that empower organizations to make smarter, faster
+                decisions.
+            </p>
+            <div class="section-about">
+                <div class="about-me">
+                    <h3>
+                        What I do!
+                    </h3>
+                    <div class="item-data">
+                        <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                data-name="Layer 1" viewBox="0 0 24 24" width="30" height="27" fill="orange">
+                                <path
+                                    d="M6.163,21.814c-2.605-.43-4.163-1.514-4.163-2.314v-2.035c.741,.456,1.668,.833,2.76,1.102,1.246,.333,1.749-1.649,.479-1.941-2.127-.525-3.24-1.466-3.24-2.125v-2.041c1.535,.954,3.835,1.541,6.5,1.541,4.846,0,8.5-1.935,8.5-4.5V4.5C17,1.935,13.346,0,8.5,0S0,1.935,0,4.5v15c0,2.02,2.292,3.703,5.837,4.288,1.27,.232,1.613-1.781,.325-1.974Zm2.337-9.814c-3.968,0-6.5-1.48-6.5-2.5v-2.041c1.535,.954,3.835,1.541,6.5,1.541s4.965-.588,6.5-1.541v2.041c0,1.02-2.532,2.5-6.5,2.5Zm0-10c3.968,0,6.5,1.48,6.5,2.5s-2.532,2.5-6.5,2.5-6.5-1.48-6.5-2.5,2.532-2.5,6.5-2.5Zm4.471,18.974c-.19,1.174-1.214,2.026-2.434,2.026-.663,0-1.299-.195-1.837-.551-.388-.257-.448-.802-.119-1.13,.236-.235,.602-.283,.887-.111,.316,.191,.688,.297,1.068,.297,1.4-.007,1.287-1.552,.279-1.752-.914-.37-1.749-.779-1.752-.779-.691-.484-1.026-1.23-.921-2.047,.111-.844,.674-1.532,1.469-1.794,.838-.277,1.601-.076,2.15,.203,.405,.205,.518,.732,.24,1.092-.203,.263-.558,.357-.862,.224-.305-.134-.709-.226-1.136-.088-.825,.25-.476,1.11-.082,1.192,.282,.128,.805,.368,1.364,.595,1.459,.591,1.827,1.743,1.683,2.625Zm11.029,1.23h0c0,.442-.358,.8-.8,.8h-2.133c-.442,0-.8-.358-.8-.8v-6.401c0-.442,.358-.8,.8-.8h0c.442,0,.8,.358,.8,.8v5.601s.577,0,1.331,0c.442,0,.802,.358,.802,.8Zm-5.267-.598c.165-.334,.267-.705,.267-1.102v-2.944c0-1.402-1.147-2.582-2.548-2.556-1.358,.026-2.452,1.135-2.452,2.5v2.917c0,1.23,.856,2.319,2.065,2.543,.564,.104,1.084-.002,1.537-.226l.433,.433c.312,.312,.819,.312,1.131,0,.312-.312,.312-.819,0-1.131l-.433-.433Zm-1.333-1.102c0,.496-.404,.9-.9,.9s-.9-.404-.9-.9v-3c0-.496,.404-.9,.9-.9s.9,.404,.9,.9v3Z" />
+                            </svg> Data Engineering</div>
+                        <div class="subtitle-about">With a solid foundation in data engineering, my expertise spans
+                            across data pipelines, ETL processes, and database management. I have a keen eye for detail
+                            and a deep understanding of how to build scalable
+                            systems that maximize both speed and accuracy.</div>
+                        <div class="location-about"></div>
+                    </div>
+                    <div class="item-data">
+                        <div class="title-about"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                data-name="Layer 1" viewBox="0 0 24 24" width="30" height="27" fill="purple">
+                                <title>03-Diagram</title>
+                                <path d="M3,21.976a1,1,0,0,1-1-1V0H0V20.976a3,3,0,0,0,3,3H24v-2Z" />
+                                <rect x="5" y="12" width="2" height="7" />
+                                <rect x="10" y="10" width="2" height="9" />
+                                <rect x="15" y="13" width="2" height="6" />
+                                <rect x="20" y="9" width="2" height="10" />
+                                <polygon
+                                    points="11 4.414 16 9.414 23.707 1.707 22.293 0.293 16 6.586 11 1.586 5.293 7.293 6.707 8.707 11 4.414" />
+                            </svg>
+                            Data Analytics</div>
+                        <div class="subtitle-about">I also have knowledge as a Data Analyst. I specialize in
+                            transforming data into insightful visualizations using Power BI. I leverage its
+                            powerful analytics tools to create dynamic dashboards and reports that help organizations
+                            make data-driven decisions
+                            efficiently and effectively.</div>
+                        <div class="location-about"></div>
+                    </div>
+                </div>
+                <div class="what-i-do-right">
+                    <h3>
+                        <br>
+                    </h3>
+                    <div class="item-data">
+                        <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1080 1080"
+                                xml:space="preserve" width="30" height="27">
+                                <desc>Created with Fabric.js 5.2.4</desc>
+                                <defs>
+                                </defs>
+                                <g transform="matrix(1 0 0 1 540 540)" id="9c904d25-e74f-42ad-9fd7-c39926e9213d">
+                                    <rect
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;"
+                                        vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0" width="1080"
+                                        height="1080" />
+                                </g>
+                                <g transform="matrix(1 0 0 1 540 540)" id="ca9a6f41-0b00-41cb-ab64-b33a157bc302">
+                                </g>
+                                <g transform="matrix(24 0 0 24 540 540)">
+                                    <path
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(38,159,255); fill-rule: nonzero; opacity: 1;"
+                                        transform=" translate(-22.5, -21)"
+                                        d="M 18.3594 41 L 15.3125 40.0625 C 15.1562 40.0104 15.026 39.9062 14.9219 39.75 C 14.8698 39.6458 14.8438 39.4896 14.8438 39.2812 L 25.8594 1.46875 C 25.9115 1.3125 26.0156 1.18229 26.1719 1.07812 C 26.3281 0.973958 26.4844 0.947917 26.6406 1 L 29.6875 1.9375 C 29.8438 1.9375 29.9479 2.01562 30 2.17188 C 30.1042 2.32812 30.1562 2.51042 30.1562 2.71875 L 19.1406 40.5312 C 19.0885 40.6875 18.9844 40.8177 18.8281 40.9219 C 18.6719 41.026 18.5156 41.0521 18.3594 41 Z M 11.875 31.5469 L 13.9844 29.2812 C 14.0885 29.125 14.1406 28.9688 14.1406 28.8125 C 14.1406 28.6042 14.0625 28.4479 13.9062 28.3438 L 5.625 21 L 13.9062 13.6562 C 14.0625 13.5521 14.1406 13.4219 14.1406 13.2656 C 14.1406 13.0573 14.0885 12.875 13.9844 12.7188 L 11.875 10.4531 C 11.7188 10.349 11.5625 10.2969 11.4062 10.2969 C 11.25 10.2969 11.0938 10.349 10.9375 10.4531 L 0.234375 20.5312 C 0.078125 20.6875 0 20.8438 0 21 C 0 21.1562 0.078125 21.3125 0.234375 21.4688 L 10.9375 31.5469 C 11.0938 31.651 11.25 31.7031 11.4062 31.7031 C 11.5625 31.7031 11.7188 31.651 11.875 31.5469 Z M 34.0625 31.5469 L 44.7656 21.4688 C 44.9219 21.3125 45 21.1562 45 21 C 45 20.8438 44.9219 20.6875 44.7656 20.5312 L 34.0625 10.4531 C 33.9062 10.349 33.75 10.2969 33.5938 10.2969 C 33.4375 10.2969 33.2812 10.349 33.125 10.4531 L 31.0156 12.7188 C 30.9115 12.875 30.8594 13.0573 30.8594 13.2656 C 30.8594 13.4219 30.9375 13.5521 31.0938 13.6562 L 39.375 21 L 31.0938 28.3438 C 30.9375 28.4479 30.8594 28.6042 30.8594 28.8125 C 30.8594 28.9688 30.9115 29.125 31.0156 29.2812 L 33.125 31.5469 C 33.2812 31.651 33.4375 31.7031 33.5938 31.7031 C 33.75 31.7031 33.9062 31.651 34.0625 31.5469 Z"
+                                        stroke-linecap="round" />
+                                </g>
+                            </svg> Web Development</div>
+                        <div class="subtitle-about">In addition to my data engineering skills, I am an enthusiastic web
+                            developer with expertise in JavaScript, HTML, and
+                            CSS. I enjoy creating user-friendly web interfaces and combining backend knowledge with
+                            front-end technologies to build
+                            efficient, integrated solutions.</div>
+                        <div class="location-about"></div>
+                    </div>
+                    <div class="item-data">
+                        <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30"
+                                height="27" fill="fuchsia">
+                                <g id="_01_align_center" data-name="01 align center">
+                                    <path
+                                        d="M21,0H3A3,3,0,0,0,0,3V24H18.35c2.206-2.207,3.443-3.444,5.65-5.65V3A3,3,0,0,0,21,0ZM2,3A1,1,0,0,1,3,2H21a1,1,0,0,1,1,1V16H16v6H2ZM18,21.521V18h3.521Z" />
+                                    <path
+                                        d="M6.5,5.007,4.146,11.188H5.484L6,9.824H8.049l.514,1.363H9.9L7.566,5ZM6.48,8.574l.551-1.447.546,1.447Z" />
+                                    <rect x="11.156" y="5.062" width="1.25" height="6.069" />
+                                </g>
+                            </svg>
+                            Artificial Intelligence</div>
+                        <div class="subtitle-about">
+                            I am passionate about Artificial Intelligence and its potential to revolutionize industries.
+                            I enjoy exploring machine
+                            learning algorithms and AI-driven solutions, constantly seeking to expand my knowledge in
+                            this cutting-edge field and
+                            apply it to real-world challenges.</div>
+                        <div class="location-about"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller" data-speed="fast">
+                <div class="tech-img">
+                    <ul class="tag-list scroller__inner">
+                        <li><img src="icons\tech-icons\html-5.png" alt="HTML"></li>
+                        <li><img src="icons\tech-icons\css-3.png" alt="CSS"></li>
+                        <li><img src="icons\tech-icons\js.png" alt="JS"></li>
+                        <li><img src="icons\tech-icons\sql-server.png" alt="SQL"></li>
+                        <li><img src="icons\tech-icons\python.png" alt="Python"></li>
+                        <li><img src="icons\tech-icons\commit-git.png" alt="GIT"></li>
+                        <li><img src="icons\tech-icons\google.png" alt="Google"></li>
+                        <li><img src="icons\tech-icons\azure.png" alt="Azure"></li>
+                        <li><img src="icons\tech-icons\aws.png" alt="AWS"></li>
+                        <li><img src="icons\tech-icons\docker.png" alt="Docker"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***************************************************************** -->
+    <!-- Section Resume Content -->
+    <!-- ***************************************************************** -->
+    <section class="resume-content" id="resume-content">
+        <!-- Contenido principal -->
+        <div class="content">
+            <h2>Resume</h2>
+            <div class="section-resume">
+                <div class="education">
+                    <h3>
+                        <!-- Icono de educación -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve" width="24" height="24"
+                            fill="royalblue">
+                            <path
+                                d="M470.549,111.573L313.237,36.629c-34.628-20.684-77.728-21.051-112.704-0.96L41.451,111.573  c-0.597,0.299-1.216,0.619-1.792,0.96c-37.752,21.586-50.858,69.689-29.272,107.441c7.317,12.798,18.08,23.284,31.064,30.266  l43.883,20.907V375.68c0.026,46.743,30.441,88.039,75.072,101.931c31.059,8.985,63.264,13.384,95.595,13.056  c32.326,0.362,64.531-4,95.595-12.949c44.631-13.891,75.046-55.188,75.072-101.931V271.104l42.667-20.395v175.957  c0,11.782,9.551,21.333,21.333,21.333c11.782,0,21.333-9.551,21.333-21.333v-256C512.143,145.615,492.363,122.473,470.549,111.573z   M384,375.787c0.011,27.959-18.129,52.69-44.8,61.077c-27.046,7.728-55.073,11.479-83.2,11.136  c-28.127,0.343-56.154-3.408-83.2-11.136c-26.671-8.388-44.811-33.118-44.8-61.077v-84.309l70.763,33.707  c17.46,10.368,37.401,15.816,57.707,15.765c19.328,0.137,38.331-4.98,54.976-14.805L384,291.477V375.787z M452.267,211.733  l-160.896,76.8c-22.434,13.063-50.241,12.693-72.32-0.96l-157.419-74.88c-17.547-9.462-24.101-31.357-14.639-48.903  c3.2-5.934,7.998-10.853,13.85-14.201l159.893-76.373c22.441-13.034,50.233-12.665,72.32,0.96l157.312,74.944  c11.569,6.424,18.807,18.555,18.965,31.787C469.354,193.441,462.9,205.097,452.267,211.733L452.267,211.733z" />
+                        </svg>
+                        Education
+                    </h3>
+                    <div class="item">
+                        <div class="location">
+                            2023 - On going <br></div>
+                        <div class="title">Systems Engineering</div>
+                        <div class="subtitle">Merchant Marine University (UdeMM)</div>
+                        <div class="location">
+                            Faculty of Engineering <br>
+                            Buenos Aires, Argentina</div>
+                    </div>
+                    <div class="item">
+                        <div class="location">2016 - On pause <br>
+                        </div>
+                        <div class="title">Biomedical Engineering</div>
+                        <div class="subtitle">National University of Cordoba (UNC)</div>
+                        <div class="location">Faculty of Exact Physical and Natural Sciences
+                            <br>Córdoba, Argentina
+                        </div>
+                    </div>
+                    <!-- <div class="item">
+                        <div class="title">English Language</div>
+                        <div class="subtitle">Faculty of Language (UNC)</div>
+                        <div class="location">Córdoba, Argentina | 2008 - 2013</div>
+                    </div> -->
+                </div>
+                <div class="experience">
+                    <h3>
+                        <!-- Icono de experiencia -->
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+                            width="24" height="24" fill="royalblue">
+                            <path
+                                d="M21,4h-3V2c0-1.1-.9-2-2-2H8c-1.1,0-2,.9-2,2v2H3c-1.65,0-3,1.35-3,3V24H24V7c0-1.65-1.35-3-3-3ZM8,2h8v2H8V2Zm14,20H2V7c0-.55,.45-1,1-1H21c.55,0,1,.45,1,1v15Z" />
+                        </svg>
+
+                        Experience
+                    </h3>
+                    <div class="item">
+                        <div class="location">
+                            2022 - Present <br></div>
+                        <div class="title">SSr. Data Engineer</div>
+                        <div class="subtitle">Accenture Argentina</div>
+                        <div class="location">
+                            Google Cloud Platform: DataFlow, BigQuery, Cloud Composer (Airflow),
+                            Data Fusion, Cloud Function, Storage <br>
+                            PostgreSQL <br></div>
+                    </div>
+                    <div class="item">
+                        <div class="location">
+                            2021 - 2022 <br></div>
+                        <div class="title">Jr. Data Engineer</div>
+                        <div class="subtitle">Quales Group</div>
+                        <div class="location">
+                            ETL Tool: SSIS <br>
+                            SQL Server, BigQuery <br>
+                            Data Viz: Power BI, Tableau <br>
+                        </div>
+                    </div>
+                    <!-- <div class="item">
+                        <div class="title">Jr. Web Developer</div>
+                        <div class="subtitle">Creative Gigs</div>
+                        <div class="location">2014 - 2015</div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="certifications">
+                <h3>
+                    What am I certified in!
+                </h3>
+            </div>
+            <div class="certifications-img">
+                <img src="icons\tech-icons\digital_leader.png" background="none" alt="DigitalLeader">
+                <img src="icons\tech-icons\dataengineer.png" background="#FFFFFF " alt="DataEngineer">
+            </div> -->
+        </div>
+    </section>
+
+    <!-- ***************************************************************** -->
+    <!-- Section Work -->
+    <!-- ***************************************************************** -->
+    <section class="works" id="works">
+        <!-- Contenido principal -->
+        <div class="work-content">
+            <h2>Portfolio</h2>
+            <p>
+                Hey, welcome to my Portfolio! <br>
+                <br>
+                Here you'll find a variety of projects I've worked on, covering everything from building data pipelines
+                to optimizing workflows. I'm always looking to learn and improve. Take a look around and feel free to
+                reach out if you have any
+                questions!
+            </p>
+            <div class="section-work">
+                <div class="work" id="work">
+                    <div class="section-work">
+                        <div class="work-portfolio">
+                            <!-- <h3>
+                            </h3> -->
+                            <div class="item-work">
+                                <div class="title-work"> <img src="icons\works\gato.png" background="none"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        alt="dinoData">
+                                    <div class="location-work"><br>Data Engineering Projects
+                                    </div>Google Cloud Platform
+                                </div>
+                            </div>
+                            <div class="item-work">
+                                <div class="title-work"> <img src="icons\works\zorro-google.png" background="none"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        alt="dinoData">
+                                    <div class="location-work"><br>Blogs
+                                    </div>Blogs | Google Cloud Platform
+                                </div>
+                            </div>
+                            <!-- <div class="item-work">
+                                <div class="title-work"> <img src="icons\works\astroman.webp" background="none"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        alt="dinoData">
+                                    <div class="location-work"><br>Blogs
+                                    </div>Blogs | Google Cloud Platform
+                                </div> 
+                        </div>-->
+                        </div>
+                        <div class="what-i-did">
+                            <h3>
+                                <br>
+                            </h3>
+                            <div class="item-work">
+                                <div class="title-work"> <img src="icons\works\racoon.png" background="none"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        alt="dinoData">
+                                    <div class="location-work"><br>Playground
+                                    </div>Play and Learn about SQL
+                                </div>
+                            </div>
+                            <div class="item-work">
+                                <div class="title-work"> <img src="icons\works\outer.png" background="none"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        alt="dinoData">
+                                    <div class="location-work"><br>Google Cloud Digital Leader
+                                    </div>Prepare to certificate in the Cloud
+                                </div>
+                            </div>
+                            <!-- <div class="item-work">
+                                <div class="title-work"> <img src="icons\works\dino.webp" background="none"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        alt="dinoData">
+                                    <div class="location-work"><br>Azure Services
+                                    </div>Projects in Azure -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
