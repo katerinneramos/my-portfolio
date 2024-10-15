@@ -187,7 +187,7 @@ section {
     padding: 30px 15px;
     position: relative;
     top: 4vh;
-    left: 10vh;
+    margin-left: 10%;
     /* original left: 100px; */
     text-align: center;
     /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);-- Box Shadow del fondo blanco */
@@ -249,7 +249,7 @@ section {
 
 .contact-info {
     background-color: #f7f8fa;
-    padding: 10px;
+    padding: 8px;
     border-radius: 8px;
     margin-bottom: 10px;
     width: 100%;
@@ -268,7 +268,7 @@ section {
     background-color: white;
     border-radius: 10%;
     display: inline-block;
-    padding: 9px;
+    padding: 15px;
 }
 
 .contact-info img {
@@ -276,8 +276,8 @@ section {
     background-color: white;
     border-radius: 20%;
     display: inline-block;
-    padding: 9px;
-    margin-right: 10px;
+    padding: 15px;
+    margin-right: 20px;
     width: 18px;
     /* Reducir el tamaño del ícono */
     height: 18px;
@@ -361,8 +361,8 @@ a[download] {
     }
 
     .profile-pic {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
 
     .info h1 {
@@ -397,7 +397,7 @@ a[download] {
 
 /* Estilo para la imagen */
 .about-image img {
-    width: 100%;
+    width: 80%;
     /* Ancho de la imagen */
     max-width: 1350px;
     height: auto;
@@ -427,13 +427,12 @@ a[download] {
     background-color: var(--common-white);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 68vw;
-    margin-left: 10%;
+    width: 72vw;
+    margin-left: 5%;
     border-radius: 20px;
     flex: 3;
     /* Toma más espacio para el contenido del texto */
 }
-
 
 .about-content h2 {
     font-size: 32px;
@@ -553,7 +552,7 @@ a[download] {
     /*Ver si dejo el rectángulo o no*/
     margin-top: 3rem;
     color: #fff;
-    width: 68vw;
+    width: 72vw;
     padding: 30px;
     height: 40px;
 }
@@ -595,7 +594,7 @@ a[download] {
 }
 
 .scroller {
-    max-width: 68vw;
+    max-width: 72vw;
     padding-top: 2rem;
     margin-left: 5%;
 }
@@ -676,10 +675,11 @@ a[download] {
 
     .about-image img {
         width: 100%;
-        max-width: 250px;
+        max-width: 200;
         /* Limita el ancho de la imagen */
         height: auto;
         border-radius: 15px;
+        margin-left: 10px;
     }
 
     .about-text {
@@ -773,8 +773,8 @@ a[download] {
     background-color: var(--common-white);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 68vw;
-    margin-left: 10%;
+    width: 72vw;
+    margin-left: 5%;
     border-radius: 20px;
     flex: 3;
     /* Toma más espacio para el contenido del texto */
@@ -1058,8 +1058,8 @@ a[download] {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 68vw;
-    margin-left: 10%;
+    width: 72vw;
+    margin-left: 5%;
     border-radius: 20px;
     flex: 3;
 }
@@ -1250,8 +1250,8 @@ a[download] {
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 68vw;
-    margin-left: 10%;
+    width: 72vw;
+    margin-left: 5%;
     border-radius: 20px;
     flex: 3;
 }
@@ -1370,9 +1370,13 @@ mejorando la experiencia del usuario. */
         width: 66.66666667%;
     }
 
-    .home-content {
-        flex: 0 0 auto;
-        width: 66.66666667%;
+    .about-section {
+        width: 98%;
+    }
+
+    .about-image img {
+        align-items: center;
+        width: 98%;
     }
 
     /*   .profile {
@@ -1416,7 +1420,7 @@ mejorando la experiencia del usuario. */
 
     .contact {
         flex: 0 0 auto;
-        width: 70%;
+        width: 72%;
     }
 
     .form-group input,
