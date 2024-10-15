@@ -252,8 +252,9 @@ section {
     padding: 8px;
     border-radius: 8px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 98%;
     max-width: auto;
+    margin-top: 20px;
 }
 
 .contact-info p {
@@ -262,6 +263,7 @@ section {
     font-size: 12px;
     text-align: left;
     color: #44566c;
+    width: 90%;
 }
 
 .contact-info a {
@@ -391,7 +393,7 @@ a[download] {
     display: flex;
     align-items: flex-start;
     /* Alinea los elementos al inicio */
-    gap: 30px;
+    gap: 20px;
     /* Espacio entre la imagen y el texto */
 }
 
@@ -668,9 +670,9 @@ a[download] {
     }
 
     .about-section {
-        display: flex;
         flex-direction: column;
-        gap: 20px;
+        /* Cambia la dirección del diseño a vertical */
+        margin-top: 10px;
     }
 
     .about-image img {
@@ -683,8 +685,9 @@ a[download] {
     }
 
     .about-text {
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
+        width: 100%;
     }
 
     .about-content {
