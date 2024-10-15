@@ -109,3 +109,32 @@ window.onscroll = () => {
 
     /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
 };
+
+
+// Seleccionar los elementos del menú móvil
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Agregar un evento de clic para mostrar/ocultar el menú
+menuToggle.addEventListener('click', () => {
+    if (mobileMenu.style.display === 'none') {
+        mobileMenu.style.display = 'block';
+    } else {
+        mobileMenu.style.display = 'none';
+    }
+});
+
+
+
+// script 2
+
+var typed = new Typed(".multiple-text", {
+    strings: ["a Data Engineer", "a Sytem Engineering Student", "from Argentina"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
+
+
+const btnlearning = document.getElementById("learning");

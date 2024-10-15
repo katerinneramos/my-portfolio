@@ -16,6 +16,10 @@ body {
     box-sizing: border-box;
     outline: none;
     min-block-size: 100vh;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -44,6 +48,11 @@ body {
     --light-white-2: #f8fbfb;
     --prink: #fff4f4;
     --catkrill: #eef5fa;
+    --hover-bg-color: #fa5252;
+    /* Color de fondo en hover */
+    --bg-color2: #f5f5f5;
+    /* Color de fondo inicial */
+
 }
 
 html {
@@ -51,81 +60,96 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    min-block-size: 100vh;
+}
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
-.sidebar {
+.header {
+    /* Barra de navegación: Cambia la posición de Home Contact.. */
     position: fixed;
-    width: 100px;
-    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    top: 5vh;
-    right: 40px;
-    padding: 20px 0px 30px 0px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    height: fit-content;
-    margin-right: 4%;
+    z-index: 100;
+    background: "icons\background.jpg";
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 90px;
-    /* width: 80%; Ancho de la background blanco */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidebar li {
-    margin: 15px 20px 0px 20px;
-}
-
-.sidebar a {
-    color: #44566c;
+/* Título portfolio*/
+.logo {
+    font-size: 4rem;
+    color: #fa5252;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    /* NUEVO AGREGADO */
+    animation: slideRight 1s ease forwards;
     text-decoration: none;
-    font-size: 12px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    margin-right: 30rem;
+    /* Para desplazar la barra a la izquierda */
+    display: flex;
+    /* Mostrar los enlaces en línea */
+    gap: 3rem;
+    /* Espaciado entre los enlaces */
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar a {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    background-color: #fff;
+    /* Fondo claro inicial */
+    padding: 1rem 3.2rem;
+    border-radius: 0.9rem;
+    /* Bordes redondeados */
+    transition: background-color .3s, color .3s;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 12px 10px 10px 12px;
-    width: 50px;
-    height: 50px;
-    transition: background-color 0.3s;
-    border-radius: 14px;
-    background-color: #f7f8fa;
-    margin: 15px 20px 0px 20px;
-    /* Ajusta el margen para centrar los elementos */
-    margin: 10px;
+    gap: 0.5rem;
+    /* Espaciado entre el ícono y el texto */
+    text-decoration: none;
+    /* Quitar subrayado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar a img {
-    color: #44566c;
-    margin-bottom: 5px;
-    width: 25px;
-    height: 25px;
-    transition: filter 0.3s ease-in-out;
-    /* Añadimos una transición suave */
+/* Efecto hover en los enlaces del navbar */
+.navbar a:hover {
+    background: linear-gradient(100deg, #fa5252, #ff00aa);
+    /* Fondo rosado al pasar el mouse */
+    color: #fff;
+    /* Texto blanco al pasar el mouse */
 }
 
-.sidebar a:hover {
-    background-color: #1b74e4;
-    border-radius: 10px;
-    color: white;
+/* Enlace activo */
+.navbar a.active {
+    background: linear-gradient(100deg, #fa5252, #ff00aa);
+    /*background: linear-gradient(100deg, #fa5252, #ff8c00);*/
+    /* Degradé de rosa (#ff69b4) a naranja (#ff8c00) */
+    /* Fondo rosado para la sección activa */
+    color: #fff;
 }
 
-.sidebar a:hover img {
-    filter: invert(1);
-    /* Invierte los colores del ícono */
+
+/* Ícono del menú */
+#menu-icon {
+    font-size: 3.2rem;
+    color: var(--text-color);
+    display: none;
 }
+
 
 /* ************************************************************** */
 /*                     Profile                                    */
@@ -134,22 +158,28 @@ section {
 .home-profile {
     flex: 0 0 auto;
     width: 25%;
+    display: flex;
+}
+
+#home-profile {
+    display: flex;
+    display: block;
 }
 
 .profile {
-    width: 270px;
+    width: 72vw;
     /* original width: 300px; */
     height: 60vh;
     /* original height: 85vh; */
-    background-color: white;
+    /*background-color: white;*/
     border-radius: 15px;
     padding: 30px 15px;
-    position: fixed;
+    position: relative;
     top: 4vh;
     left: 10vh;
     /* original left: 100px; */
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);-- Box Shadow del fondo blanco */
     height: fit-content;
     margin-top: 0.9vh;
 }
@@ -159,23 +189,21 @@ section {
 }
 
 .profile-pic {
-    border-radius: 10%;
-    width: 60%;
-    height: 165px;
+    border-radius: 100%;
     object-fit: cover;
     margin-top: -50px;
 }
 
 .info h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     color: #212121;
 }
 
 .info p {
     margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
 }
 
@@ -212,7 +240,7 @@ section {
     background-color: #f7f8fa;
     padding: 10px;
     border-radius: 8px;
-    margin-bottom: 7%;
+    margin-bottom: 10px;
 }
 
 .contact-info p {
@@ -244,18 +272,15 @@ section {
 }
 
 
-.contact-info1 img {
-    color: #1b74e4;
-}
-
 .download-cv {
-    background-color: var(--theme-primary);
+    background-image: linear-gradient(100deg, #fa5252, #ff00aa);
     color: white;
     border: none;
-    padding: 10px 20px;
-    padding-bottom: 2px;
+    align-items: center;
+    padding: 8px 30px 30px;
+    padding-bottom: 8px;
     line-height: 27px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
     transition: background-color 0.3s;
@@ -265,17 +290,22 @@ section {
     /* Añadimos una transición suave */
 }
 
-.download-cv:hover {
-    background-color: #f7f8fa;
-    color: #212121;
-    border-color: #1b74e4;
-    /* border-style: dashed; */
-
+a[download] {
+    padding: 5px;
+    color: white;
+    text-decoration: none;
 }
 
-.download-cv:hover svg {
-    line-height: 5%;
-    color: #212121;
+.white {
+    filter: invert();
+    align-items: center;
+    margin-right: 5px;
+}
+
+.download-cv:hover {
+    color: #f7f8fa;
+    background-image: linear-gradient(100deg, #ff00aa, #fa5252);
+    /* border-style: dashed; */
 }
 
 .section {
@@ -297,6 +327,37 @@ section {
     display: block;
 }
 
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    /* Alinea los elementos al inicio */
+    gap: 30px;
+    /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para la imagen */
+.about-image img {
+    width: 350px;
+    /* Ancho de la imagen */
+    height: auto;
+    /* Mantener la proporción */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    object-fit: cover;
+    /* Ajustar la imagen */
+    margin-top: 5px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info div {
+    margin-top: 10px;
+}
+
+/* Estilo para el contenido principal */
 .about-content {
     /* margin-left: calc(270 + 120px); */
     margin-top: 5px;
@@ -306,9 +367,11 @@ section {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 46vw;
-    margin-left: 27%;
+    width: 68vw;
+    margin-left: 10%;
     border-radius: 20px;
+    flex: 2;
+    /* Toma más espacio para el contenido del texto */
 }
 
 
@@ -318,9 +381,15 @@ section {
     position: relative;
 }
 
+.about-content h3 {
+    font-size: 20px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
 .about-content p {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
     position: relative;
     color: #44566c;
 }
@@ -424,9 +493,9 @@ section {
     /*Ver si dejo el rectángulo o no*/
     margin-top: 3rem;
     color: #fff;
-    width: 46vw;
+    width: 68vw;
     padding: 30px;
-    height: 50px;
+    height: 40px;
 }
 
 .tech-img :hover {
@@ -437,8 +506,8 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 1rem;
-    height: 1rem;
+    width: 20px;
+    height: 20px;
     background: transparent;
     font-size: 4rem;
     margin: 2rem 1.5rem 2rem 0;
@@ -456,9 +525,9 @@ section {
     display: flex;
     width: 50%;
     margin: auto;
-    width: 8vh;
+    width: 50px;
     /* Ajusta el tamaño de las imágenes según tus necesidades */
-    height: 8vh;
+    height: 50px;
     margin: 0 30px;
     /* Espacio entre las imágenes */
     color: var(--main-color);
@@ -466,8 +535,9 @@ section {
 }
 
 .scroller {
-    max-width: 590px;
+    max-width: 68vw;
     padding-top: 2rem;
+    margin-left: 5%;
 }
 
 .scroller__inner {
@@ -550,8 +620,8 @@ section {
     /*overflow-y: auto;*/
     background-color: var(--common-white);
     padding: 30px;
-    width: 46vw;
-    margin-left: 27%;
+    width: 68vw;
+    margin-left: 10%;
     border-radius: 20px;
 }
 
@@ -734,8 +804,8 @@ section {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 46vw;
-    margin-left: 27%;
+    width: 68vw;
+    margin-left: 10%;
     border-radius: 20px;
 }
 
@@ -790,8 +860,10 @@ section {
     padding: 15px;
     margin-bottom: 15px;
     border-left: 5px solid transparent;
+    border-right: 22px solid transparent;
     cursor: pointer;
     transition: transform .2s;
+    align-items: center;
 }
 
 .item-work:hover {

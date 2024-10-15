@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,27 +9,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
+
 <body background="icons\background.jpg">
-    <!-- Barra lateral con menú -->
-    <i class='bx bx-menu' id="menu-icon"></i>
-    <nav class="sidebar">
-        <a href="#home"><img src="icons\sidebar\usuario.png" alt="About Icon" class="active" class="filter-btn"
-                data-target="about">About</a>
-        <a href="#resume-content"><img src="icons\sidebar\nota.png" alt="Resume Icon" class="filter-btn"
-                data-target="resume">Resume</a>
-        <a href="#works"><img src="icons\sidebar\maletin.png" alt="Works Icon" class="filter-btn"
-                data-target="works">Works</a>
-        <a href="#blogs"><img src="icons\sidebar\blog.png" alt="Blogs Icon" class="filter-btn"
-                data-target="blogs">Blogs</a>
-        <a href="#contact"><img src="icons\sidebar\directorio.png" alt="Contact Icon" class="filter-btn"
-                data-target="contact">Contact</a>
-    </nav>
-    <header class="home-profile" id="home-profile">
+    <!-- header design -->
+    <header class="header">
+        <a href="#home-profile" class="logo">Ebika.</a>
+        <!-- <a href="#" class="dev">dev</a> -->
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home-profile" style="--i:1;" class="active">Home</a>
+            <a href="#home" style="--i:2;">About</a>
+            <a href="#resume-content" style="--i:3;">Resume</a>
+            <!-- <a href="#services" style="--i:4;">Learning</a> -->
+            <a href="#works" style="--i:5;">Works</a>
+            <a href="#contact" style="--i:6;">Contact</a>
+        </nav>
+
+    </header>
+    <!-- home section design -->
+    <section class="home-profile" id="home-profile">
         <!-- Perfil del usuario -->
         <div class="profile">
-            <img alt="avatar" loading="lazy" width="120" height="160" decoding="async" data-nimg="1"
+            <img alt="avatar" loading="lazy" width="230" height="230" decoding="async" data-nimg="1"
                 style="color:transparent" src="icons\foto-cv.jpg" class="profile-pic">
             <!-- <img src="icons\foto-cv.jpg" alt="Profile Picture" class="profile-pic"> -->
             <div class="info">
@@ -38,57 +45,76 @@
             </div>
             <div class="social-icons">
                 <!-- <a href="#"><img src="icons/facebook-icon.png" alt="Facebook"></a> -->
-                <a href="#"><img src="icons\profile\github.png" alt="Github"></a>
-                <a href="#"><img src="icons\profile\instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="icons\profile\linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/katerinneramos" target="_blank"><img src="icons\profile\github.png"
+                        alt="Github"></a>
+                <a href="https://www.linkedin.com/in/katerinneramos/" target="_blank"><img
+                        src="icons\profile\instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/katerinneramos/" target="_blank"><img
+                        src="icons\profile\linkedin.png" alt="LinkedIn"></a>
             </div>
-            <div class="contact-info">
-                <div class="contact-info1">
-                    <p><img src="icons\contact-info\celular.png" alt="Phone Icon">Phone <br> +54 9 351 528
-                        4410</p>
-                </div>
-                <div class="contact-info2">
-                    <p><img src="icons\contact-info\correo.png" alt="Email Icon">Email <br> katerinne.ramos.ar@gmail.com
-                    </p>
-                </div>
-                <div class="contact-info3">
-                    <p><img src="icons\contact-info\mapa.png" alt="Location Icon">Location <br> Córdoba, Argentina</p>
-                </div>
-            </div>
-            <button class="download-cv">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="17"
-                    height="14" fill="currentColor">
-                    <path
-                        d="M12.032,19a2.991,2.991,0,0,0,2.122-.878L18.073,14.2,16.659,12.79l-3.633,3.634L13,0,11,0l.026,16.408-3.62-3.62L5.992,14.2l3.919,3.919A2.992,2.992,0,0,0,12.032,19Z" />
-                    <path d="M22,16v5a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V16H0v5a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V16Z" />
-                </svg>
 
-                Download CV</button>
+            <button class="download-cv">
+                <img alt="avatar" loading="lazy" width="20" height="20" decoding="async" src="icons\icon-descargar.png"
+                    class="white"> <a href="icons\Download\CV-Katerinne Ramos.pdf" target="_blank"
+                    download="CV-Katerinne Ramos.pdf">Download CV</a>
+            </button>
         </div>
-    </header>
+    </section>
+
     <!-- ***************************************************************** -->
     <!-- Section Home | About  -->
     <!-- ***************************************************************** -->
     <section class="home" id="home">
         <!-- Contenido principal -->
         <div class="about-content">
+
+            <!-- Imagen al costado izquierdo -->
             <h2>About</h2>
-            <p>I am a passionate Data Engineer from Argentina with over 3 years of hands-on experience in designing and
-                optimizing data
-                systems. Currently pursuing a degree in Systems Engineering, I thrive on solving complex problems by
-                developing
-                efficient, performance-oriented solutions. <br>
-                <br>
-                One of my core strengths is my commitment to continuous learning. I am constantly exploring new
-                technologies and trends
-                in the industry, ensuring that I stay at the forefront of innovation. Whether it's diving into cloud
-                platforms,
-                mastering programming languages, or embracing emerging tools, I am always eager to expand my skill set.
-                <br>
-                <br>
-                My goal is to create data-driven architectures that empower organizations to make smarter, faster
-                decisions.
-            </p>
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="icons\foto-about.png" alt="Descripción de la imagen">
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I am a passionate Data Engineer from Argentina with over 3 years of hands-on experience in
+                        designing
+                        and
+                        optimizing data
+                        systems. Currently pursuing a degree in Systems Engineering, I thrive on solving complex
+                        problems by
+                        developing
+                        efficient, performance-oriented solutions.
+                        <br>
+                        <br>
+                        One of my core strengths is my commitment to continuous learning.<br>
+                        <!-- I'm constantly exploring new technologies and trends
+                        in the industry, ensuring that I stay at the forefront of innovation. Whether it's diving into
+                        cloud platforms, mastering programming languages, or embracing emerging tools, I am always eager to expand my
+                        skill set. -->
+                        <br>
+                        My goal is to create data-driven architectures that empower organizations to make smarter,
+                        faster
+                        decisions.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-info1">
+                            <p><img src="icons\contact-info\celular.png" alt="Phone Icon">Phone <br> +54 9 351 528
+                                4410</p>
+                        </div>
+                        <div class="contact-info2">
+                            <p><img src="icons\contact-info\correo.png" alt="Email Icon">Email <br>
+                                katerinne.ramos.ar@gmail.com
+                            </p>
+                        </div>
+                        <!--<div class="contact-info3">
+                            <p><img src="icons\contact-info\mapa.png" alt="Location Icon">Location <br> Córdoba,
+                                Argentina
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
             <div class="section-about">
                 <div class="about-me">
                     <h3>
@@ -194,9 +220,9 @@
                         <li><img src="icons\tech-icons\python.png" alt="Python"></li>
                         <li><img src="icons\tech-icons\commit-git.png" alt="GIT"></li>
                         <li><img src="icons\tech-icons\google.png" alt="Google"></li>
-                        <li><img src="icons\tech-icons\azure.png" alt="Azure"></li>
-                        <li><img src="icons\tech-icons\aws.png" alt="AWS"></li>
-                        <li><img src="icons\tech-icons\docker.png" alt="Docker"></li>
+                        <!-- <li><img src="icons\tech-icons\azure.png" alt="Azure"></li>
+                        <li><img src="icons\tech-icons\aws.png" alt="AWS"></li> 
+                        <li><img src="icons\tech-icons\docker.png" alt="Docker"></li> -->
                     </ul>
                 </div>
             </div>
@@ -304,7 +330,7 @@
     <section class="works" id="works">
         <!-- Contenido principal -->
         <div class="work-content">
-            <h2>Portfolio</h2>
+            <h2>Portfolio (Working on it! Come back soon)</h2>
             <p>
                 Hey, welcome to my Portfolio! <br>
                 <br>
@@ -337,7 +363,7 @@
                             </div>
                             <!-- <div class="item-work">
                                 <div class="title-work"> <img src="icons\works\astroman.webp" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:350px;gap:0"
                                         alt="dinoData">
                                     <div class="location-work"><br>Blogs
                                     </div>Blogs | Google Cloud Platform
@@ -366,7 +392,7 @@
                             </div>
                             <!-- <div class="item-work">
                                 <div class="title-work"> <img src="icons\works\dino.webp" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
+                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:350px;gap:0"
                                         alt="dinoData">
                                     <div class="location-work"><br>Azure Services
                                     </div>Projects in Azure -->
