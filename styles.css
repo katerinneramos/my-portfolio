@@ -70,22 +70,27 @@ section {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     /* Barra de navegación: Cambia la posición de Home Contact.. */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 20px;
     z-index: 100;
-    background: "icons\background.jpg";
+    /*background-color: #fff;*/
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    /*background: url('icons/back-ground.jpg') no-repeat center center;*/
+    background: linear-gradient(100deg, #e7fcfa, #f1dcf7);
+    background-size: cover;
+    width: 100%;
 }
 
 /* Título portfolio*/
 .logo {
-    font-size: 4rem;
+    font-size: 32px;
     color: #fa5252;
     font-weight: 600;
     cursor: pointer;
@@ -94,6 +99,7 @@ section {
     /* NUEVO AGREGADO */
     animation: slideRight 1s ease forwards;
     text-decoration: none;
+    padding-left: 100px;
 }
 
 /* Estilos para la barra de navegación */
@@ -102,7 +108,7 @@ section {
     /* Para desplazar la barra a la izquierda */
     display: flex;
     /* Mostrar los enlaces en línea */
-    gap: 3rem;
+    gap: 30px;
     /* Espaciado entre los enlaces */
 }
 
@@ -113,7 +119,7 @@ section {
     background-color: #fff;
     /* Fondo claro inicial */
     padding: 1rem 3.2rem;
-    border-radius: 0.9rem;
+    border-radius: 10px;
     /* Bordes redondeados */
     transition: background-color .3s, color .3s;
     display: flex;
@@ -127,7 +133,7 @@ section {
 
 /* Efecto hover en los enlaces del navbar */
 .navbar a:hover {
-    background: linear-gradient(100deg, #fa5252, #ff00aa);
+    background: linear-gradient(100deg, #ff00aa, #fa5252);
     /* Fondo rosado al pasar el mouse */
     color: #fff;
     /* Texto blanco al pasar el mouse */
@@ -135,13 +141,18 @@ section {
 
 /* Enlace activo */
 .navbar a.active {
-    background: linear-gradient(100deg, #fa5252, #ff00aa);
+    background: linear-gradient(100deg, #ff00aa, #fa5252);
     /*background: linear-gradient(100deg, #fa5252, #ff8c00);*/
     /* Degradé de rosa (#ff69b4) a naranja (#ff8c00) */
     /* Fondo rosado para la sección activa */
     color: #fff;
 }
 
+.bx-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
 
 /* Ícono del menú */
 #menu-icon {
@@ -241,6 +252,8 @@ section {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
+    width: 100%;
+    max-width: auto;
 }
 
 .contact-info p {
@@ -272,22 +285,21 @@ section {
 }
 
 
+/* Botón de descarga */
 .download-cv {
-    background-image: linear-gradient(100deg, #fa5252, #ff00aa);
-    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-image: linear-gradient(100deg, #ff00aa, #fa5252);
+    color: #fff;
     border: none;
-    align-items: center;
-    padding: 8px 30px 30px;
-    padding-bottom: 8px;
-    line-height: 27px;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s;
-    font-weight: 500;
-    text-transform: capitalize;
-    transition: filter 0.3s ease-in-out;
-    /* Añadimos una transición suave */
+    font-size: 16px;
+}
+
+.download-cv img {
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 a[download] {
@@ -304,7 +316,7 @@ a[download] {
 
 .download-cv:hover {
     color: #f7f8fa;
-    background-image: linear-gradient(100deg, #ff00aa, #fa5252);
+    background-image: linear-gradient(100deg, #fa5252, #ff00aa);
     /* border-style: dashed; */
 }
 
@@ -316,6 +328,54 @@ a[download] {
 .section.active {
     display: block;
     /* Show the active section */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .bx-menu {
+        display: block;
+    }
+
+    .profile {
+        padding: 10px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info h1 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+    }
 }
 
 /* *****************************************************************/
@@ -337,8 +397,9 @@ a[download] {
 
 /* Estilo para la imagen */
 .about-image img {
-    width: 350px;
+    width: 100%;
     /* Ancho de la imagen */
+    max-width: 1350px;
     height: auto;
     /* Mantener la proporción */
     border-radius: 15px;
@@ -360,17 +421,16 @@ a[download] {
 /* Estilo para el contenido principal */
 .about-content {
     /* margin-left: calc(270 + 120px); */
-    margin-top: 5px;
+    margin-top: 0px;
     /*overflow-y: auto;*/
     /*max-width: 700px;*/
     background-color: var(--common-white);
-    border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 68vw;
     margin-left: 10%;
     border-radius: 20px;
-    flex: 2;
+    flex: 3;
     /* Toma más espacio para el contenido del texto */
 }
 
@@ -383,7 +443,7 @@ a[download] {
 
 .about-content h3 {
     font-size: 20px;
-    margin-bottom: 1px;
+    margin-bottom: 0.5px;
     position: relative;
 }
 
@@ -599,30 +659,125 @@ a[download] {
 }
 
 /* *****************************************************************/
-/* Section Resume */
+/* Estilos Responsivos para la sección About */
 /* *****************************************************************/
 
+@media (max-width: 768px) {
+    #home {
+        display: block;
+        padding: 10px;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 250px;
+        /* Limita el ancho de la imagen */
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .about-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content {
+        width: 90%;
+        /* Ajusta el ancho para pantallas pequeñas */
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+        /* Reduce el tamaño del texto */
+    }
+
+    .about-content h3 {
+        font-size: 18px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .section-about {
+        flex-direction: column;
+        /* Cambia la dirección del diseño a vertical */
+        margin-top: 10px;
+    }
+
+    .section-about .about-me,
+    .section-about .what-i-do-right {
+        width: 100%;
+        /* Elimina el ancho fijo para que ocupe todo el espacio */
+        margin-bottom: 20px;
+    }
+
+    .tech-img {
+        width: 100%;
+        /* Ajusta el ancho */
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-img img {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        /* Ajusta el tamaño de las imágenes */
+    }
+
+    .scroller {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .scroller__inner {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .scroller__inner li {
+        flex: 0 0 auto;
+        padding: 0.5rem;
+        font-size: small;
+    }
+}
+
+
+/* *****************************************************************/
+/* Section Resume */
+/* *****************************************************************/
+/* Estilos generales */
 #resume-content {
     display: flex;
     display: block;
 }
 
-.content {
-    background-size: cover;
-    background-position: center;
-}
 
 .content {
-    /*max-width: 700px;*/
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     /* margin-left: calc(270 + 120px); */
     margin-top: 0px;
     /*overflow-y: auto;*/
+    /*max-width: 700px;*/
     background-color: var(--common-white);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 68vw;
     margin-left: 10%;
     border-radius: 20px;
+    flex: 3;
+    /* Toma más espacio para el contenido del texto */
 }
 
 
@@ -656,7 +811,7 @@ a[download] {
 }
 
 .section-resume h3 {
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 15px;
     color: #1b74e4;
     display: flex;
@@ -669,10 +824,17 @@ a[download] {
 
 .item {
     background-color: #f7f8fa;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 15px;
     margin-bottom: 15px;
     border-left: 5px solid transparent;
+    border-right: 22px solid transparent;
+    transition: transform .2s;
+    align-items: center;
+}
+
+.item:hover {
+    transform: scale(1.05);
 }
 
 .education h3 {
@@ -714,7 +876,10 @@ a[download] {
 .item .subtitle {
     font-size: 13px;
     color: #44566c;
-    margin-bottom: 5px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: left;
+    text-align: left;
 }
 
 .item .location {
@@ -787,6 +952,95 @@ a[download] {
 }
 
 /* *****************************************************************/
+/* Estilos Responsivos para la sección Resume */
+/* *****************************************************************/
+
+@media (max-width: 768px) {
+    #resume-content {
+        display: block;
+        padding: 10px;
+    }
+
+    .content {
+        width: 90%;
+        /* Ajusta el ancho para pantallas pequeñas */
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+        /* Reduce el tamaño del texto */
+        margin-bottom: 15px;
+    }
+
+    .content h2::after {
+        width: 100px;
+        /* Reduce el ancho de la línea */
+    }
+
+    .section-resume {
+        flex-direction: column;
+        /* Cambia la dirección del diseño a vertical */
+        margin-top: 10px;
+    }
+
+    .section-resume .education,
+    .section-resume .experience {
+        width: 100%;
+        /* Elimina el ancho fijo para que ocupe todo el espacio */
+        margin-bottom: 20px;
+    }
+
+    .section-resume h3 {
+        font-size: 16px;
+        /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .item {
+        padding: 10px;
+        /* Reduce el padding para pantallas pequeñas */
+        margin-bottom: 15px;
+    }
+
+    .item .title {
+        font-size: 14px;
+    }
+
+    .item .subtitle {
+        font-size: 12px;
+    }
+
+    .item .location {
+        font-size: 11px;
+    }
+
+    .certifications-img {
+        width: 100%;
+        /* Ajusta el ancho */
+        height: auto;
+        padding: 20px;
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certifications-img img {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+        /* Ajusta el tamaño de las imágenes */
+    }
+
+    .certifications h3 {
+        font-size: 18px;
+        /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+}
+
+/* *****************************************************************/
 /* Section Works */
 /* *****************************************************************/
 
@@ -807,6 +1061,7 @@ a[download] {
     width: 68vw;
     margin-left: 10%;
     border-radius: 20px;
+    flex: 3;
 }
 
 
@@ -915,13 +1170,200 @@ a[download] {
     color: #aaaaaa;
 }
 
+/* *****************************************************************/
+/* Estilos Responsivos para la sección Works */
+/* *****************************************************************/
+@media (max-width: 768px) {
+    #works {
+        display: block;
+        padding: 10px;
+    }
+
+    .work-content {
+        width: 90%;
+        /* Ajusta el ancho para pantallas pequeñas */
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .work-content h2 {
+        font-size: 24px;
+        /* Reduce el tamaño del texto */
+        margin-bottom: 15px;
+    }
+
+    .work-content h2::after {
+        width: 100px;
+        /* Reduce el ancho de la línea */
+    }
+
+    .section-work {
+        flex-direction: column;
+        /* Cambia la dirección del diseño a vertical */
+        margin-top: 10px;
+    }
+
+    .section-work .work-portfolio,
+    .section-work .what-i-did {
+        width: 100%;
+        /* Elimina el ancho fijo para que ocupe todo el espacio */
+        margin-bottom: 20px;
+    }
+
+    .section-work h3 {
+        font-size: 16px;
+        /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .item-work {
+        padding: 10px;
+        /* Reduce el padding para pantallas pequeñas */
+        margin-bottom: 15px;
+    }
+
+    .item-work .title-work {
+        font-size: 14px;
+    }
+
+    .item-work .subtitle-work {
+        font-size: 12px;
+    }
+
+    .item-work .location-work {
+        font-size: 11px;
+    }
+
+    .item-work:hover {
+        transform: none;
+        /* Desactiva la transformación de escala para evitar problemas en dispositivos táctiles */
+    }
+}
+
+
+
+/* *****************************************************************/
+/* Sección Contacto */
+/* *****************************************************************/
+.contact-content {
+    background-color: var(--common-white);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 68vw;
+    margin-left: 10%;
+    border-radius: 20px;
+    flex: 3;
+}
+
+.contact-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #44566c;
+}
+
+.contact-content h2::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #1b74e4;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* .form-group: Agrega un margen inferior para cada grupo de formulario,
+separándolos visualmente. */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1b74e4;
+    outline: none;
+}
+
+/* .focus --> Cuando el usuario hace clic en un campo,
+el borde cambia de color para indicar que está activo.*/
+
+button {
+    background: linear-gradient(100deg, #ff00aa, #fa5252);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background: linear-gradient(100deg, #fa5252, #ff00aa);
+}
+
+/* button:hover: Cambia el color de fondo cuando el ratón está sobre el botón,
+mejorando la experiencia del usuario. */
+
+/* *****************************************************************/
+/* Estilos Responsivos para la sección Contacto */
+/* *****************************************************************/
+@media (max-width: 768px) {
+    .contact-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+
 /* **************************************************** */
 
 /* Media Query para dispositivos más pequeños */
 @media (max-width: 768px) {
-    .sidebar {
+    /*    .sidebar {
         width: 60px;
-    }
+    }*/
 
     .about-content {
         flex: 0 0 auto;
@@ -930,18 +1372,13 @@ a[download] {
 
     .home-content {
         flex: 0 0 auto;
-        width: 25%;
+        width: 66.66666667%;
     }
 
-    .profile {
+    /*   .profile {
         width: 250px;
         height: 80vh;
         left: 80px;
-    }
-
-    .content {
-        margin-left: calc(250px + 80px + 20px);
-        max-width: 600px;
     }
 
     .profile-pic {
@@ -965,37 +1402,25 @@ a[download] {
 
     .sidebar a {
         font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile {
-        width: 200px;
-        height: 75vh;
-        left: 60px;
-    }
+    }*/
 
     .content {
-        margin-left: calc(200px + 60px + 10px);
-        max-width: 500px;
+        flex: 0 0 auto;
+        width: 66.66666667%;
     }
 
-    .profile-pic {
-        width: 80px;
-        height: 80px;
+    .work-content {
+        flex: 0 0 auto;
+        width: 66.66666667%;
     }
 
-    .info h1 {
-        font-size: 14px;
+    .contact {
+        flex: 0 0 auto;
+        width: 70%;
     }
 
-    .info p,
-    .contact-info p {
-        font-size: 9px;
-    }
-
-    .download-cv {
-        padding: 5px 10px;
-        font-size: 10px;
+    .form-group input,
+    .form-group textarea {
+        width: 95%;
     }
 }

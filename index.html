@@ -14,14 +14,13 @@
 </head>
 
 
-<body background="icons\background.jpg">
+<body background="icons\back-ground.jpg">
     <!-- header design -->
     <header class="header">
         <a href="#home-profile" class="logo">Ebika.</a>
         <!-- <a href="#" class="dev">dev</a> -->
 
         <i class='bx bx-menu' id="menu-icon"></i>
-
         <nav class="navbar">
             <a href="#home-profile" style="--i:1;" class="active">Home</a>
             <a href="#home" style="--i:2;">About</a>
@@ -47,8 +46,8 @@
                 <!-- <a href="#"><img src="icons/facebook-icon.png" alt="Facebook"></a> -->
                 <a href="https://github.com/katerinneramos" target="_blank"><img src="icons\profile\github.png"
                         alt="Github"></a>
-                <a href="https://www.instagram.com/ebika.dev/" target="_blank"><img src="icons\profile\instagram.png"
-                        alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/katerinneramos/" target="_blank"><img
+                        src="icons\profile\instagram.png" alt="Instagram"></a>
                 <a href="https://www.linkedin.com/in/katerinneramos/" target="_blank"><img
                         src="icons\profile\linkedin.png" alt="LinkedIn"></a>
             </div>
@@ -267,11 +266,13 @@
                             <br>Córdoba, Argentina
                         </div>
                     </div>
-                    <!-- <div class="item">
-                        <div class="title">English Language</div>
-                        <div class="subtitle">Faculty of Language (UNC)</div>
-                        <div class="location">Córdoba, Argentina | 2008 - 2013</div>
-                    </div> -->
+                    <div class="item">
+                        <div class="location">
+                            Oct 2023- Feb 2024 <br></div>
+                        <div class="title">DevOps</div>
+                        <div class="subtitle">Mundos E (Business schools in Córdoba)</div>
+                        <div class="location">Córdoba, Argentina</div>
+                    </div>
                 </div>
                 <div class="experience">
                     <h3>
@@ -290,9 +291,10 @@
                         <div class="title">SSr. Data Engineer</div>
                         <div class="subtitle">Accenture Argentina</div>
                         <div class="location">
-                            Google Cloud Platform: DataFlow, BigQuery, Cloud Composer (Airflow),
-                            Data Fusion, Cloud Function, Storage <br>
-                            PostgreSQL <br></div>
+                            Google Cloud Platform: Cloud DataFlow, BigQuery, Cloud Composer (Airflow),
+                            Cloud Data Fusion, Cloud Pub/Sub, Cloud Function, Cloud Storage <br>
+                            PostgreSQL <br>
+                            Git. GitHub <br></div>
                     </div>
                     <div class="item">
                         <div class="location">
@@ -330,8 +332,8 @@
     <section class="works" id="works">
         <!-- Contenido principal -->
         <div class="work-content">
-            <h2>Portfolio (Working on it! Come back soon)</h2>
-            <p>
+            <h2>Portfolio </h2>
+            <p> (Working on it! Come back soon) <br> <br>
                 Hey, welcome to my Portfolio! <br>
                 <br>
                 Here you'll find a variety of projects I've worked on, covering everything from building data pipelines
@@ -404,8 +406,31 @@
         </div>
         </div>
     </section>
+    <!-- ****************************************************************-->
+    <!-- Sección de Contacto -->
+    <!-- ****************************************************************-->
+    <section class="contact" id="contact">
+        <div id="contact" class="contact-content">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o quieres ponerte en contacto conmigo, no dudes en escribir.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
 
-
+    </section>
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
