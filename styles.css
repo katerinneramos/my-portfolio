@@ -1371,12 +1371,12 @@ mejorando la experiencia del usuario. */
     }
 
     .about-section {
-        width: 98%;
+        width: 85%;
     }
 
     .about-image img {
         align-items: center;
-        width: 98%;
+        width: 96%;
     }
 
     /*   .profile {
