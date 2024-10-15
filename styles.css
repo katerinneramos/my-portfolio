@@ -376,7 +376,7 @@ a[download] {
     }
 
     .contact-info p {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
 
@@ -1377,9 +1377,17 @@ mejorando la experiencia del usuario. */
         width: 66%;
     }
 
+    .about-text {
+        width: 140%;
+    }
+
     .about-image img {
         align-items: center;
-        width: 96%;
+        width: 140%;
+    }
+
+    .logo {
+        margin-left: 20vw;
     }
 
     /*   .profile {
@@ -1396,12 +1404,12 @@ mejorando la experiencia del usuario. */
     .info h1 {
         font-size: 16px;
     }
-
-    .info p,
+*/
     .contact-info p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
+    /*
     .download-cv {
         padding: 6px 12px;
         font-size: 11px;
