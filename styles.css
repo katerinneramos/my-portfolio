@@ -331,13 +331,13 @@ a[download] {
     display: flex;
     align-items: flex-start;
     /* Alinea los elementos al inicio */
-    gap: 30px;
+    gap: 20px;
     /* Espacio entre la imagen y el texto */
 }
 
 /* Estilo para la imagen */
 .about-image img {
-    width: 350px;
+    width: 90%;
     /* Ancho de la imagen */
     height: auto;
     /* Mantener la proporción */
