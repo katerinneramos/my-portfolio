@@ -4,78 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Katerinne Ramos - My Portfolio</title>
 </head>
 
+<body>
+    <!--==================== NAV ====================-->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li>
+                <a href="#home" title="Home" class="nav__link active-link">
+                    <i class="ri-home-line"></i>
+                </a>
+            </li>
 
-<body background="icons\back-ground.jpg">
-    <!-- header design -->
-    <header class="header">
-        <a href="#home-profile" class="logo">Ebika.</a>
-        <!-- <a href="#" class="dev">dev</a> -->
+            <li>
+                <a href="#projects" title="Projects" class="nav__link">
+                    <i class="ri-folder-line"></i>
+                </a>
+            </li>
+            <!--
+            <li>
+                <a href="#services" title="Services" class="nav__link">
+                    <i class="ri-file-edit-line"></i>
+                </a>
+            </li> -->
 
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home-profile" style="--i:1;" class="active">Home</a>
-            <a href="#home" style="--i:2;">About</a>
-            <a href="#resume-content" style="--i:3;">Resume</a>
-            <!-- <a href="#services" style="--i:4;">Learning</a> -->
-            <a href="#works" style="--i:5;">Works</a>
-            <a href="#contact" style="--i:6;">Contact</a>
-        </nav>
+            <li>
+                <a href="#experience" title="Experience" class="nav__link">
+                    <i class="ri-honour-line"></i>
+                </a>
+            </li>
 
-    </header>
-    <!-- home section design -->
-    <section class="home-profile" id="home-profile">
-        <!-- Perfil del usuario -->
-        <div class="profile">
-            <img alt="avatar" loading="lazy" width="230" height="230" decoding="async" data-nimg="1"
-                style="color:transparent" src="icons\foto-cv.jpg" class="profile-pic">
-            <!-- <img src="icons\foto-cv.jpg" alt="Profile Picture" class="profile-pic"> -->
-            <div class="info">
-                <h1>Katerinne Ramos</h1>
-                <p>Data Engineer</p>
-            </div>
-            <div class="social-icons">
-                <!-- <a href="#"><img src="icons/facebook-icon.png" alt="Facebook"></a> -->
-                <a href="https://github.com/katerinneramos" target="_blank"><img src="icons\profile\github.png"
-                        alt="Github"></a>
-                <a href="https://www.instagram.com/ebika.dev/" target="_blank"><img src="icons\profile\instagram.png"
-                        alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/katerinneramos/" target="_blank"><img
-                        src="icons\profile\linkedin.png" alt="LinkedIn"></a>
-            </div>
+            <li>
+                <a href="#education" title="Education" class="nav__link">
+                    <i class="ri-graduation-cap-line"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" title="Contact" class="nav__link">
+                    <i class="ri-send-plane-line"></i>
+                </a>
+            </li>
+        </ul>
 
-            <button class="download-cv">
-                <img alt="avatar" loading="lazy" width="20" height="20" decoding="async" src="icons\icon-descargar.png"
-                    class="white"> <a href="icons\Download\CV-Katerinne Ramos.pdf" target="_blank"
-                    download="CV-Katerinne Ramos.pdf">Download CV</a>
-            </button>
-        </div>
-    </section>
+    </nav>
 
-    <!-- ***************************************************************** -->
-    <!-- Section Home | About  -->
-    <!-- ***************************************************************** -->
-    <section class="home" id="home">
-        <!-- Contenido principal -->
-        <div class="about-content">
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <!--===== PERFIL =====
+                <div class="perfil">
+                    <img src="icons\profile\about-perfil.png" alt="" alt="image" class="perfil__img">
 
-            <!-- Imagen al costado izquierdo -->
-            <h2>About</h2>
-            <div class="about-section">
-                <div class="about-image">
-                    <img src="icons\foto-about.png" alt="Descripción de la imagen">
+                    <div class="perfil__data">
+                        <h1 class="perfil__name">Katerinne Ramos</h1>
+                        <div class="perfil__buttons">
+                            <a href="#projects" class="button">Projects</a>
+                            <a href="#services" class="button button__black">Services</a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="about-text">
-                    <h3>Who am I?</h3>
-                    <p>I am a passionate Data Engineer from Argentina with over 3 years of hands-on experience in
+-->
+
+                <!--===== INFO =====-->
+                <div class="info">
+                    <div class="info__data">
+                        <div class="info__circle">
+                            <h1 class="info__name"><b>Katerinne Ramos</b><br> Data Engineer </h1>
+                        </div>
+                    </div>
+                    <div class="info__image">
+                        <img src="icons\profile\home-perfil.png" alt="image" class="info__img">
+                    </div>
+                    <p class="info__description">
+                        Download my updated CV
+                    </p>
+                    <a href="icons\Download\CV-Katerinne Ramos.pdf" download target="_blank"
+                        class="button button__black">Download CV</a>
+                </div>
+
+                <!--===== ABOUT =====-->
+                <div class="about">
+                    <h3 class="about__name">
+                        Who am I?
+                    </h3>
+                    <p class="about__description">I am a passionate Data Engineer from Argentina with over 3 years of
+                        hands-on experience in
                         designing
                         and
                         optimizing data
@@ -85,362 +116,448 @@
                         efficient, performance-oriented solutions.
                         <br>
                         <br>
-                        One of my core strengths is my commitment to continuous learning.<br>
-                        <!-- I'm constantly exploring new technologies and trends
+                        One of my core strengths is my commitment to continuous learning.
+                        I'm constantly exploring new technologies and trends
                         in the industry, ensuring that I stay at the forefront of innovation. Whether it's diving into
-                        cloud platforms, mastering programming languages, or embracing emerging tools, I am always eager to expand my
-                        skill set. -->
-                        <br>
+                        cloud platforms, mastering programming languages, or embracing emerging tools, I am always eager
+                        to expand my
+                        skill set.
+                        <br><br>
                         My goal is to create data-driven architectures that empower organizations to make smarter,
                         faster
                         decisions.
                     </p>
-                </div>
-            </div>
-            <div class="contact-info">
-                <div class="contact-info1">
-                    <p><img src="icons\contact-info\celular.png" alt="Phone Icon">Phone <br> +54 9 351 528
-                        4410</p>
-                </div>
-                <div class="contact-info2">
-                    <p><img src="icons\contact-info\correo.png" alt="Email Icon">Email <br>
-                        katerinne.ramos.ar@gmail.com
+
+                    <div class="about__social">
+                        <a href="https://www.linkedin.com/in/katerinneramos/" target="_blank" class="about__link">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+
+                        <a href="https://github.com/katerinneramos" target="_blank" class="about__link">
+                            <i class="ri-github-line"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/ebika.dev/" target="_blank" class="about__link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </div>
+                    <!--
+                    <div class="about__image">
+                         <img src="icons\profile\about-perfil.png" alt="image" class="about__img"> 
+                    </div>
+
+                    <p class="about__note">
+                        He doesn't write messages on social networks,
+                        send me an email and I'll answer you. 
                     </p>
-                </div>
-                <!--<div class="contact-info3">
-                            <p><img src="icons\contact-info\mapa.png" alt="Location Icon">Location <br> Córdoba,
-                                Argentina
-                            </p>
-                        </div> -->
-            </div>
-            <div class="section-about">
-                <div class="about-me">
-                    <h3>
-                        What I do!
-                    </h3>
-                    <div class="item-data">
-                        <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
-                                data-name="Layer 1" viewBox="0 0 24 24" width="30" height="27" fill="orange">
-                                <path
-                                    d="M6.163,21.814c-2.605-.43-4.163-1.514-4.163-2.314v-2.035c.741,.456,1.668,.833,2.76,1.102,1.246,.333,1.749-1.649,.479-1.941-2.127-.525-3.24-1.466-3.24-2.125v-2.041c1.535,.954,3.835,1.541,6.5,1.541,4.846,0,8.5-1.935,8.5-4.5V4.5C17,1.935,13.346,0,8.5,0S0,1.935,0,4.5v15c0,2.02,2.292,3.703,5.837,4.288,1.27,.232,1.613-1.781,.325-1.974Zm2.337-9.814c-3.968,0-6.5-1.48-6.5-2.5v-2.041c1.535,.954,3.835,1.541,6.5,1.541s4.965-.588,6.5-1.541v2.041c0,1.02-2.532,2.5-6.5,2.5Zm0-10c3.968,0,6.5,1.48,6.5,2.5s-2.532,2.5-6.5,2.5-6.5-1.48-6.5-2.5,2.532-2.5,6.5-2.5Zm4.471,18.974c-.19,1.174-1.214,2.026-2.434,2.026-.663,0-1.299-.195-1.837-.551-.388-.257-.448-.802-.119-1.13,.236-.235,.602-.283,.887-.111,.316,.191,.688,.297,1.068,.297,1.4-.007,1.287-1.552,.279-1.752-.914-.37-1.749-.779-1.752-.779-.691-.484-1.026-1.23-.921-2.047,.111-.844,.674-1.532,1.469-1.794,.838-.277,1.601-.076,2.15,.203,.405,.205,.518,.732,.24,1.092-.203,.263-.558,.357-.862,.224-.305-.134-.709-.226-1.136-.088-.825,.25-.476,1.11-.082,1.192,.282,.128,.805,.368,1.364,.595,1.459,.591,1.827,1.743,1.683,2.625Zm11.029,1.23h0c0,.442-.358,.8-.8,.8h-2.133c-.442,0-.8-.358-.8-.8v-6.401c0-.442,.358-.8,.8-.8h0c.442,0,.8,.358,.8,.8v5.601s.577,0,1.331,0c.442,0,.802,.358,.802,.8Zm-5.267-.598c.165-.334,.267-.705,.267-1.102v-2.944c0-1.402-1.147-2.582-2.548-2.556-1.358,.026-2.452,1.135-2.452,2.5v2.917c0,1.23,.856,2.319,2.065,2.543,.564,.104,1.084-.002,1.537-.226l.433,.433c.312,.312,.819,.312,1.131,0,.312-.312,.312-.819,0-1.131l-.433-.433Zm-1.333-1.102c0,.496-.404,.9-.9,.9s-.9-.404-.9-.9v-3c0-.496,.404-.9,.9-.9s.9,.404,.9,.9v3Z" />
-                            </svg> Data Engineering</div>
-                        <div class="subtitle-about">With a solid foundation in data engineering, my expertise spans
-                            across data pipelines, ETL processes, and database management. I have a keen eye for detail
-                            and a deep understanding of how to build scalable
-                            systems that maximize both speed and accuracy.</div>
-                        <div class="location-about"></div>
-                    </div>
-                    <div class="item-data">
-                        <div class="title-about"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
-                                data-name="Layer 1" viewBox="0 0 24 24" width="30" height="27" fill="purple">
-                                <title>03-Diagram</title>
-                                <path d="M3,21.976a1,1,0,0,1-1-1V0H0V20.976a3,3,0,0,0,3,3H24v-2Z" />
-                                <rect x="5" y="12" width="2" height="7" />
-                                <rect x="10" y="10" width="2" height="9" />
-                                <rect x="15" y="13" width="2" height="6" />
-                                <rect x="20" y="9" width="2" height="10" />
-                                <polygon
-                                    points="11 4.414 16 9.414 23.707 1.707 22.293 0.293 16 6.586 11 1.586 5.293 7.293 6.707 8.707 11 4.414" />
-                            </svg>
-                            Data Analytics</div>
-                        <div class="subtitle-about">I also have knowledge as a Data Analyst. I specialize in
-                            transforming data into insightful visualizations using Power BI. I leverage its
-                            powerful analytics tools to create dynamic dashboards and reports that help organizations
-                            make data-driven decisions
-                            efficiently and effectively.</div>
-                        <div class="location-about"></div>
-                    </div>
-                </div>
-                <div class="what-i-do-right">
-                    <h3>
-                        <br>
-                    </h3>
-                    <div class="item-data">
-                        <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1080 1080"
-                                xml:space="preserve" width="30" height="27">
-                                <desc>Created with Fabric.js 5.2.4</desc>
-                                <defs>
-                                </defs>
-                                <g transform="matrix(1 0 0 1 540 540)" id="9c904d25-e74f-42ad-9fd7-c39926e9213d">
-                                    <rect
-                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;"
-                                        vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0" width="1080"
-                                        height="1080" />
-                                </g>
-                                <g transform="matrix(1 0 0 1 540 540)" id="ca9a6f41-0b00-41cb-ab64-b33a157bc302">
-                                </g>
-                                <g transform="matrix(24 0 0 24 540 540)">
-                                    <path
-                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(38,159,255); fill-rule: nonzero; opacity: 1;"
-                                        transform=" translate(-22.5, -21)"
-                                        d="M 18.3594 41 L 15.3125 40.0625 C 15.1562 40.0104 15.026 39.9062 14.9219 39.75 C 14.8698 39.6458 14.8438 39.4896 14.8438 39.2812 L 25.8594 1.46875 C 25.9115 1.3125 26.0156 1.18229 26.1719 1.07812 C 26.3281 0.973958 26.4844 0.947917 26.6406 1 L 29.6875 1.9375 C 29.8438 1.9375 29.9479 2.01562 30 2.17188 C 30.1042 2.32812 30.1562 2.51042 30.1562 2.71875 L 19.1406 40.5312 C 19.0885 40.6875 18.9844 40.8177 18.8281 40.9219 C 18.6719 41.026 18.5156 41.0521 18.3594 41 Z M 11.875 31.5469 L 13.9844 29.2812 C 14.0885 29.125 14.1406 28.9688 14.1406 28.8125 C 14.1406 28.6042 14.0625 28.4479 13.9062 28.3438 L 5.625 21 L 13.9062 13.6562 C 14.0625 13.5521 14.1406 13.4219 14.1406 13.2656 C 14.1406 13.0573 14.0885 12.875 13.9844 12.7188 L 11.875 10.4531 C 11.7188 10.349 11.5625 10.2969 11.4062 10.2969 C 11.25 10.2969 11.0938 10.349 10.9375 10.4531 L 0.234375 20.5312 C 0.078125 20.6875 0 20.8438 0 21 C 0 21.1562 0.078125 21.3125 0.234375 21.4688 L 10.9375 31.5469 C 11.0938 31.651 11.25 31.7031 11.4062 31.7031 C 11.5625 31.7031 11.7188 31.651 11.875 31.5469 Z M 34.0625 31.5469 L 44.7656 21.4688 C 44.9219 21.3125 45 21.1562 45 21 C 45 20.8438 44.9219 20.6875 44.7656 20.5312 L 34.0625 10.4531 C 33.9062 10.349 33.75 10.2969 33.5938 10.2969 C 33.4375 10.2969 33.2812 10.349 33.125 10.4531 L 31.0156 12.7188 C 30.9115 12.875 30.8594 13.0573 30.8594 13.2656 C 30.8594 13.4219 30.9375 13.5521 31.0938 13.6562 L 39.375 21 L 31.0938 28.3438 C 30.9375 28.4479 30.8594 28.6042 30.8594 28.8125 C 30.8594 28.9688 30.9115 29.125 31.0156 29.2812 L 33.125 31.5469 C 33.2812 31.651 33.4375 31.7031 33.5938 31.7031 C 33.75 31.7031 33.9062 31.651 34.0625 31.5469 Z"
-                                        stroke-linecap="round" />
-                                </g>
-                            </svg> Web Development</div>
-                        <div class="subtitle-about">In addition to my data engineering skills, I am an enthusiastic web
-                            developer with expertise in JavaScript, HTML, and
-                            CSS. I enjoy creating user-friendly web interfaces and combining backend knowledge with
-                            front-end technologies to build
-                            efficient, integrated solutions.</div>
-                        <div class="location-about"></div>
-                    </div>
-                    <div class="item-data">
-                        <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30"
-                                height="27" fill="fuchsia">
-                                <g id="_01_align_center" data-name="01 align center">
-                                    <path
-                                        d="M21,0H3A3,3,0,0,0,0,3V24H18.35c2.206-2.207,3.443-3.444,5.65-5.65V3A3,3,0,0,0,21,0ZM2,3A1,1,0,0,1,3,2H21a1,1,0,0,1,1,1V16H16v6H2ZM18,21.521V18h3.521Z" />
-                                    <path
-                                        d="M6.5,5.007,4.146,11.188H5.484L6,9.824H8.049l.514,1.363H9.9L7.566,5ZM6.48,8.574l.551-1.447.546,1.447Z" />
-                                    <rect x="11.156" y="5.062" width="1.25" height="6.069" />
-                                </g>
-                            </svg>
-                            Artificial Intelligence</div>
-                        <div class="subtitle-about">
-                            I am passionate about Artificial Intelligence and its potential to revolutionize industries.
-                            I enjoy exploring machine
-                            learning algorithms and AI-driven solutions, constantly seeking to expand my knowledge in
-                            this cutting-edge field and
-                            apply it to real-world challenges.</div>
-                        <div class="location-about"></div>
-                    </div>
-                </div>
-            </div>
+-->
+                    <a href="#contact" class="button">Contact Me</a>
 
-            <div class="scroller" data-speed="fast">
-                <div class="tech-img">
-                    <ul class="tag-list scroller__inner">
-                        <li><img src="icons\tech-icons\html-5.png" alt="HTML"></li>
-                        <li><img src="icons\tech-icons\css-3.png" alt="CSS"></li>
-                        <li><img src="icons\tech-icons\js.png" alt="JS"></li>
-                        <li><img src="icons\tech-icons\sql-server.png" alt="SQL"></li>
-                        <li><img src="icons\tech-icons\python.png" alt="Python"></li>
-                        <li><img src="icons\tech-icons\commit-git.png" alt="GIT"></li>
-                        <li><img src="icons\tech-icons\google.png" alt="Google"></li>
-                        <!-- <li><img src="icons\tech-icons\azure.png" alt="Azure"></li>
-                        <li><img src="icons\tech-icons\aws.png" alt="AWS"></li> 
-                        <li><img src="icons\tech-icons\docker.png" alt="Docker"></li> -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ***************************************************************** -->
-    <!-- Section Resume Content -->
-    <!-- ***************************************************************** -->
-    <section class="resume-content" id="resume-content">
-        <!-- Contenido principal -->
-        <div class="content">
-            <h2>Resume</h2>
-            <div class="section-resume">
-                <div class="education">
-                    <h3>
-                        <!-- Icono de educación -->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512"
-                            style="enable-background:new 0 0 512 512;" xml:space="preserve" width="24" height="24"
-                            fill="royalblue">
-                            <path
-                                d="M470.549,111.573L313.237,36.629c-34.628-20.684-77.728-21.051-112.704-0.96L41.451,111.573  c-0.597,0.299-1.216,0.619-1.792,0.96c-37.752,21.586-50.858,69.689-29.272,107.441c7.317,12.798,18.08,23.284,31.064,30.266  l43.883,20.907V375.68c0.026,46.743,30.441,88.039,75.072,101.931c31.059,8.985,63.264,13.384,95.595,13.056  c32.326,0.362,64.531-4,95.595-12.949c44.631-13.891,75.046-55.188,75.072-101.931V271.104l42.667-20.395v175.957  c0,11.782,9.551,21.333,21.333,21.333c11.782,0,21.333-9.551,21.333-21.333v-256C512.143,145.615,492.363,122.473,470.549,111.573z   M384,375.787c0.011,27.959-18.129,52.69-44.8,61.077c-27.046,7.728-55.073,11.479-83.2,11.136  c-28.127,0.343-56.154-3.408-83.2-11.136c-26.671-8.388-44.811-33.118-44.8-61.077v-84.309l70.763,33.707  c17.46,10.368,37.401,15.816,57.707,15.765c19.328,0.137,38.331-4.98,54.976-14.805L384,291.477V375.787z M452.267,211.733  l-160.896,76.8c-22.434,13.063-50.241,12.693-72.32-0.96l-157.419-74.88c-17.547-9.462-24.101-31.357-14.639-48.903  c3.2-5.934,7.998-10.853,13.85-14.201l159.893-76.373c22.441-13.034,50.233-12.665,72.32,0.96l157.312,74.944  c11.569,6.424,18.807,18.555,18.965,31.787C469.354,193.441,462.9,205.097,452.267,211.733L452.267,211.733z" />
-                        </svg>
-                        Education
-                    </h3>
-                    <div class="item">
-                        <div class="location">
-                            2023 - On going <br></div>
-                        <div class="title">Systems Engineering</div>
-                        <div class="subtitle">Merchant Marine University (UdeMM)</div>
-                        <div class="location">
-                            Faculty of Engineering <br>
-                            Buenos Aires, Argentina</div>
-                    </div>
-                    <div class="item">
-                        <div class="location">2016 - On pause <br>
-                        </div>
-                        <div class="title">Biomedical Engineering</div>
-                        <div class="subtitle">National University of Cordoba (UNC)</div>
-                        <div class="location">Faculty of Exact Physical and Natural Sciences
-                            <br>Córdoba, Argentina
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="location">
-                            Oct 2023- Feb 2024 <br></div>
-                        <div class="title">DevOps</div>
-                        <div class="subtitle">Mundos E (Business schools in Córdoba)</div>
-                        <div class="location">Córdoba, Argentina</div>
-                    </div>
-                </div>
-                <div class="experience">
-                    <h3>
-                        <!-- Icono de experiencia -->
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
-                            width="24" height="24" fill="royalblue">
-                            <path
-                                d="M21,4h-3V2c0-1.1-.9-2-2-2H8c-1.1,0-2,.9-2,2v2H3c-1.65,0-3,1.35-3,3V24H24V7c0-1.65-1.35-3-3-3ZM8,2h8v2H8V2Zm14,20H2V7c0-.55,.45-1,1-1H21c.55,0,1,.45,1,1v15Z" />
-                        </svg>
-
-                        Experience
-                    </h3>
-                    <div class="item">
-                        <div class="location">
-                            2022 - Present <br></div>
-                        <div class="title">SSr. Data Engineer</div>
-                        <div class="subtitle">Accenture Argentina</div>
-                        <div class="location">
-                            Google Cloud Platform: Cloud DataFlow, BigQuery, Cloud Composer (Airflow),
-                            Cloud Data Fusion, Cloud Pub/Sub, Cloud Function, Cloud Storage <br>
-                            PostgreSQL <br>
-                            Git. GitHub <br></div>
-                    </div>
-                    <div class="item">
-                        <div class="location">
-                            2021 - 2022 <br></div>
-                        <div class="title">Jr. Data Engineer</div>
-                        <div class="subtitle">Quales Group</div>
-                        <div class="location">
-                            ETL Tool: SSIS <br>
-                            SQL Server, BigQuery <br>
-                            Data Viz: Power BI, Tableau <br>
-                        </div>
-                    </div>
-                    <!-- <div class="item">
-                        <div class="title">Jr. Web Developer</div>
-                        <div class="subtitle">Creative Gigs</div>
-                        <div class="location">2014 - 2015</div>
-                    </div> -->
-                </div>
-            </div>
-            <!-- <div class="certifications">
-                <h3>
-                    What am I certified in!
-                </h3>
-            </div>
-            <div class="certifications-img">
-                <img src="icons\tech-icons\digital_leader.png" background="none" alt="DigitalLeader">
-                <img src="icons\tech-icons\dataengineer.png" background="#FFFFFF " alt="DataEngineer">
-            </div> -->
-        </div>
-    </section>
-
-    <!-- ***************************************************************** -->
-    <!-- Section Work -->
-    <!-- ***************************************************************** -->
-    <section class="works" id="works">
-        <!-- Contenido principal -->
-        <div class="work-content">
-            <h2>Portfolio </h2>
-            <p> (Working on it! Come back soon) <br> <br>
-                Hey, welcome to my Portfolio! <br>
-                <br>
-                Here you'll find a variety of projects I've worked on, covering everything from building data pipelines
-                to optimizing workflows. I'm always looking to learn and improve. Take a look around and feel free to
-                reach out if you have any
-                questions!
-            </p>
-            <div class="section-work">
-                <div class="work" id="work">
-                    <div class="section-work">
-                        <div class="work-portfolio">
-                            <!-- <h3>
-                            </h3> -->
-                            <div class="item-work">
-                                <div class="title-work"> <img src="icons\works\gato.png" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
-                                        alt="dinoData">
-                                    <div class="location-work"><br>Data Engineering Projects
-                                    </div>Google Cloud Platform
-                                </div>
+                    <div class="section-about">
+                        <div class="about-me">
+                            <h3>
+                                What I do!
+                            </h3>
+                            <div class="item-data">
+                                <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                        data-name="Layer 1" viewBox="0 0 24 24" width="30" height="27" fill="orange">
+                                        <path
+                                            d="M6.163,21.814c-2.605-.43-4.163-1.514-4.163-2.314v-2.035c.741,.456,1.668,.833,2.76,1.102,1.246,.333,1.749-1.649,.479-1.941-2.127-.525-3.24-1.466-3.24-2.125v-2.041c1.535,.954,3.835,1.541,6.5,1.541,4.846,0,8.5-1.935,8.5-4.5V4.5C17,1.935,13.346,0,8.5,0S0,1.935,0,4.5v15c0,2.02,2.292,3.703,5.837,4.288,1.27,.232,1.613-1.781,.325-1.974Zm2.337-9.814c-3.968,0-6.5-1.48-6.5-2.5v-2.041c1.535,.954,3.835,1.541,6.5,1.541s4.965-.588,6.5-1.541v2.041c0,1.02-2.532,2.5-6.5,2.5Zm0-10c3.968,0,6.5,1.48,6.5,2.5s-2.532,2.5-6.5,2.5-6.5-1.48-6.5-2.5,2.532-2.5,6.5-2.5Zm4.471,18.974c-.19,1.174-1.214,2.026-2.434,2.026-.663,0-1.299-.195-1.837-.551-.388-.257-.448-.802-.119-1.13,.236-.235,.602-.283,.887-.111,.316,.191,.688,.297,1.068,.297,1.4-.007,1.287-1.552,.279-1.752-.914-.37-1.749-.779-1.752-.779-.691-.484-1.026-1.23-.921-2.047,.111-.844,.674-1.532,1.469-1.794,.838-.277,1.601-.076,2.15,.203,.405,.205,.518,.732,.24,1.092-.203,.263-.558,.357-.862,.224-.305-.134-.709-.226-1.136-.088-.825,.25-.476,1.11-.082,1.192,.282,.128,.805,.368,1.364,.595,1.459,.591,1.827,1.743,1.683,2.625Zm11.029,1.23h0c0,.442-.358,.8-.8,.8h-2.133c-.442,0-.8-.358-.8-.8v-6.401c0-.442,.358-.8,.8-.8h0c.442,0,.8,.358,.8,.8v5.601s.577,0,1.331,0c.442,0,.802,.358,.802,.8Zm-5.267-.598c.165-.334,.267-.705,.267-1.102v-2.944c0-1.402-1.147-2.582-2.548-2.556-1.358,.026-2.452,1.135-2.452,2.5v2.917c0,1.23,.856,2.319,2.065,2.543,.564,.104,1.084-.002,1.537-.226l.433,.433c.312,.312,.819,.312,1.131,0,.312-.312,.312-.819,0-1.131l-.433-.433Zm-1.333-1.102c0,.496-.404,.9-.9,.9s-.9-.404-.9-.9v-3c0-.496,.404-.9,.9-.9s.9,.404,.9,.9v3Z" />
+                                    </svg> Data Engineering</div>
+                                <div class="subtitle-about">With a solid foundation in data engineering, my expertise
+                                    spans
+                                    across data pipelines, ETL processes, and database management. I have a keen eye for
+                                    detail
+                                    and a deep understanding of how to build scalable
+                                    systems that maximize both speed and accuracy.</div>
+                                <div class="location-about"></div>
                             </div>
-                            <div class="item-work">
-                                <div class="title-work"> <img src="icons\works\zorro-google.png" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
-                                        alt="dinoData">
-                                    <div class="location-work"><br>Blogs
-                                    </div>Blogs | Google Cloud Platform
-                                </div>
+                            <div class="item-data">
+                                <div class="title-about"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                        data-name="Layer 1" viewBox="0 0 24 24" width="30" height="27" fill="purple">
+                                        <title>03-Diagram</title>
+                                        <path d="M3,21.976a1,1,0,0,1-1-1V0H0V20.976a3,3,0,0,0,3,3H24v-2Z" />
+                                        <rect x="5" y="12" width="2" height="7" />
+                                        <rect x="10" y="10" width="2" height="9" />
+                                        <rect x="15" y="13" width="2" height="6" />
+                                        <rect x="20" y="9" width="2" height="10" />
+                                        <polygon
+                                            points="11 4.414 16 9.414 23.707 1.707 22.293 0.293 16 6.586 11 1.586 5.293 7.293 6.707 8.707 11 4.414" />
+                                    </svg>
+                                    Data Analytics</div>
+                                <div class="subtitle-about">I also have knowledge as a Data Analyst. I specialize in
+                                    transforming data into insightful visualizations using Power BI. I leverage its
+                                    powerful analytics tools to create dynamic dashboards and reports that help
+                                    organizations
+                                    make data-driven decisions
+                                    efficiently and effectively.</div>
+                                <div class="location-about"></div>
                             </div>
-                            <!-- <div class="item-work">
-                                <div class="title-work"> <img src="icons\works\astroman.webp" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:350px;gap:0"
-                                        alt="dinoData">
-                                    <div class="location-work"><br>Blogs
-                                    </div>Blogs | Google Cloud Platform
-                                </div> 
-                        </div>-->
                         </div>
-                        <div class="what-i-did">
+                        <div class="what-i-do-right">
                             <h3>
                                 <br>
                             </h3>
-                            <div class="item-work">
-                                <div class="title-work"> <img src="icons\works\racoon.png" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
-                                        alt="dinoData">
-                                    <div class="location-work"><br>Playground
-                                    </div>Play and Learn about SQL
-                                </div>
+                            <div class="item-data">
+                                <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1080 1080"
+                                        xml:space="preserve" width="30" height="27">
+                                        <desc>Created with Fabric.js 5.2.4</desc>
+                                        <defs>
+                                        </defs>
+                                        <g transform="matrix(1 0 0 1 540 540)"
+                                            id="9c904d25-e74f-42ad-9fd7-c39926e9213d">
+                                            <rect
+                                                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;"
+                                                vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0"
+                                                width="1080" height="1080" />
+                                        </g>
+                                        <g transform="matrix(1 0 0 1 540 540)"
+                                            id="ca9a6f41-0b00-41cb-ab64-b33a157bc302">
+                                        </g>
+                                        <g transform="matrix(24 0 0 24 540 540)">
+                                            <path
+                                                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(38,159,255); fill-rule: nonzero; opacity: 1;"
+                                                transform=" translate(-22.5, -21)"
+                                                d="M 18.3594 41 L 15.3125 40.0625 C 15.1562 40.0104 15.026 39.9062 14.9219 39.75 C 14.8698 39.6458 14.8438 39.4896 14.8438 39.2812 L 25.8594 1.46875 C 25.9115 1.3125 26.0156 1.18229 26.1719 1.07812 C 26.3281 0.973958 26.4844 0.947917 26.6406 1 L 29.6875 1.9375 C 29.8438 1.9375 29.9479 2.01562 30 2.17188 C 30.1042 2.32812 30.1562 2.51042 30.1562 2.71875 L 19.1406 40.5312 C 19.0885 40.6875 18.9844 40.8177 18.8281 40.9219 C 18.6719 41.026 18.5156 41.0521 18.3594 41 Z M 11.875 31.5469 L 13.9844 29.2812 C 14.0885 29.125 14.1406 28.9688 14.1406 28.8125 C 14.1406 28.6042 14.0625 28.4479 13.9062 28.3438 L 5.625 21 L 13.9062 13.6562 C 14.0625 13.5521 14.1406 13.4219 14.1406 13.2656 C 14.1406 13.0573 14.0885 12.875 13.9844 12.7188 L 11.875 10.4531 C 11.7188 10.349 11.5625 10.2969 11.4062 10.2969 C 11.25 10.2969 11.0938 10.349 10.9375 10.4531 L 0.234375 20.5312 C 0.078125 20.6875 0 20.8438 0 21 C 0 21.1562 0.078125 21.3125 0.234375 21.4688 L 10.9375 31.5469 C 11.0938 31.651 11.25 31.7031 11.4062 31.7031 C 11.5625 31.7031 11.7188 31.651 11.875 31.5469 Z M 34.0625 31.5469 L 44.7656 21.4688 C 44.9219 21.3125 45 21.1562 45 21 C 45 20.8438 44.9219 20.6875 44.7656 20.5312 L 34.0625 10.4531 C 33.9062 10.349 33.75 10.2969 33.5938 10.2969 C 33.4375 10.2969 33.2812 10.349 33.125 10.4531 L 31.0156 12.7188 C 30.9115 12.875 30.8594 13.0573 30.8594 13.2656 C 30.8594 13.4219 30.9375 13.5521 31.0938 13.6562 L 39.375 21 L 31.0938 28.3438 C 30.9375 28.4479 30.8594 28.6042 30.8594 28.8125 C 30.8594 28.9688 30.9115 29.125 31.0156 29.2812 L 33.125 31.5469 C 33.2812 31.651 33.4375 31.7031 33.5938 31.7031 C 33.75 31.7031 33.9062 31.651 34.0625 31.5469 Z"
+                                                stroke-linecap="round" />
+                                        </g>
+                                    </svg> Web Development</div>
+                                <div class="subtitle-about">In addition to my data engineering skills, I am an
+                                    enthusiastic web
+                                    developer with expertise in JavaScript, HTML, and
+                                    CSS. I enjoy creating user-friendly web interfaces and combining backend knowledge
+                                    with
+                                    front-end technologies to build
+                                    efficient, integrated solutions.</div>
+                                <div class="location-about"></div>
                             </div>
-                            <div class="item-work">
-                                <div class="title-work"> <img src="icons\works\outer.png" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:100%;gap:0"
-                                        alt="dinoData">
-                                    <div class="location-work"><br>Google Cloud Digital Leader
-                                    </div>Prepare to certificate in the Cloud
-                                </div>
+                            <div class="item-data">
+                                <div class="title-about"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        width="30" height="27" fill="fuchsia">
+                                        <g id="_01_align_center" data-name="01 align center">
+                                            <path
+                                                d="M21,0H3A3,3,0,0,0,0,3V24H18.35c2.206-2.207,3.443-3.444,5.65-5.65V3A3,3,0,0,0,21,0ZM2,3A1,1,0,0,1,3,2H21a1,1,0,0,1,1,1V16H16v6H2ZM18,21.521V18h3.521Z" />
+                                            <path
+                                                d="M6.5,5.007,4.146,11.188H5.484L6,9.824H8.049l.514,1.363H9.9L7.566,5ZM6.48,8.574l.551-1.447.546,1.447Z" />
+                                            <rect x="11.156" y="5.062" width="1.25" height="6.069" />
+                                        </g>
+                                    </svg>
+                                    Artificial Intelligence</div>
+                                <div class="subtitle-about">
+                                    I am passionate about Artificial Intelligence and its potential to revolutionize
+                                    industries.
+                                    I enjoy exploring machine
+                                    learning algorithms and AI-driven solutions, constantly seeking to expand my
+                                    knowledge in
+                                    this cutting-edge field and
+                                    apply it to real-world challenges.</div>
+                                <div class="location-about"></div>
                             </div>
-                            <!-- <div class="item-work">
-                                <div class="title-work"> <img src="icons\works\dino.webp" background="none"
-                                        style="border-radius:5%;display:flex;flex-direction:row;justify-content:center;align-content:stretch;box-sizing:border-box;width:350px;gap:0"
-                                        alt="dinoData">
-                                    <div class="location-work"><br>Azure Services
-                                    </div>Projects in Azure -->
                         </div>
                     </div>
                 </div>
+
+
+                <!--===== SKILLS =====-->
+                <div class="skills">
+                    <h2 class="skills__title">Skills</h2>
+                    <div class="skills__items">
+                        <img src="icons/img/skills-html.svg" alt="image" class="skills__item">
+                        <img src="icons/img/skills-css.svg" alt="image" class="skills__item">
+                        <img src="icons/img/skills-javascript.svg" alt="image" class="skills__item">
+                        <img src="icons/img/skills-python.svg" alt="image" class="skills__item">
+                        <img src="icons/img/skills-git.svg" alt="image" class="skills__item">
+                        <img src="icons/img/skills-github.svg" alt="image" class="skills__item">
+                        <img src="icons/img/skills-google.svg" alt="image" class="skills__item">
+                        <img src="icons\tech-icons\aws-2.png" alt="image" class="skills__item">
+                        <img src="icons\tech-icons\sql-server.png" alt="image" class="skills__item">
+                        <img src="icons/img/skills-postgresql.svg" alt="image" class="skills__item">
+                    </div>
+
+                    <p class="skills__description">
+                        Visit the projects section to see the work done with the web technologies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Recent Projects</h2>
+
+            <div class="projects__container container grid">
+                <article class="projects__card">
+                    <a href="#" target="_blank" class="projects__image">
+                        <img src="icons\img\projects-1.jpg" alt="" class="projects__img">
+                    </a>
+                    <div class="projects__date">
+                        <h3 class="projects__name">Google Cloud Platform Project</h3>
+                        <p class="projects__description">
+                            Here you'll find a variety of projects I've worked on, covering everything from building
+                            data pipelines to optimizing workflows. I'm always looking to learn and improve. Take a look
+                            around and
+                            feel free to reach out if you have any questions!
+                        </p>
+                        <div class="projects__skills">
+                            <img src="icons\img\skills-google.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-python.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-google-bigquery.svg" alt="image" class="projects__skill">
+                        </div>
+
+                        <a href="#" target="_blank" class="projects__button">
+                            <i class="ri-link"></i>
+                            <span>Visit Project</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="projects__card">
+                    <a href="#" target="_blank" class="projects__image">
+                        <img src="icons\img\projects-2.jpg" alt="" class="projects__img">
+                    </a>
+                    <div class="projects__date">
+                        <h3 class="projects__name">Apache Airflow Project</h3>
+                        <p class="projects__description">
+                            Here you'll find a variety of projects I've worked on, covering everything from building
+                            data pipelines to optimizing workflows. I'm always looking to learn and improve. Take a look
+                            around and
+                            feel free to reach out if you have any questions!
+                        </p>
+                        <div class="projects__skills">
+                            <img src="icons\img\skills-google.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-python.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-google-bigquery.svg" alt="image" class="projects__skill">
+                        </div>
+
+                        <a href="#" target="_blank" class="projects__button">
+                            <i class="ri-link"></i>
+                            <span>Visit Project</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="projects__card">
+                    <a href="#" target="_blank" class="projects__image">
+                        <img src="icons\img\projects-3.jpg" alt="" class="projects__img">
+                    </a>
+                    <div class="projects__date">
+                        <h3 class="projects__name">Learn SQL</h3>
+                        <p class="projects__description">
+                            Here you'll find a variety of projects I've worked on, covering everything from building
+                            data pipelines to optimizing workflows. I'm always looking to learn and improve. Take a look
+                            around and
+                            feel free to reach out if you have any questions!
+                        </p>
+                        <div class="projects__skills">
+                            <img src="icons\img\skills-google.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-python.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-google-bigquery.svg" alt="image" class="projects__skill">
+                        </div>
+
+                        <a href="#" target="_blank" class="projects__button">
+                            <i class="ri-link"></i>
+                            <span>Visit Project</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="projects__card">
+                    <a href="#" target="_blank" class="projects__image">
+                        <img src="icons\img\projects-4.jpg" alt="" class="projects__img">
+                    </a>
+                    <div class="projects__date">
+                        <h3 class="projects__name">Learn playing</h3>
+                        <p class="projects__description">
+                            Here you'll find a variety of projects I've worked on, covering everything from building
+                            data pipelines to optimizing workflows. I'm always looking to learn and improve. Take a look
+                            around and
+                            feel free to reach out if you have any questions!
+                        </p>
+                        <div class="projects__skills">
+                            <img src="icons\img\skills-google.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-python.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-google-bigquery.svg" alt="image" class="projects__skill">
+                        </div>
+
+                        <a href="#" target="_blank" class="projects__button">
+                            <i class="ri-link"></i>
+                            <span>Visit Project</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="projects__card">
+                    <a href="#" target="_blank" class="projects__image">
+                        <img src="icons\img\projects-5.jpg" alt="" class="projects__img">
+                    </a>
+                    <div class="projects__date">
+                        <h3 class="projects__name">HTML CSS JS Project</h3>
+                        <p class="projects__description">
+                            Here you'll find a variety of projects I've worked on, covering everything from building
+                            data pipelines to optimizing workflows. I'm always looking to learn and improve. Take a look
+                            around and
+                            feel free to reach out if you have any questions!
+                        </p>
+                        <div class="projects__skills">
+                            <img src="icons\img\skills-html.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-css.svg" alt="image" class="projects__skill">
+                            <img src="icons\img\skills-javascript.svg" alt="image" class="projects__skill">
+                        </div>
+
+                        <a href="#" target="_blank" class="projects__button">
+                            <i class="ri-link"></i>
+                            <span>Visit Project</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== EXPERIENCE ====================-->
+        <section class="experience section" id="experience">
+            <h2 class="section__title">Experience</h2>
+
+            <div class="experience__container container grid">
+
+                <article class="experience__card">
+                    <h2 class="experience__company">Accenture Argentina</h2>
+                    <div class="experience__data">
+                        <h3 class="experience__profession">Data Engineering, Management & Governance</h3>
+                        <span class="experience__date">Sep 2022 - Present</span>
+                        <p class="experience__description">
+                            Google Cloud Platform: Cloud DataFlow, BigQuery, Cloud Composer (Airflow), Cloud Data
+                            Fusion, Cloud Pub/Sub, Cloud
+                            Function, Cloud Storage <br>
+                            PostgreSQL <br>
+                            Git. GitHub
+                        </p>
+                    </div>
+                </article>
+
+                <article class="experience__card">
+                    <h2 class="experience__company">Quales Group</h2>
+                    <div class="experience__data">
+                        <h3 class="experience__profession">Data Engineer</h3>
+                        <span class="experience__date">Sep 2021 - Sep 2022</span>
+                        <p class="experience__description">
+                            ETL Tool: SSIS <br>
+                            SQL Server, BigQuery <br>
+                            Data Viz: Power BI, Tableau
+                        </p>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+
+        <!--==================== EDUCATION ====================-->
+        <section class="education section" id="education">
+            <h2 class="section__title">Education</h2>
+
+            <div class="education__container container grid">
+
+                <article class="education__card">
+                    <h2 class="education__company">Systems Engineering</h2>
+                    <div class="education__data">
+                        <h3 class="education__profession">Merchant Marine University (UdeMM)</h3>
+                        <span class="education__date">2023 - On going</span>
+                        <p class="education__description">
+                            Faculty of Engineering <br>
+                            Buenos Aires, Argentina
+                        </p>
+                    </div>
+                </article>
+
+                <article class="education__card">
+                    <h2 class="education__company">Biomedical Engineering</h2>
+                    <div class="education__data">
+                        <h3 class="education__profession">National University of Cordoba (UNC)</h3>
+                        <span class="education__date">2016 - On pause</span>
+                        <p class="education__description">
+                            Faculty of Exact Physical and Natural Sciences <br>
+                            Córdoba, Argentina
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+
+            <div class="contact__container container grid">
+                <form action="" class="contact__form grid" id="contact-form">
+                    <div class="contact__group grid">
+                        <input type="text" name="user_name" placeholder="Names" required class="contact__input">
+                        <input type="email" name="user_email" placeholder="Email" required class="contact__input">
+                    </div>
+
+                    <textarea name="user_message" placeholder="Message" class="contact__input contact__area"></textarea>
+
+                    <button type="submit" class="button contact__button">Send Message</button>
+
+                    <p class="contact__message" id="contact-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <a href="#" class="footer__logo">Ebika Dev</a>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#experience" class="footer__link">Experience</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <a href="https://www.instagram.com/ebika.dev/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://github.com/katerinneramos" target="_blank" class="footer__social-link">
+                    <i class="ri-github-line"></i>
+                </a>
+                <a href="https://github.com/katerinneramos" target="_blank" class="footer__social-link">
+                    <i class="ri-tiktok-line"></i>
+                </a>
             </div>
         </div>
-        </div>
-        </div>
-    </section>
-    <!-- ****************************************************************-->
-    <!-- Sección de Contacto -->
-    <!-- ****************************************************************-->
-    <section class="contact" id="contact">
-        <div id="contact" class="contact-content">
-            <h2>Contacto</h2>
-            <p>Si tienes alguna pregunta o quieres ponerte en contacto conmigo, no dudes en escribir.</p>
-            <form>
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+        <span class="footer__copy">
+            &#169; All Rights Reserved By Ebika Dev - Katerinne Ramos
+        </span>
+    </footer>
 
-    </section>
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
 
-    <!-- typed js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="scrollreveal.min.js"></script>
 
-    <!-- custom js -->
-    <script src="script.js"></script>
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="main.js"></script>
 </body>
 
 </html>
