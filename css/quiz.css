@@ -40,7 +40,7 @@ button {
     margin-top: 0.9em;
 }
 
-.display-container {
+#display-container {
     background-color: #fff;
     padding: 3.1em 1.8em;
     width: 80%;
@@ -85,7 +85,7 @@ button {
     text-align: left;
     outline: none;
     background: transparent;
-    border: 1px solid #c0bfd2;
+    border: 1px solid #bab9ca;
     border-radius: 0.3em;
 }
 
@@ -94,7 +94,7 @@ button {
     cursor: not-allowed;
 }
 
-.next-button {
+#next-button {
     font-size: 1em;
     margin-top: 1.5em;
     background-color: #1d2630;
@@ -121,7 +121,7 @@ button {
     border-color: #689f38;
 }
 
-.user-score {
+#user-score {
     font-size: 1.5em;
     color: #fff;
 }
