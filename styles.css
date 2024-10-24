@@ -63,7 +63,7 @@
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.25rem;
         --normal-font-size: 1rem;
-        --small-font-size: .875rem;
+        --small-font-size: .9rem;
         --smaller-font-size: .813rem;
     }
 }
@@ -185,6 +185,14 @@ img {
 /* Active link */
 
 .active-link {
+    background: var(--first-color);
+}
+
+.nav__link:hover {
+    background: var(--first-color);
+}
+
+.nav__link:active {
     background: var(--first-color);
 }
 
@@ -383,7 +391,7 @@ img {
     background-color: #f7f8fa;
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     border-left: 5px solid transparent;
 }
 
@@ -419,9 +427,9 @@ img {
 }
 
 .item-data .subtitle-about {
-    font-size: 13px;
+    font-size: 15px;
     color: #888888;
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
     margin-left: 35px;
     display: flex;
     align-items: left;
@@ -511,7 +519,8 @@ img {
 }
 
 .projects__description {
-    color: var(--text-color);
+    color: #888888;
+    /* var(--text-color);*/
     margin-bottom: 1.5rem;
 }
 
