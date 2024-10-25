@@ -13,7 +13,7 @@ let scoreCount = 0;
 let count = 31;
 let countdown;
 
-//10 questions with options and answer array
+//20 questions with options and answer array
 const quizArray = [
     {
         id: "0",
@@ -115,6 +115,108 @@ const quizArray = [
             "Actualiza registros en una tabla.",
         ],
         correct: "Une filas de dos o más tablas basándose en una condición relacionada.",
+    },
+    {
+        id: "10",
+        question: "Dado el siguiente código: SELECT * FROM empleados WHERE salario > 3000;, ¿qué hace esta consulta?",
+        options: [
+            "Selecciona todos los registros de la tabla empleados con un salario mayor a 3000.",
+            "Actualiza todos los registros de la tabla empleados con un salario mayor a 3000.",
+            "Elimina todos los registros de la tabla empleados con un salario mayor a 3000.",
+            "Selecciona los primeros 3000 registros de la tabla empleados.",
+        ],
+        correct: "Selecciona todos los registros de la tabla empleados con un salario mayor a 3000.",
+    }, {
+        id: "11",
+        question: "¿Cuál sería el resultado de ejecutar: SELECT COUNT(*) FROM productos;?",
+        options: [
+            "Devuelve la suma de los valores en la columna productos.",
+            "Devuelve el número total de columnas en la tabla productos.",
+            "Devuelve el número total de filas en la tabla productos.",
+            "Devuelve todos los registros en la tabla productos.",
+        ],
+        correct: "Devuelve el número total de filas en la tabla productos.",
+    }, {
+        id: "12",
+        question: "Dada una tabla empleados con columnas nombre y salario, ¿cuál es la forma correcta de incrementar el salario en un 5% solo para empleados con un salario menor a 3000?",
+        options: [
+            "UPDATE empleados SET salario = salario * 1.05;",
+            "UPDATE empleados SET salario = salario + 3000 WHERE salario < 3000;",
+            "UPDATE empleados SET salario = salario * 1.05 WHERE salario < 3000;",
+            "ALTER empleados SET salario = salario * 1.05 WHERE salario < 3000;",
+        ],
+        correct: "UPDATE empleados SET salario = salario * 1.05 WHERE salario < 3000;",
+    }, {
+        id: "13",
+        question: "¿Cuál es la forma correcta de insertar un registro en una tabla llamada clientes?",
+        options: [
+            "INSERT INTO clientes (nombre, edad) VALUES ('Juan', 30);",
+            "ADD TO clientes (nombre, edad) VALUES ('Juan', 30);",
+            "INSERT clientes VALUES ('Juan', 30);",
+            "INSERT INTO clientes VALUES (nombre='Juan', edad=30);",
+        ],
+        correct: "INSERT INTO clientes (nombre, edad) VALUES ('Juan', 30);",
+    }, {
+        id: "14",
+        question: "Dada la tabla ventas con las columnas fecha y monto, ¿cómo se calcularía el total de ventas en un año específico?",
+        options: [
+            "SELECT SUM(monto) FROM ventas WHERE fecha = '2024';",
+            "SELECT SUM(monto) FROM ventas WHERE YEAR(fecha) = 2024;",
+            "SELECT TOTAL(monto) FROM ventas WHERE fecha = '2024';",
+            "SELECT COUNT(monto) FROM ventas WHERE fecha = '2024';",
+        ],
+        correct: "SELECT SUM(monto) FROM ventas WHERE YEAR(fecha) = 2024;",
+    }, {
+        id: "15",
+        question: "¿Cuál de las siguientes consultas eliminaría todos los registros de la tabla clientes?",
+        options: [
+            "DELETE * FROM clientes;",
+            "DELETE FROM clientes;",
+            "DROP clientes;",
+            "REMOVE FROM clientes;",
+        ],
+        correct: "DELETE FROM clientes;",
+    }, {
+        id: "16",
+        question: "¿Cómo se cambiaría el valor de la columna precio en la tabla productos para que sea un 10% mayor?",
+        options: [
+            "UPDATE productos SET precio = precio + 10;",
+            "UPDATE productos SET precio = precio * 1.1;",
+            "SET productos.precio = productos.precio * 1.1;",
+            "ALTER productos SET precio = precio * 1.1;",
+        ],
+        correct: "UPDATE productos SET precio = precio * 1.1;"
+    }, {
+        id: "17",
+        question: "¿Qué comando se usa para crear una nueva tabla en una base de datos?",
+        options: [
+            "CREATE NEW TABLE",
+            "INSERT TABLE",
+            "ADD TABLE",
+            "CREATE TABLE",
+        ],
+        correct: "CREATE TABLE",
+    },
+    {
+        id: "18",
+        question: "¿Cuál es la manera correcta de seleccionar registros únicos de la columna ciudad en la tabla clientes?",
+        options: [
+            "SELECT ALL ciudad FROM clientes;",
+            "SELECT DIFFERENT ciudad FROM clientes;",
+            "SELECT UNIQUE ciudad FROM clientes;",
+            "SELECT DISTINCT ciudad FROM clientes;",
+        ],
+        correct: "SELECT DISTINCT ciudad FROM clientes;",
+    }, {
+        id: "19",
+        question: "Si quieres devolver los 5 registros con los precios más altos de la tabla productos, ¿cuál sería la consulta?",
+        options: [
+            "SELECT * FROM productos ORDER BY precio ASC LIMIT 5;",
+            "SELECT * FROM productos WHERE precio TOP 5;",
+            "SELECT TOP 5 * FROM productos ORDER BY precio DESC;",
+            "SELECT * FROM productos ORDER BY precio DESC LIMIT 5;",
+        ],
+        correct: "SELECT * FROM productos ORDER BY precio DESC LIMIT 5;",
     },
 ];
 

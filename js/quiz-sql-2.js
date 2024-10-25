@@ -10,113 +10,214 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-let count = 31;
+let count = 61;
 let countdown;
 
-//10 questions with options and answer array
+//20 questions with options and answer array
 const quizArray = [
     {
         id: "0",
-        question: "Dado el siguiente código: SELECT * FROM empleados WHERE salario > 3000;, ¿qué hace esta consulta?",
+        question: "¿Cuál es la función de la palabra clave 'FOREIGN KEY' en una base de datos relacional?",
         options: [
-            "Selecciona todos los registros de la tabla empleados con un salario mayor a 3000.",
-            "Actualiza todos los registros de la tabla empleados con un salario mayor a 3000.",
-            "Elimina todos los registros de la tabla empleados con un salario mayor a 3000.",
-            "Selecciona los primeros 3000 registros de la tabla empleados.",
+            "Definir una relación entre dos tablas.",
+            "Garantizar que todas las filas sean únicas en una tabla.",
+            "Mejorar el rendimiento de las consultas.",
+            "Eliminar duplicados en una consulta.",
         ],
-        correct: "Selecciona todos los registros de la tabla empleados con un salario mayor a 3000.",
+        correct: "Definir una relación entre dos tablas.",
     }, {
         id: "1",
-        question: "¿Cuál sería el resultado de ejecutar: SELECT COUNT(*) FROM productos;?",
+        question: "¿Cuál es la diferencia principal entre un 'INNER JOIN' y un 'LEFT JOIN'?",
         options: [
-            "Devuelve la suma de los valores en la columna productos.",
-            "Devuelve el número total de columnas en la tabla productos.",
-            "Devuelve el número total de filas en la tabla productos.",
-            "Devuelve todos los registros en la tabla productos.",
+            "El 'INNER JOIN' devuelve todas las filas de ambas tablas, mientras que el 'LEFT JOIN' devuelve solo las filas coincidentes.",
+            "El 'LEFT JOIN' devuelve todas las filas de la tabla de la derecha, mientras que el 'INNER JOIN' solo devuelve filas coincidentes.",
+            "El 'INNER JOIN' devuelve filas coincidentes de ambas tablas, mientras que el 'LEFT JOIN' devuelve todas las filas de la tabla de la izquierda y las filas coincidentes de la derecha.",
+            "El 'LEFT JOIN' devuelve filas no coincidentes, mientras que el 'INNER JOIN' no devuelve ninguna fila.",
         ],
-        correct: "Devuelve el número total de filas en la tabla productos.",
+        correct: "El 'INNER JOIN' devuelve filas coincidentes de ambas tablas, mientras que el 'LEFT JOIN' devuelve todas las filas de la tabla de la izquierda y las filas coincidentes de la derecha.",
     }, {
         id: "2",
-        question: "Dada una tabla empleados con columnas nombre y salario, ¿cuál es la forma correcta de incrementar el salario en un 5% solo para empleados con un salario menor a 3000?",
+        question: "¿Para qué se usa la cláusula 'HAVING' en una consulta SQL?",
         options: [
-            "UPDATE empleados SET salario = salario * 1.05;",
-            "UPDATE empleados SET salario = salario + 3000 WHERE salario < 3000;",
-            "UPDATE empleados SET salario = salario * 1.05 WHERE salario < 3000;",
-            "ALTER empleados SET salario = salario * 1.05 WHERE salario < 3000;",
+            "Filtrar filas individuales antes de la agrupación.",
+            "Filtrar el resultado después de usar funciones de agregación.",
+            "Cambiar el orden de los resultados de la consulta.",
+            "Eliminar filas duplicadas en la consulta.",
         ],
-        correct: "UPDATE empleados SET salario = salario * 1.05 WHERE salario < 3000;",
+        correct: "Filtrar el resultado después de usar funciones de agregación.",
     }, {
         id: "3",
-        question: "¿Cuál es la forma correcta de insertar un registro en una tabla llamada clientes?",
+        question: "¿Qué resultado devolverá la consulta 'SELECT COALESCE(NULL, 'a', 'b')'? ",
         options: [
-            "INSERT INTO clientes (nombre, edad) VALUES ('Juan', 30);",
-            "ADD TO clientes (nombre, edad) VALUES ('Juan', 30);",
-            "INSERT clientes VALUES ('Juan', 30);",
-            "INSERT INTO clientes VALUES (nombre='Juan', edad=30);",
+            "NULL",
+            "'a'",
+            "'b'",
+            "Error",
         ],
-        correct: "INSERT INTO clientes (nombre, edad) VALUES ('Juan', 30);",
+        correct: "'a'",
     }, {
         id: "4",
-        question: "Dada la tabla ventas con las columnas fecha y monto, ¿cómo se calcularía el total de ventas en un año específico?",
+        question: "¿Cuál es el propósito de la palabra clave 'INDEX' en SQL?",
         options: [
-            "SELECT SUM(monto) FROM ventas WHERE fecha = '2024';",
-            "SELECT SUM(monto) FROM ventas WHERE YEAR(fecha) = 2024;",
-            "SELECT TOTAL(monto) FROM ventas WHERE fecha = '2024';",
-            "SELECT COUNT(monto) FROM ventas WHERE fecha = '2024';",
+            "Crear un índice en una tabla para mejorar el rendimiento de las consultas.",
+            "Eliminar filas de una tabla.",
+            "Definir la estructura de una tabla.",
+            "Agrupar resultados en una consulta.",
         ],
-        correct: "SELECT SUM(monto) FROM ventas WHERE YEAR(fecha) = 2024;",
+        correct: "Crear un índice en una tabla para mejorar el rendimiento de las consultas.",
     }, {
         id: "5",
-        question: "¿Cuál de las siguientes consultas eliminaría todos los registros de la tabla clientes?",
+        question: "¿Cómo se eliminaría una columna de una tabla existente?",
         options: [
-            "DELETE * FROM clientes;",
-            "DELETE FROM clientes;",
-            "DROP clientes;",
-            "REMOVE FROM clientes;",
+            "DELETE COLUMN nombre_columna FROM tabla;",
+            "DROP nombre_columna FROM tabla;",
+            "ALTER TABLE tabla REMOVE COLUMN nombre_columna;",
+            "ALTER TABLE tabla DROP COLUMN nombre_columna;",
         ],
-        correct: "DELETE FROM clientes;",
+        correct: "ALTER TABLE tabla DROP COLUMN nombre_columna;",
     }, {
         id: "6",
-        question: "¿Cómo se cambiaría el valor de la columna precio en la tabla productos para que sea un 10% mayor?",
+        question: "¿Cuál es el resultado de la consulta 'SELECT COUNT(DISTINCT columna) FROM tabla;'?",
         options: [
-            "UPDATE productos SET precio = precio + 10;",
-            "UPDATE productos SET precio = precio * 1.1;",
-            "SET productos.precio = productos.precio * 1.1;",
-            "ALTER productos SET precio = precio * 1.1;",
+            "Devuelve el número total de filas en la tabla.",
+            "Devuelve el número de filas únicas para la columna especificada.",
+            "Devuelve el número de columnas en la tabla.",
+            "Devuelve el número de filas duplicadas en la columna especificada.",
         ],
-        correct: "UPDATE productos SET precio = precio * 1.1;"
+        correct: "Devuelve el número de filas únicas para la columna especificada.",
     }, {
         id: "7",
-        question: "¿Qué comando se usa para crear una nueva tabla en una base de datos?",
+        question: "¿Cuál es el propósito de la función 'PARTITION BY' en una función de ventana?",
         options: [
-            "CREATE NEW TABLE",
-            "INSERT TABLE",
-            "ADD TABLE",
-            "CREATE TABLE",
+            "Dividir el resultado en bloques de filas para aplicar una función de ventana.",
+            "Ordenar las filas de una tabla en bloques separados.",
+            "Eliminar filas duplicadas en una consulta.",
+            "Cambiar el orden de los resultados de la consulta.",
         ],
-        correct: "CREATE TABLE",
+        correct: "Dividir el resultado en bloques de filas para aplicar una función de ventana.",
     }, {
         id: "8",
-        question: "¿Cuál es la manera correcta de seleccionar registros únicos de la columna ciudad en la tabla clientes?",
+        question: "¿Qué sucede cuando se ejecuta un 'UPDATE' sin una cláusula 'WHERE'?",
         options: [
-            "SELECT ALL ciudad FROM clientes;",
-            "SELECT DIFFERENT ciudad FROM clientes;",
-            "SELECT UNIQUE ciudad FROM clientes;",
-            "SELECT DISTINCT ciudad FROM clientes;",
+            "Actualiza solo la primera fila de la tabla.",
+            "No realiza ningún cambio en la tabla.",
+            "Actualiza todas las filas de la tabla.",
+            "Devuelve un error de sintaxis.",
         ],
-        correct: "SELECT DISTINCT ciudad FROM clientes;",
+        correct: "Actualiza todas las filas de la tabla.",
     }, {
         id: "9",
-        question: "Si quieres devolver los 5 registros con los precios más altos de la tabla productos, ¿cuál sería la consulta?",
+        question: "¿Cuál es la forma correcta de realizar una inserción condicional que evita duplicados?",
         options: [
-            "SELECT * FROM productos ORDER BY precio ASC LIMIT 5;",
-            "SELECT * FROM productos WHERE precio TOP 5;",
-            "SELECT TOP 5 * FROM productos ORDER BY precio DESC;",
-            "SELECT * FROM productos ORDER BY precio DESC LIMIT 5;",
+            "INSERT INTO tabla (columna) VALUES (valor) ON DUPLICATE KEY UPDATE;",
+            "INSERT IGNORE INTO tabla (columna) VALUES (valor);",
+            "MERGE INTO tabla USING otra_tabla ON condicion;",
+            "INSERT INTO tabla (columna) VALUES (valor) WHERE NOT EXISTS (SELECT 1 FROM tabla WHERE columna = valor);",
         ],
-        correct: "SELECT * FROM productos ORDER BY precio DESC LIMIT 5;",
+        correct: "INSERT INTO tabla (columna) VALUES (valor) WHERE NOT EXISTS (SELECT 1 FROM tabla WHERE columna = valor);",
+    }, {
+        id: "10",
+        question: "¿Qué resultado se obtiene al ejecutar 'SELECT NULLIF(5, 5)'?",
+        options: [
+            "5",
+            "NULL",
+            "Error",
+            "0"
+        ],
+        correct: "NULL",
+    }, {
+        id: "11",
+        question: "¿Cuál es la diferencia entre 'ROW_NUMBER()' y 'RANK()' en funciones de ventana?",
+        options: [
+            "'ROW_NUMBER()' asigna números consecutivos, mientras que 'RANK()' puede asignar el mismo número a filas con valores iguales.",
+            "'RANK()' asigna números consecutivos, mientras que 'ROW_NUMBER()' puede asignar el mismo número a filas con valores iguales.",
+            "Ambas funciones devuelven el mismo resultado.",
+            "'ROW_NUMBER()' solo se puede usar con 'ORDER BY'.",
+        ],
+        correct: "'ROW_NUMBER()' asigna números consecutivos, mientras que 'RANK()' puede asignar el mismo número a filas con valores iguales.",
+    }, {
+        id: "12",
+        question: "¿Cómo se eliminarían filas duplicadas de una tabla llamada 'clientes'?",
+        options: [
+            "DELETE FROM clientes WHERE fila_id IN (SELECT fila_id FROM clientes GROUP BY columna HAVING COUNT(*) > 1);",
+            "DELETE DUPLICATES FROM clientes;",
+            "DELETE FROM clientes WHERE columna IS DUPLICATE;",
+            "DELETE FROM clientes WHERE RANK() OVER (PARTITION BY columna ORDER BY columna) > 1;",
+        ],
+        correct: "DELETE FROM clientes WHERE fila_id IN (SELECT fila_id FROM clientes GROUP BY columna HAVING COUNT(*) > 1);",
+    }, {
+        id: "13",
+        question: "¿Qué hace la instrucción 'TRUNCATE TABLE' en SQL?",
+        options: [
+            "Elimina todas las filas de una tabla sin eliminar la tabla en sí.",
+            "Elimina una columna específica de una tabla.",
+            "Elimina la estructura de la tabla y todos sus datos.",
+            "Actualiza todas las filas de la tabla con valores predeterminados.",
+        ],
+        correct: "Elimina todas las filas de una tabla sin eliminar la tabla en sí.",
+    }, {
+        id: "14",
+        question: "¿Cuál es la diferencia entre 'UNION' y 'UNION ALL'?",
+        options: [
+            "'UNION' elimina los duplicados, mientras que 'UNION ALL' incluye duplicados.",
+            "'UNION ALL' elimina los duplicados, mientras que 'UNION' incluye duplicados.",
+            "'UNION' combina tablas horizontalmente, 'UNION ALL' las combina verticalmente.",
+            "No hay diferencia entre ambas.",
+        ],
+        correct: "'UNION' elimina los duplicados, mientras que 'UNION ALL' incluye duplicados.",
+    }, {
+        id: "15",
+        question: "¿Qué tipo de índice debería usarse en una columna con muchos valores repetidos?",
+        options: [
+            "Índice único",
+            "Índice hash",
+            "Índice clusterizado",
+            "Índice bitmap",
+        ],
+        correct: "Índice bitmap",
+    }, {
+        id: "16",
+        question: "¿Qué sucede si se intenta agregar una fila que viola una restricción 'UNIQUE'?",
+        options: [
+            "La fila se inserta con un valor por defecto.",
+            "Se lanza un error y la fila no se inserta.",
+            "La fila se inserta pero se elimina la restricción 'UNIQUE'.",
+            "Se inserta la fila con un valor NULL.",
+        ],
+        correct: "Se lanza un error y la fila no se inserta.",
+    }, {
+        id: "17",
+        question: "¿Cuál es el propósito de la cláusula 'CROSS JOIN'?",
+        options: [
+            "Devuelve las filas que coinciden entre dos tablas.",
+            "Devuelve todas las combinaciones posibles de filas entre dos tablas.",
+            "Elimina filas duplicadas de una tabla.",
+            "Devuelve las filas únicas de la tabla de la izquierda.",
+        ],
+        correct: "Devuelve todas las combinaciones posibles de filas entre dos tablas.",
+    }, {
+        id: "18",
+        question: "¿Cuál es el propósito de la cláusula 'GROUP BY'?",
+        options: [
+            "Filtrar filas después de usar funciones de agregación.",
+            "Ordenar los resultados en una consulta.",
+            "Agrupar filas que tienen valores idénticos en columnas específicas.",
+            "Eliminar filas duplicadas en el resultado de una consulta.",
+        ],
+        correct: "Agrupar filas que tienen valores idénticos en columnas específicas.",
+    }, {
+        id: "19",
+        question: "¿Qué resultado se obtendría al ejecutar 'SELECT ROUND(123.456, 1)'?",
+        options: [
+            "123.5",
+            "123.46",
+            "123",
+            "124",
+        ],
+        correct: "123.5",
     },
 ];
+
 
 //Restart Quiz
 restart.addEventListener("click", () => {
@@ -143,7 +244,7 @@ nextBtn.addEventListener("click", (displayNext = () => {
             questionCount + 1 + " of " + quizArray.length + " Question";
         //display quiz
         quizDisplay(questionCount);
-        count = 31;
+        count = 61;
         clearInterval(countdown);
         timerDisplay();
     }
@@ -236,7 +337,7 @@ function initial() {
     quizContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
-    count = 31;
+    count = 61;
     clearInterval(countdown);
     timerDisplay();
     quizCreator();

@@ -33,29 +33,30 @@ const scrollUp = () => {
     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
         : scrollUp.classList.remove('show-scroll')
 }
-window.addEventListener('scroll', scrollUp)
+window.addEventListener('scroll', scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]');
 
 const scrollActive = () => {
-    const scrollDown = window.scrollY
+    const scrollDown = window.scrollY;
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
             sectionTop = current.offsetTop - 58,
             sectionId = current.getAttribute('id'),
-            sectionsClass = document = querySelector('.nav__list a[href*=' + sectionId + ']')
+            sectionsClass = document.querySelector('.nav__list a[href*=' + sectionId + ']');
 
         if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link')
+            sectionsClass.classList.add('active-link');
         } else {
-            sectionsClass.classList.remove('active-link')
+            sectionsClass.classList.remove('active-link');
         }
-    })
+    });
 }
-window.addEventListener('scroll', scrollActive)
+
+window.addEventListener('scroll', scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
@@ -68,5 +69,5 @@ const sr = ScrollReveal({
 
 sr.reveal(`.about, .contact__form`)
 sr.reveal(`.info`, { origin: 'left', delay: 800 })
-sr.reveal(`.skills`, { origin: 'left', delay: 1000 })
+sr.reveal(`.skills`, { origin: 'left', delay: 800 })
 sr.reveal(`.projects__card, .experience__card, .education__card`, { interval: 100 })
