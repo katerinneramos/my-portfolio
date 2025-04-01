@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Data Engineer Quiz</title>
+    <style>
+        body {
+            background-color: #1d2630;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .title {
+            font-size: 2.4em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .quiz-section {
+            position: relative;
+            /* Necesario para posicionar la imagen dentro de esta sección */
+            background: linear-gradient(135deg, #1e2a3a, #2e3b4e);
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .quiz-section:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #2e3b4e, #3a4c65);
+        }
+
+        .quiz-content {
+            display: inline-block;
+            flex-grow: 1;
+        }
+
+        .quiz-image {
+            position: absolute;
+            right: -60px;
+            /* Imagen fuera del borde derecho */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            /* Ajusta el tamaño de la imagen */
+            height: auto;
+            opacity: 0;
+            transition: opacity 0.3s, right 0.3s;
+            /* Desvanecimiento y animación */
+        }
+
+        .quiz-section:hover .quiz-image {
+            right: 0;
+            /* La imagen aparecerá fuera del borde derecho de la sección */
+            opacity: 1;
+            /* La imagen será visible */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Google Cloud Data Engineer Quiz</div>
+        <div class="quiz-section" onclick="location.href='games/data-engineer/gcp-quiz-data-engineer.html'">
+            <div class="quiz-content">
+                Ingesta y Procesamiento de Datos
+            </div>
+            <img src="icons\asomandose.png" alt="Animalito" class="quiz-image">
+        </div>
+        <div class="quiz-section" onclick="location.href='game2.html'">Modelado y Almacenamiento de Datos</div>
+        <div class="quiz-section" onclick="location.href='game3.html'">Machine Learning con Vertex AI</div>
+        <div class="quiz-section" onclick="location.href='game4.html'">Seguridad y Gobernanza de Datos</div>
+        <div class="quiz-section" onclick="location.href='game5.html'">Optimización de BigQuery</div>
+        <div class="quiz-section" onclick="location.href='games/data-engineer/mini-lab.html'">Mini-Laboratorio Virtual
+            de GCP</div>
+    </div>
+</body>
+
+</html>

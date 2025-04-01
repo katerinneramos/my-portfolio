@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío de Ingesta y Procesamiento de Datos</title>
+    <link rel="stylesheet" href="css\gcp-quiz-data-eng-2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Desafíos de Ingesta y Procesamiento de Datos</h1>
+
+        <!-- Desafío 1: Crear un Bucket en GCP -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 1: Crear un Bucket en GCP</h2>
+            <p>Ingresa el comando correcto para crear un bucket de almacenamiento en GCP:</p>
+            <input type="text" id="gcp-command" class="input-box" placeholder="gcloud storage buckets create">
+            <button onclick="checkCommand('gcp-command', 'gcloud storage buckets create', 1)"
+                class="submit-btn">Verificar Comando</button>
+            <p id="feedback-1"></p>
+        </div>
+
+        <!-- Desafío 2: Iniciar DataFlow Job -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 2: Iniciar un Job de DataFlow</h2>
+            <p>Ingresa el comando correcto para iniciar un DataFlow Job:</p>
+            <input type="text" id="dataflow-command" class="input-box" placeholder="gcloud dataflow jobs run">
+            <button onclick="checkCommand('dataflow-command', 'gcloud dataflow jobs run', 2)"
+                class="submit-btn">Verificar Comando</button>
+            <p id="feedback-2"></p>
+        </div>
+
+        <!-- Desafío 3: Crear un Topic en Pub/Sub -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 3: Crear un Topic en Pub/Sub</h2>
+            <p>Ingresa el comando correcto para crear un Topic en Pub/Sub:</p>
+            <input type="text" id="pubsub-command" class="input-box" placeholder="gcloud pubsub topics create">
+            <button onclick="checkCommand('pubsub-command', 'gcloud pubsub topics create', 3)"
+                class="submit-btn">Verificar Comando</button>
+            <p id="feedback-3"></p>
+        </div>
+
+        <!-- Desafío 4: Crear una tabla en BigQuery -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 4: Crear una Tabla en BigQuery</h2>
+            <p>Ingresa el comando correcto para crear una tabla en BigQuery:</p>
+            <input type="text" id="bigquery-command" class="input-box" placeholder="bq mk">
+            <button onclick="checkCommand('bigquery-command', 'bq mk', 4)" class="submit-btn">Verificar Comando</button>
+            <p id="feedback-4"></p>
+        </div>
+
+        <!-- Desafío 5: Ingresar datos a BigQuery -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 5: Ingresar Datos a BigQuery</h2>
+            <p>Ingresa el comando correcto para cargar un archivo CSV a BigQuery:</p>
+            <input type="text" id="bigquery-load-command" class="input-box" placeholder="bq load">
+            <button onclick="checkCommand('bigquery-load-command', 'bq load', 5)" class="submit-btn">Verificar
+                Comando</button>
+            <p id="feedback-5"></p>
+        </div>
+
+        <!-- Desafío 6: Configurar Pub/Sub Subscription -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 6: Configurar una Suscripción en Pub/Sub</h2>
+            <p>Ingresa el comando correcto para crear una suscripción en Pub/Sub:</p>
+            <input type="text" id="pubsub-subscription-command" class="input-box"
+                placeholder="gcloud pubsub subscriptions create">
+            <button onclick="checkCommand('pubsub-subscription-command', 'gcloud pubsub subscriptions create', 6)"
+                class="submit-btn">Verificar Comando</button>
+            <p id="feedback-6"></p>
+        </div>
+
+        <!-- Desafío 7: Verificar el estado de un DataFlow Job -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 7: Verificar Estado de un Job en DataFlow</h2>
+            <p>Ingresa el comando correcto para verificar el estado de un DataFlow Job:</p>
+            <input type="text" id="dataflow-status-command" class="input-box"
+                placeholder="gcloud dataflow jobs describe">
+            <button onclick="checkCommand('dataflow-status-command', 'gcloud dataflow jobs describe', 7)"
+                class="submit-btn">Verificar Comando</button>
+            <p id="feedback-7"></p>
+        </div>
+
+        <!-- Desafío 8: Ver los logs de Pub/Sub -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 8: Ver los Logs de Pub/Sub</h2>
+            <p>Ingresa el comando correcto para visualizar los logs de Pub/Sub:</p>
+            <input type="text" id="pubsub-logs-command" class="input-box" placeholder="gcloud logging read">
+            <button onclick="checkCommand('pubsub-logs-command', 'gcloud logging read', 8)" class="submit-btn">Verificar
+                Comando</button>
+            <p id="feedback-8"></p>
+        </div>
+
+        <!-- Desafío 9: Consultar datos en BigQuery -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 9: Consultar Datos en BigQuery</h2>
+            <p>Ingresa el comando correcto para realizar una consulta en BigQuery:</p>
+            <input type="text" id="bigquery-query-command" class="input-box" placeholder="bq query">
+            <button onclick="checkCommand('bigquery-query-command', 'bq query', 9)" class="submit-btn">Verificar
+                Comando</button>
+            <p id="feedback-9"></p>
+        </div>
+
+        <!-- Desafío 10: Optimizar una consulta en BigQuery -->
+        <div class="challenge">
+            <h2 class="challenge-title">Reto 10: Optimizar una Consulta en BigQuery</h2>
+            <p>Ingresa el comando correcto para optimizar una consulta en BigQuery:</p>
+            <input type="text" id="bigquery-optimize-command" class="input-box"
+                placeholder="bq query --use_legacy_sql=false">
+            <button onclick="checkCommand('bigquery-optimize-command', 'bq query --use_legacy_sql=false', 10)"
+                class="submit-btn">Verificar Comando</button>
+            <p id="feedback-10"></p>
+        </div>
+
+        <!-- Botón para avanzar -->
+        <div class="next-step">
+            <p>Cuando termines todos los desafíos, presiona el botón de abajo para avanzar al siguiente nivel:</p>
+            <button onclick="location.href='nextGame.html'" class="next-btn">Avanzar al siguiente desafío</button>
+        </div>
+    </div>
+
+    <script src="js\gcp-quiz-data-eng-2.js"></script>
+</body>
+
+</html>
