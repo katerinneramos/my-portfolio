@@ -1,90 +1,90 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Preguntas organizadas por tema
     const questionsByTopic = {
-        "0": [ // Module 01 - Digital Transformation with Google Cloud
+        "0": [ // Fundamentos de la Nube y Google Cloud
             {
-                question: "Imagine you're the CTO of BrightBooks, an online platform that offers a vast collection of e-books and audiobooks to its users. You're exploring different cloud service models to determine the best way to manage your application and its infrastructure needs. Each of the three cloud service models - infrastructure as a service(IaaS), platform as a service(PaaS), and software as a service(SaaS) - offers varying benefits between flexibility and levels of management by the cloud provider and the customer.Why would SaaS be the right choice of service model for BrightBooks ? ",
-                answer: "B. You want to minimize the level of management by BrightBooks",
+                question: "¿Cuál es una de las principales ventajas de utilizar una nube pública como Google Cloud en comparación con una infraestructura on-premise?",
+                answer: "Escalabilidad bajo demanda sin necesidad de inversión en hardware físico.",
                 type: "multiple",
                 options: [
-                    "A. You want a balance between flexibility for BrightBooks and the level of management by the cloud provider.",
-                    "B. You want to minimize the level of management by BrightBooks.",
-                    "C. You want to maximize flexibility for BrightBooks.",
-                    "D. You want to be able to shift your emphasis between flexibility and management by the cloud provider as BrightBooks' needs change."
+                    "Mayor control sobre el hardware y la red.",
+                    "Escalabilidad bajo demanda sin necesidad de inversión en hardware físico.",
+                    "Menor seguridad en comparación con una solución on-premise.",
+                    "Mayor costo operativo en todos los casos."
                 ],
-                explanation: "B is correct because opting for Software as a Service (SaaS) minimizes the level of management required by BrightBooks. SaaS provides a fully managed solution where the cloud provider handles everything from infrastructure to application maintenance. This allows BrightBooks to concentrate on its core business functions, such as curating and offering e-books and audiobooks, without worrying about the technical aspects of running the platform. This level of management simplicity and reduced overhead makes SaaS the most appropriate choice for a company looking to streamline its operations and focus on delivering content to its users."
+                explanation: "La nube pública permite escalar recursos según la demanda sin inversiones iniciales en hardware, reduciendo costos y mejorando la flexibilidad."
             },
             {
-                question: "Your popular e-commerce platform, ShopEase, operates servers that handle essential online transactions and customer data at various locations globally. You aim to streamline the management of these critical operations from a single, central point while eliminating the need for hands-on infrastructure maintenance. What should ShopEase do?",
-                answer: "A. Migrate the workloads to a public cloud",
+                question: "Caso de Estudio: Una empresa de retail quiere mejorar su infraestructura de TI para manejar picos de tráfico en días de grandes ofertas. ¿Qué estrategia en Google Cloud permitiría manejar estos picos de tráfico eficientemente?",
+                answer: "Autoscaling en Google Kubernetes Engine o Compute Engine.",
                 type: "multiple",
                 options: [
-                    "A. Migrate the workloads to a public cloud",
-                    "B. Migrate the workloads to a central office building",
-                    "C. Migrate the workloads to multiple local co-location facilities",
-                    "D. Migrate the workloads to multiple local private clouds"
+                    "Mantener servidores adicionales encendidos todo el tiempo.",
+                    "Autoscaling en Google Kubernetes Engine o Compute Engine.",
+                    "Usar un solo servidor grande para soportar todo el tráfico.",
+                    "Aumentar manualmente la capacidad de los servidores antes del evento."
                 ],
-                explanation: "A is correct because migrating the workloads to a public cloud offers several advantages, especially for a global e-commerce platform like ShopEase. Public cloud providers, such as Google Cloud Platform (GCP), Amazon Web Services (AWS), and Microsoft Azure, offer a centralized management interface that allows businesses to manage their resources efficiently from a single point. Additionally, public cloud services eliminate the need for maintaining physical infrastructure since the cloud provider takes care of all the underlying hardware, software, and networking. This not only reduces operational overhead but also ensures high availability, scalability, and security. Public cloud providers also offer global data centers, which means ShopEase can leverage these to ensure low-latency access for customers worldwide and comply with local data regulations."
+                explanation: "El autoscaling en GKE o Compute Engine permite ajustar automáticamente los recursos según la demanda, optimizando costos y rendimiento."
             },
             {
-                question: "Your company, an online travel agency called Global Journeys, has recently acquired three emerging travel apps in different regions: Europe, Asia, and South America. To streamline operations and minimize infrastructure management costs while ensuring secure and high-quality service for your users worldwide, you need to integrate these new apps into your existing system. How should you meet these requirements?",
-                answer: "B. Host all your acquired apps' services together with your existing services on the public cloud.",
+                question: "¿Cuál de los siguientes modelos de servicio en la nube proporciona control total sobre el sistema operativo y la infraestructura de red?",
+                answer: "Infrastructure as a Service (IaaS).",
                 type: "multiple",
                 options: [
-                    "A. Host all your acquired apps' services on-premises together with your existing services.",
-                    "B. Host all your acquired apps' services together with your existing services on the public cloud.",
-                    "C. Build a homogenous infrastructure at each acquired app's location and invest in training their engineers.",
-                    "D. Build a homogenous infrastructure at each acquired app's location and invest in hiring more engineers."
+                    "Software as a Service (SaaS).",
+                    "Platform as a Service (PaaS).",
+                    "Infrastructure as a Service (IaaS).",
+                    "Database as a Service (DBaaS)."
                 ],
-                explanation: "B is correct because hosting all your acquired apps' services together with your existing services on the public cloud offers numerous advantages. Public cloud providers, like Google Cloud Platform, provide scalable infrastructure, which can easily accommodate the increased load from integrating multiple apps. They also offer a range of managed services that reduce the need for in-house infrastructure management. Moreover, public cloud providers invest heavily in security, ensuring that your data and applications remain secure. This approach allows Global Journeys to streamline operations, reduce costs, and ensure a high-quality and secure service for users worldwide."
+                explanation: "IaaS proporciona control total sobre máquinas virtuales, redes y almacenamiento, a diferencia de PaaS y SaaS, que abstraen más niveles de la infraestructura."
             },
             {
-                question: "PixieArt, a company that runs its creative design applications in a private cloud on top of a hypervisor, has decided to move its operations to Google Cloud as quickly as possible. PixieArt aims to make minimal changes to its current environment while leveraging the maximum number of managed services offered by Google. What should PixieArt do?",
-                answer: "B. Migrate the workloads to Compute Engine.",
+                question: "Caso de Estudio: Una empresa quiere adoptar Google Cloud pero tiene preocupaciones sobre seguridad y cumplimiento normativo. ¿Qué servicio de Google Cloud proporciona herramientas de monitoreo y cumplimiento?",
+                answer: "Security Command Center.",
                 type: "multiple",
                 options: [
-                    "A. Migrate the workloads to Google Cloud VMware Engine.",
-                    "B. Migrate the workloads to Compute Engine.",
-                    "C. Migrate the workloads to Bare Metal Solution.",
-                    "D. Migrate the workloads to Google Kubernetes Engine."
+                    "Cloud Logging.",
+                    "Security Command Center.",
+                    "Compute Engine.",
+                    "Cloud Functions."
                 ],
-                explanation: "B is correct because migrating the workloads to Compute Engine allows PixieArt to lift and shift their applications to virtual machines in Google Cloud. Compute Engine provides managed infrastructure and services that can be configured to closely resemble their existing private cloud environment on a hypervisor. This approach requires minimal changes to the existing workloads while allowing PixieArt to take full advantage of Google Cloud's managed services, such as monitoring, logging, and security, thereby aligning with their goal of minimal changes and maximum managed services usage."
+                explanation: "Security Command Center ofrece herramientas avanzadas de monitoreo, detección de amenazas y cumplimiento normativo en Google Cloud."
             },
             {
-                question: "You are the CTO of HealthNet Solutions, a global telehealth platform aiming to provide quick and efficient medical consultations to users worldwide. Due to international regulations, patient data must be stored in specific geographic regions, but the data can still be accessed from anywhere globally. You need to design the architecture and deployment strategy for your telehealth platform to meet these requirements. What should you do?",
-                answer: "C. Select a public cloud provider that guarantees data location in the required geographic area.",
+                question: "¿Cuál es un beneficio clave de usar Google Cloud Storage para almacenar datos empresariales?",
+                answer: "Alta durabilidad y disponibilidad global.",
                 type: "multiple",
                 options: [
-                    "A. Select a public cloud provider that is only active in the required geographic area.",
-                    "B. Select a private cloud provider that globally replicates data storage for fast data access.",
-                    "C. Select a public cloud provider that guarantees data location in the required geographic area.",
-                    "D. Select a private cloud provider that is only active in the required geographic area."
+                    "Bajo rendimiento en comparación con discos locales.",
+                    "Alta durabilidad y disponibilidad global.",
+                    "Requiere administración constante del hardware.",
+                    "No permite escalabilidad automatizada."
                 ],
-                explanation: "C is correct because selecting a public cloud provider that guarantees data location in the required geographic area ensures compliance with international regulations while maintaining global accessibility. Public cloud providers like Google Cloud Platform offer features such as multi-region and regional storage options, allowing businesses to store data in specific locations. They also provide assurances and certifications regarding data residency, ensuring that HealthNet Solutions can meet regulatory requirements without compromising on global access and scalability. This approach balances regulatory compliance with the need for efficient and widespread data access."
+                explanation: "Google Cloud Storage ofrece alta disponibilidad y durabilidad gracias a la replicación de datos en múltiples ubicaciones."
             },
             {
-                question: "Imagine a global e-commerce platform, ShopGalaxy, is transitioning its operations to Google Cloud. What measures should ShopGalaxy take to align with security and privacy regulations and ensure adherence to worldwide standards during this migration?",
-                answer: "A. Comply with data security and privacy regulations in each geographical region.",
+                question: "¿Cuál es un beneficio clave del modelo de nube frente a la infraestructura on-premises?",
+                answer: "Escalabilidad elástica",
                 type: "multiple",
                 options: [
-                    "A. Comply with data security and privacy regulations in each geographical region.",
-                    "B. Comply with regional standards for data security and privacy, because they supersede all international regulations.",
-                    "C. Comply with international standards for data security and privacy, because they supersede all regional regulations.",
-                    "D. Comply with regional data security regulations, because they're more complex than privacy standards."
+                    "Costos fijos previsibles",
+                    "Menos requisitos de seguridad",
+                    "Escalabilidad elástica",
+                    "Menor latencia garantizada"
                 ],
-                explanation: "A is correct because complying with data security and privacy regulations in each geographical region is crucial for an international business like ShopGalaxy. Different regions have their own specific requirements and regulations regarding data security and privacy, such as the GDPR in Europe, CCPA in California, and PIPEDA in Canada. By adhering to these regional regulations, ShopGalaxy ensures that it is legally compliant in all the markets it operates in, thereby avoiding potential fines and legal issues. Moreover, regional compliance demonstrates a commitment to respecting the local laws and the privacy rights of customers, which can enhance customer trust and the company's reputation."
+                explanation: "La nube permite escalar recursos dinámicamente según la demanda, a diferencia de la infraestructura on-premises."
             },
             {
-                question: "At CreativeApps Inc., a rapidly growing startup focused on developing innovative mobile applications, the team is looking for a solution that offers near-unlimited availability of computing resources to handle their unpredictable workload spikes without the need to procure and provision new hardware. What would be the best option for them?",
-                answer: "A. Public cloud.",
+                question: "En Google Cloud, ¿qué principio de seguridad sigue el modelo de IAM (Identity and Access Management)?",
+                answer: "Principio de privilegio mínimo",
                 type: "multiple",
                 options: [
-                    "A. Public cloud.",
-                    "B. Containers.",
-                    "C. Private cloud.",
-                    "D. Microservices."
+                    "Acceso total por defecto",
+                    "Principio de privilegio mínimo",
+                    "Acceso basado en redes",
+                    "Seguridad basada en contraseñas"
                 ],
-                explanation: "A is correct because public cloud services provide a scalable and flexible solution ideal for handling unpredictable workload spikes. Public cloud platforms, such as Google Cloud Platform (GCP), offer near-unlimited availability of computing resources. These resources can be quickly scaled up or down as needed without the need to procure or provision new hardware. This makes it an excellent choice for startups like CreativeApps Inc., which may experience rapid growth and fluctuating demand. Public cloud providers manage the infrastructure, allowing the company to focus on development rather than IT management."
+                explanation: "IAM en Google Cloud sigue el principio de privilegio mínimo, otorgando solo los permisos necesarios a cada usuario."
             },
             {
                 question: "¿Cuál de las siguientes opciones describe un servicio IaaS en Google Cloud?",
@@ -1013,7 +1013,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalQuestions = shuffledQuestions.length;
     let playerName = "";
     let timer;
-    let timeLeft = 120; // Timer: 120 segundos por pregunta
+    let timeLeft = 60; // Timer: 60 segundos por pregunta
 
     const questionElement = document.getElementById("question-text");
     const optionsContainer = document.getElementById("options-container");
@@ -1077,7 +1077,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resultMessage.textContent = "";
         scoreElement.style.display = "none";
         nextButton.style.display = "none";
-        timeLeft = 120; // Reiniciar el temporizador
+        timeLeft = 60; // Reiniciar el temporizador
         clearInterval(timer);
         timerElement.textContent = `Tiempo: ${timeLeft}s`;
     }
@@ -1144,7 +1144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Función para avanzar a la siguiente pregunta
     nextButton.addEventListener("click", () => {
         currentIndex++;
-        timeLeft = 120; // Reiniciar el temporizador para la siguiente pregunta
+        timeLeft = 60; // Reiniciar el temporizador para la siguiente pregunta
         clearInterval(timer);
         if (currentIndex < totalQuestions) {
             loadQuestion();

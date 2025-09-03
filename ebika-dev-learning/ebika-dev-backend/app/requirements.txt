@@ -1,0 +1,4 @@
+# Dependencias del ebika-dev-backend
+fastapi
+uvicorn
+sqlite3  # O el driver para tu base de datos
