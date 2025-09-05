@@ -1,0 +1,1475 @@
+{
+    "cert": "Cloud Digital Leader",
+    "modules": {
+        "0": {
+            "name": "Module 01 - Digital Transformation with Google Cloud",
+            "questions": [
+                {
+                    "question": "Imagina que eres el CTO de BrightBooks, una plataforma en línea que ofrece una amplia colección de libros electrónicos y audiolibros a sus usuarios. Estás explorando diferentes modelos de servicios en la nube para determinar la mejor manera de gestionar tu aplicación y sus necesidades de infraestructura. ¿Por qué SaaS sería la elección correcta para BrightBooks?",
+                    "answer": "B. Quieres minimizar el nivel de gestión por parte de BrightBooks",
+                    "type": "multiple",
+                    "options": [
+                        "A. Quieres un equilibrio entre la flexibilidad para BrightBooks y el nivel de gestión por parte del proveedor de la nube.",
+                        "B. Quieres minimizar el nivel de gestión por parte de BrightBooks.",
+                        "C. Quieres maximizar la flexibilidad para BrightBooks.",
+                        "D. Quieres poder cambiar el énfasis entre flexibilidad y gestión según cambien las necesidades de BrightBooks."
+                    ],
+                    "explanation": "SaaS minimiza la gestión requerida por BrightBooks, permitiéndoles enfocarse en su negocio sin preocuparse por la infraestructura."
+                },
+                {
+                    "question": "Tu plataforma de comercio electrónico, ShopEase, opera servidores que manejan transacciones críticas y datos de clientes en ubicaciones globales. Quieres simplificar la gestión de estas operaciones desde un punto central eliminando la necesidad de mantenimiento de infraestructura. ¿Qué debe hacer ShopEase?",
+                    "answer": "A. Migrar las cargas de trabajo a una nube pública",
+                    "type": "multiple",
+                    "options": [
+                        "A. Migrar las cargas de trabajo a una nube pública",
+                        "B. Migrar las cargas de trabajo a un edificio de oficina central",
+                        "C. Migrar las cargas de trabajo a múltiples instalaciones locales de co-location",
+                        "D. Migrar las cargas de trabajo a múltiples nubes privadas locales"
+                    ],
+                    "explanation": "La nube pública permite gestión centralizada, elimina la necesidad de mantenimiento físico y garantiza alta disponibilidad y escalabilidad."
+                },
+                {
+                    "question": "Global Journeys, una agencia de viajes en línea, ha adquirido tres aplicaciones de viaje en diferentes regiones. Para optimizar operaciones y minimizar costos de infraestructura, ¿cómo debería integrar estas nuevas apps?",
+                    "answer": "B. Hospedar todos los servicios de las apps adquiridas junto con los existentes en la nube pública.",
+                    "type": "multiple",
+                    "options": [
+                        "A. Hospedar todos los servicios adquiridos on-premises junto con los existentes.",
+                        "B. Hospedar todos los servicios adquiridos junto con los existentes en la nube pública.",
+                        "C. Construir infraestructura homogénea en cada ubicación y entrenar a sus ingenieros.",
+                        "D. Construir infraestructura homogénea en cada ubicación y contratar más ingenieros."
+                    ],
+                    "explanation": "La nube pública ofrece escalabilidad, reducción de costos y seguridad para integrar múltiples apps."
+                },
+                {
+                    "question": "PixieArt opera sus aplicaciones creativas en una nube privada sobre un hipervisor y quiere migrar rápidamente a Google Cloud aprovechando servicios gestionados. ¿Qué debería hacer?",
+                    "answer": "B. Migrar las cargas de trabajo a Compute Engine.",
+                    "type": "multiple",
+                    "options": [
+                        "A. Migrar a Google Cloud VMware Engine.",
+                        "B. Migrar a Compute Engine.",
+                        "C. Migrar a Bare Metal Solution.",
+                        "D. Migrar a Google Kubernetes Engine."
+                    ],
+                    "explanation": "Compute Engine permite 'lift and shift' con mínimo cambio y uso de servicios gestionados de Google Cloud."
+                },
+                {
+                    "question": "Eres el CTO de HealthNet Solutions, plataforma de telemedicina global. Los datos de pacientes deben almacenarse en regiones específicas por regulaciones. ¿Qué debes hacer?",
+                    "answer": "C. Seleccionar un proveedor de nube pública que garantice la ubicación de los datos en la región requerida.",
+                    "type": "multiple",
+                    "options": [
+                        "A. Seleccionar un proveedor de nube pública solo activo en la región requerida.",
+                        "B. Seleccionar un proveedor de nube privada con replicación global.",
+                        "C. Seleccionar un proveedor de nube pública que garantice la ubicación de los datos en la región requerida.",
+                        "D. Seleccionar un proveedor de nube privada solo activo en la región requerida."
+                    ],
+                    "explanation": "Garantiza cumplimiento normativo y accesibilidad global sin comprometer la seguridad."
+                },
+                {
+                    "question": "ShopGalaxy, plataforma de e-commerce global, migra a Google Cloud. ¿Qué medidas debe tomar para cumplir regulaciones de seguridad y privacidad a nivel mundial?",
+                    "answer": "A. Cumplir con las regulaciones de seguridad y privacidad de datos en cada región geográfica.",
+                    "type": "multiple",
+                    "options": [
+                        "A. Cumplir con las regulaciones de seguridad y privacidad de datos en cada región geográfica.",
+                        "B. Cumplir con estándares regionales, ya que prevalecen sobre las regulaciones internacionales.",
+                        "C. Cumplir con estándares internacionales, ya que prevalecen sobre los regionales.",
+                        "D. Cumplir con regulaciones regionales de seguridad, ya que son más complejas que las normas de privacidad."
+                    ],
+                    "explanation": "Cumplir normativas regionales garantiza legalidad y confianza de los usuarios en diferentes mercados."
+                },
+                {
+                    "question": "CreativeApps Inc., startup de apps móviles, busca disponibilidad casi ilimitada para manejar picos de carga impredecibles sin comprar hardware adicional. ¿Qué opción es la mejor?",
+                    "answer": "A. Nube pública.",
+                    "type": "multiple",
+                    "options": [
+                        "A. Nube pública.",
+                        "B. Contenedores.",
+                        "C. Nube privada.",
+                        "D. Microservicios."
+                    ],
+                    "explanation": "La nube pública ofrece escalabilidad inmediata y gestión de infraestructura, ideal para startups con demanda variable."
+                },
+                {
+                    "question": "¿Cuál de las siguientes opciones describe un servicio IaaS en Google Cloud?",
+                    "answer": "Compute Engine",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Functions",
+                        "BigQuery",
+                        "Compute Engine",
+                        "Cloud Run"
+                    ],
+                    "explanation": "Compute Engine es un servicio IaaS que proporciona máquinas virtuales en Google Cloud."
+                },
+                {
+                    "question": "¿Qué ventaja ofrece Google Cloud en comparación con infraestructura on-premises en términos de mantenimiento?",
+                    "answer": "Mantenimiento gestionado por Google",
+                    "type": "multiple",
+                    "options": [
+                        "Mayor personalización del hardware",
+                        "Mantenimiento gestionado por Google",
+                        "Costos fijos sin variaciones",
+                        "Acceso ilimitado a hardware físico"
+                    ],
+                    "explanation": "Google Cloud gestiona el mantenimiento y actualizaciones de la infraestructura, reduciendo la carga operativa."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite gestionar y optimizar costos en múltiples proyectos?",
+                    "answer": "Billing Account Management",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Monitoring",
+                        "Billing Account Management",
+                        "IAM Policies",
+                        "Cloud Spanner"
+                    ],
+                    "explanation": "Permite centralizar la gestión y optimización de costos en Google Cloud."
+                },
+                {
+                    "question": "¿Qué significa 'transformación digital' en el contexto empresarial?",
+                    "answer": "Uso estratégico de tecnología",
+                    "type": "multiple",
+                    "options": [
+                        "Uso estratégico de tecnología",
+                        "Compra de más hardware",
+                        "Implementación de ERP únicamente",
+                        "Contratar más personal"
+                    ],
+                    "explanation": "La transformación digital implica usar tecnología estratégicamente para mejorar procesos, productos y servicios."
+                },
+                {
+                    "question": "¿Cuál es la ventaja principal de migrar cargas de trabajo a la nube?",
+                    "answer": "Escalabilidad y flexibilidad",
+                    "type": "multiple",
+                    "options": [
+                        "Escalabilidad y flexibilidad",
+                        "Menor seguridad",
+                        "Dependencia de un solo servidor",
+                        "Reducción de innovación"
+                    ],
+                    "explanation": "La nube permite escalar recursos dinámicamente y adaptarse rápidamente a las necesidades del negocio."
+                },
+                {
+                    "question": "¿Qué modelo de adopción de nube describe un entorno completamente nuevo sin sistemas heredados?",
+                    "answer": "Greenfield",
+                    "type": "multiple",
+                    "options": [
+                        "Greenfield",
+                        "Brownfield",
+                        "Hybrid Cloud",
+                        "Multi-Cloud"
+                    ],
+                    "explanation": "Greenfield se refiere a crear soluciones desde cero sin depender de sistemas existentes."
+                },
+                {
+                    "question": "¿Qué modelo describe la modernización de aplicaciones existentes sin empezar desde cero?",
+                    "answer": "Brownfield",
+                    "type": "multiple",
+                    "options": [
+                        "Brownfield",
+                        "Greenfield",
+                        "Serverless",
+                        "Multi-Cloud"
+                    ],
+                    "explanation": "Brownfield implica adaptar y modernizar sistemas existentes para aprovechar tecnologías modernas."
+                },
+                {
+                    "question": "¿Qué enfoque de seguridad de Google Cloud se basa en no confiar automáticamente en usuarios o dispositivos?",
+                    "answer": "Zero Trust",
+                    "type": "multiple",
+                    "options": [
+                        "Zero Trust",
+                        "Firewall tradicional",
+                        "VPN corporativa",
+                        "Privileged Access"
+                    ],
+                    "explanation": "Zero Trust verifica identidades y dispositivos continuamente en lugar de confiar implícitamente en la red interna."
+                },
+                {
+                    "question": "¿Cuál es la ventaja de usar servicios serverless en la transformación digital?",
+                    "answer": "Reducción de la complejidad operativa",
+                    "type": "multiple",
+                    "options": [
+                        "Reducción de la complejidad operativa",
+                        "Mayor necesidad de servidores físicos",
+                        "Mayor costo de mantenimiento",
+                        "Dependencia de hardware local"
+                    ],
+                    "explanation": "Serverless permite enfocarse en desarrollo y negocio, sin preocuparse por la infraestructura subyacente."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite la colaboración y productividad en la nube?",
+                    "answer": "Google Workspace",
+                    "type": "multiple",
+                    "options": [
+                        "Google Workspace",
+                        "Cloud SQL",
+                        "BigQuery",
+                        "Cloud Functions"
+                    ],
+                    "explanation": "Google Workspace incluye herramientas de colaboración y productividad basadas en la nube, como Docs, Drive y Gmail."
+                },
+                {
+                    "question": "¿Cuál es un beneficio clave de la automatización en la transformación digital?",
+                    "answer": "Mayor eficiencia y reducción de errores",
+                    "type": "multiple",
+                    "options": [
+                        "Mayor eficiencia y reducción de errores",
+                        "Menor seguridad",
+                        "Incremento de costos operativos",
+                        "Mayor dependencia de TI manual"
+                    ],
+                    "explanation": "Automatizar procesos reduce la intervención manual, mejora la eficiencia y disminuye errores humanos."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud facilita la adopción de análisis de datos para la toma de decisiones?",
+                    "answer": "BigQuery",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Cloud Functions",
+                        "Cloud NAT",
+                        "Cloud VPN"
+                    ],
+                    "explanation": "BigQuery permite analizar grandes volúmenes de datos rápidamente para apoyar decisiones estratégicas."
+                },
+                {
+                    "question": "Una empresa quiere innovar digitalmente ofreciendo nuevos servicios a clientes. ¿Qué enfoque debería priorizar?",
+                    "answer": "Adopción ágil de la nube",
+                    "type": "multiple",
+                    "options": [
+                        "Adopción ágil de la nube",
+                        "Mantener todos los sistemas on-premises",
+                        "Reducir inversión en TI",
+                        "Solo capacitar a personal administrativo"
+                    ],
+                    "explanation": "Adoptar la nube ágilmente permite innovar y desplegar rápidamente nuevos servicios digitales."
+                }
+            ]
+        },
+        "1": {
+            "name": "Module 02 - Exploring Data Transformation with Google Cloud",
+            "questions": [
+                {
+                    "question": "Caso de estudio: Una empresa financiera necesita procesar transacciones en tiempo real para detectar fraudes. ¿Qué servicio de Google Cloud es más adecuado para manejar datos en streaming?",
+                    "answer": "Cloud Pub/Sub",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Storage",
+                        "Cloud Pub/Sub",
+                        "BigQuery",
+                        "Firestore"
+                    ],
+                    "explanation": "Cloud Pub/Sub permite ingesta de datos en tiempo real y procesamiento con Dataflow, ideal para detección de fraudes."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa de e-commerce quiere personalizar recomendaciones de productos en tiempo real. ¿Qué combinación de servicios es más adecuada?",
+                    "answer": "BigQuery ML y AI Platform",
+                    "type": "multiple",
+                    "options": [
+                        "Compute Engine y Cloud Storage",
+                        "BigQuery ML y AI Platform",
+                        "Cloud Functions y Firestore",
+                        "App Engine y Memorystore"
+                    ],
+                    "explanation": "BigQuery ML permite entrenar modelos ML y AI Platform permite despliegue escalable."
+                },
+                {
+                    "question": "Caso de estudio: Un medio de comunicación digital quiere transcribir y traducir entrevistas en tiempo real. ¿Qué servicios usar?",
+                    "answer": "Cloud Speech-to-Text y Cloud Translation API",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Speech-to-Text y Cloud Translation API",
+                        "BigQuery y Dataflow",
+                        "Compute Engine y Memorystore",
+                        "Cloud Run y Firestore"
+                    ],
+                    "explanation": "Cloud Speech-to-Text transcribe audio y Translation API traduce automáticamente."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa de logística necesita optimizar rutas de entrega con datos de tráfico en tiempo real. ¿Qué servicio es ideal?",
+                    "answer": "Google Maps Platform",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Google Maps Platform",
+                        "Cloud Spanner",
+                        "Looker"
+                    ],
+                    "explanation": "Proporciona datos de tráfico y herramientas de optimización de rutas."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa de videojuegos quiere analizar comportamiento de jugadores y detectar anomalías en servidores en tiempo real. ¿Qué solución es más eficiente?",
+                    "answer": "Cloud Logging y BigQuery",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Logging y BigQuery",
+                        "Cloud Spanner y Dataflow",
+                        "Firestore y AI Platform",
+                        "App Engine y Cloud SQL"
+                    ],
+                    "explanation": "Cloud Logging captura eventos y BigQuery permite analizarlos para detectar patrones y anomalías."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa farmacéutica necesita analizar grandes volúmenes de datos genómicos. ¿Qué servicio permite procesarlos escalablemente?",
+                    "answer": "Cloud Life Sciences",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Cloud Life Sciences",
+                        "Cloud Run",
+                        "Memorystore"
+                    ],
+                    "explanation": "Cloud Life Sciences permite análisis genómicos a gran escala."
+                },
+                {
+                    "question": "Caso de estudio: Una entidad gubernamental quiere garantizar seguridad de datos almacenados en la nube. ¿Qué herramienta ofrece monitoreo avanzado y detección de amenazas?",
+                    "answer": "Security Command Center",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM",
+                        "Security Command Center",
+                        "Cloud SQL",
+                        "Dataflow"
+                    ],
+                    "explanation": "SCC ayuda a detectar amenazas y vulnerabilidades en Google Cloud."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa de streaming quiere ofrecer contenido con menor latencia a usuarios globales. ¿Qué solución es más adecuada?",
+                    "answer": "Cloud CDN",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud CDN",
+                        "Cloud SQL",
+                        "BigQuery ML",
+                        "Dataproc"
+                    ],
+                    "explanation": "Cloud CDN almacena contenido cerca de los usuarios, reduciendo latencia."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa automotriz quiere entrenar modelos de IA con datos de sensores de vehículos. ¿Qué servicio es ideal?",
+                    "answer": "Vertex AI",
+                    "type": "multiple",
+                    "options": [
+                        "Vertex AI",
+                        "Cloud Spanner",
+                        "Cloud SQL",
+                        "App Engine"
+                    ],
+                    "explanation": "Vertex AI permite entrenar, desplegar y gestionar modelos ML con grandes volúmenes de datos."
+                },
+                {
+                    "question": "Caso de estudio: Una empresa de salud necesita analizar imágenes médicas y detectar anomalías automáticamente. ¿Qué servicio es más adecuado?",
+                    "answer": "Cloud Vision AI",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Cloud Vision AI",
+                        "Cloud SQL",
+                        "Dataproc"
+                    ],
+                    "explanation": "Cloud Vision AI permite análisis de imágenes y detección de patrones mediante IA."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite almacenar y analizar grandes volúmenes de datos estructurados de manera escalable?",
+                    "answer": "BigQuery",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Cloud SQL",
+                        "Cloud Storage",
+                        "Dataproc"
+                    ],
+                    "explanation": "BigQuery es un data warehouse serverless que permite análisis rápido y escalable de grandes volúmenes de datos."
+                },
+                {
+                    "question": "Una empresa necesita procesar datos en batch y streaming para análisis en tiempo real. ¿Qué servicio se debe usar?",
+                    "answer": "Cloud Dataflow",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Dataproc",
+                        "Cloud Dataflow",
+                        "Cloud Functions",
+                        "Cloud Pub/Sub"
+                    ],
+                    "explanation": "Cloud Dataflow permite construir pipelines de datos en batch y streaming para análisis y transformación escalable."
+                },
+                {
+                    "question": "¿Qué servicio facilita la ingesta de datos en tiempo real mediante un sistema de mensajería distribuida?",
+                    "answer": "Cloud Pub/Sub",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Pub/Sub",
+                        "Cloud Storage",
+                        "Cloud SQL",
+                        "Dataproc"
+                    ],
+                    "explanation": "Cloud Pub/Sub permite la ingesta y transmisión de eventos en tiempo real de manera confiable y escalable."
+                },
+                {
+                    "question": "Una empresa quiere ejecutar cargas de trabajo de Hadoop y Spark en la nube. ¿Qué servicio debería usar?",
+                    "answer": "Cloud Dataproc",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Dataproc",
+                        "BigQuery ML",
+                        "Cloud Dataflow",
+                        "Cloud Functions"
+                    ],
+                    "explanation": "Cloud Dataproc permite ejecutar trabajos de procesamiento de datos en frameworks como Hadoop, Spark y Hive en Google Cloud."
+                },
+                {
+                    "question": "¿Qué servicio permite limpiar, transformar y preparar datos para análisis sin escribir código complejo?",
+                    "answer": "Cloud Dataprep",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Dataprep",
+                        "BigQuery ML",
+                        "Cloud Dataflow",
+                        "Cloud Storage"
+                    ],
+                    "explanation": "Cloud Dataprep permite preparar datos mediante una interfaz visual, transformando y limpiando datos antes del análisis."
+                },
+                {
+                    "question": "Una empresa necesita mover grandes volúmenes de datos entre servicios de Google Cloud de manera programada y escalable. ¿Qué servicio usaría?",
+                    "answer": "Cloud Composer",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Composer",
+                        "Cloud Functions",
+                        "Cloud Dataflow",
+                        "BigQuery"
+                    ],
+                    "explanation": "Cloud Composer es un servicio de orquestación basado en Apache Airflow que permite automatizar pipelines de datos complejos."
+                },
+                {
+                    "question": "¿Qué servicio permite crear modelos de machine learning directamente sobre los datos de BigQuery usando SQL?",
+                    "answer": "BigQuery ML",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "Vertex AI",
+                        "Cloud Dataproc",
+                        "Cloud AutoML"
+                    ],
+                    "explanation": "BigQuery ML permite entrenar y ejecutar modelos de ML directamente sobre datos almacenados en BigQuery usando consultas SQL."
+                },
+                {
+                    "question": "Una empresa quiere centralizar la gobernanza de sus datos y definir políticas de acceso y seguridad. ¿Qué servicio es adecuado?",
+                    "answer": "Dataplex",
+                    "type": "multiple",
+                    "options": [
+                        "Dataplex",
+                        "Cloud DLP",
+                        "Cloud IAM",
+                        "Cloud Logging"
+                    ],
+                    "explanation": "Dataplex permite organizar, gobernar y asegurar los datos en Google Cloud, asegurando cumplimiento y control centralizado."
+                },
+                {
+                    "question": "¿Qué servicio permite almacenar datos de manera duradera y económica para su posterior análisis?",
+                    "answer": "Cloud Storage",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Storage",
+                        "Cloud SQL",
+                        "BigQuery",
+                        "Cloud Dataproc"
+                    ],
+                    "explanation": "Cloud Storage es un servicio de almacenamiento escalable y duradero, ideal para grandes volúmenes de datos que serán procesados posteriormente."
+                },
+                {
+                    "question": "Para analizar datos históricos y en tiempo real combinados en un solo pipeline, ¿qué combinación de servicios es la más adecuada?",
+                    "answer": "Cloud Dataflow + BigQuery",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Dataflow + BigQuery",
+                        "Cloud Dataproc + Cloud Storage",
+                        "Cloud Pub/Sub + Cloud Functions",
+                        "BigQuery ML + Dataprep"
+                    ],
+                    "explanation": "Cloud Dataflow procesa datos en batch y streaming y BigQuery permite analizarlos a gran escala, combinando ambos para análisis histórico y en tiempo real."
+                }
+            ]
+        },
+        "2": {
+            "name": "Module 03 - Innovating with Google Cloud Artificial Intelligence",
+            "questions": [
+                {
+                    "question": "Caso de estudio: Una empresa de salud necesita analizar imágenes médicas y detectar anomalías automáticamente. ¿Qué servicio es más adecuado?",
+                    "answer": "Cloud Vision AI",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Cloud Vision AI",
+                        "Cloud SQL",
+                        "Dataproc"
+                    ],
+                    "explanation": "Cloud Vision AI permite análisis de imágenes y detección de patrones mediante IA."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite construir, entrenar e implementar modelos de machine learning a gran escala?",
+                    "answer": "Vertex AI",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "TensorFlow",
+                        "Vertex AI",
+                        "AI Platform"
+                    ],
+                    "explanation": "Vertex AI es la plataforma de machine learning unificada de Google Cloud que permite entrenar y desplegar modelos con mayor eficiencia."
+                },
+                {
+                    "question": "Una empresa desea analizar grandes volúmenes de datos en tiempo real. ¿Qué servicio de Google Cloud es más adecuado?",
+                    "answer": "BigQuery con Dataflow",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery con Dataflow",
+                        "Cloud Pub/Sub",
+                        "Cloud Storage",
+                        "Looker"
+                    ],
+                    "explanation": "BigQuery con Dataflow permite procesar y analizar datos en tiempo real utilizando pipelines escalables."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud proporciona análisis de datos en tiempo real basado en eventos?",
+                    "answer": "Cloud Pub/Sub",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Pub/Sub",
+                        "BigQuery",
+                        "Vertex AI",
+                        "Cloud SQL"
+                    ],
+                    "explanation": "Cloud Pub/Sub permite la transmisión y el procesamiento de datos en tiempo real mediante un modelo de mensajería distribuida."
+                },
+                {
+                    "question": "¿Qué herramienta de Google Cloud permite realizar análisis exploratorio y visualización de datos sin necesidad de escribir consultas SQL complejas?",
+                    "answer": "Looker",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Looker",
+                        "Google Data Studio",
+                        "TensorFlow"
+                    ],
+                    "explanation": "Looker permite analizar y visualizar datos a través de una interfaz intuitiva, facilitando la exploración sin necesidad de SQL avanzado."
+                },
+                {
+                    "question": "¿Cuál de las siguientes opciones permite ejecutar modelos de machine learning directamente en BigQuery?",
+                    "answer": "BigQuery ML",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "Vertex AI",
+                        "Cloud ML Engine",
+                        "TensorFlow Extended"
+                    ],
+                    "explanation": "BigQuery ML permite entrenar y ejecutar modelos de machine learning directamente en BigQuery utilizando SQL."
+                },
+                {
+                    "question": "¿Qué servicio permite la creación de modelos de machine learning con un enfoque de AutoML en Google Cloud?",
+                    "answer": "Vertex AI AutoML",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "Vertex AI AutoML",
+                        "Cloud TPU",
+                        "Cloud Dataprep"
+                    ],
+                    "explanation": "Vertex AI AutoML permite a los usuarios sin experiencia en machine learning entrenar modelos personalizados con facilidad."
+                },
+                {
+                    "question": "Una empresa quiere analizar sentimientos en comentarios de clientes. ¿Qué servicio de Google Cloud es el más adecuado?",
+                    "answer": "Cloud Natural Language API",
+                    "type": "multiple",
+                    "options": [
+                        "Vertex AI",
+                        "Cloud Natural Language API",
+                        "BigQuery ML",
+                        "Cloud Speech-to-Text"
+                    ],
+                    "explanation": "Cloud Natural Language API permite analizar sentimientos, extraer entidades y clasificar texto de manera automatizada."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite el reconocimiento y clasificación de imágenes sin necesidad de entrenar modelos manualmente?",
+                    "answer": "Vertex AI Vision AutoML",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Vision API",
+                        "Vertex AI Vision AutoML",
+                        "TensorFlow",
+                        "BigQuery ML"
+                    ],
+                    "explanation": "Vertex AI Vision AutoML permite la clasificación y reconocimiento de imágenes mediante un enfoque de AutoML."
+                },
+                {
+                    "question": "Una empresa necesita realizar un análisis de tendencias de datos en tiempo real con dashboards interactivos. ¿Qué combinación de servicios es la más adecuada?",
+                    "answer": "BigQuery + Looker",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery + Looker",
+                        "Cloud Dataflow + Pub/Sub",
+                        "Cloud Functions + Cloud SQL",
+                        "Vertex AI + Cloud Storage"
+                    ],
+                    "explanation": "BigQuery permite el análisis de datos a gran escala, mientras que Looker facilita la visualización y creación de dashboards interactivos."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite procesar grandes volúmenes de datos en streaming y batch?",
+                    "answer": "Cloud Dataflow",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Dataflow",
+                        "Cloud Dataproc",
+                        "Cloud Bigtable",
+                        "Cloud Composer"
+                    ],
+                    "explanation": "Cloud Dataflow es un servicio serverless para el procesamiento de datos en streaming y batch basado en Apache Beam."
+                },
+                {
+                    "question": "¿Qué servicio permite construir, entrenar y desplegar modelos de machine learning de manera unificada en Google Cloud?",
+                    "answer": "Vertex AI",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "TensorFlow",
+                        "Vertex AI",
+                        "Cloud ML Engine"
+                    ],
+                    "explanation": "Vertex AI unifica herramientas de ML en Google Cloud, permitiendo entrenar y desplegar modelos de manera más eficiente."
+                },
+                {
+                    "question": "Una empresa quiere analizar imágenes y detectar objetos automáticamente. ¿Qué servicio es más adecuado?",
+                    "answer": "Cloud Vision AI",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery",
+                        "Cloud Vision AI",
+                        "Cloud SQL",
+                        "Dataproc"
+                    ],
+                    "explanation": "Cloud Vision AI permite el análisis de imágenes y la detección de patrones mediante inteligencia artificial."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite analizar texto y extraer información como entidades y sentimientos?",
+                    "answer": "Cloud Natural Language API",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Translation API",
+                        "Cloud Natural Language API",
+                        "Cloud Text-to-Speech",
+                        "BigQuery ML"
+                    ],
+                    "explanation": "Cloud Natural Language API analiza texto, identificando entidades, categorías y sentimientos de manera automatizada."
+                },
+                {
+                    "question": "Para convertir audio en texto de manera precisa, ¿qué servicio se debe usar?",
+                    "answer": "Cloud Speech-to-Text",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Text-to-Speech",
+                        "Cloud Speech-to-Text",
+                        "Cloud Translation API",
+                        "Vertex AI"
+                    ],
+                    "explanation": "Cloud Speech-to-Text permite transcribir audio a texto con soporte para múltiples idiomas y formatos."
+                },
+                {
+                    "question": "Una empresa quiere entrenar modelos de machine learning sin escribir código. ¿Qué servicio de Google Cloud es más adecuado?",
+                    "answer": "Vertex AI AutoML",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "Vertex AI AutoML",
+                        "TensorFlow",
+                        "Cloud Dataprep"
+                    ],
+                    "explanation": "Vertex AI AutoML permite entrenar modelos personalizados mediante una interfaz visual, sin necesidad de programar."
+                },
+                {
+                    "question": "¿Qué servicio permite ejecutar modelos de machine learning directamente dentro de BigQuery usando SQL?",
+                    "answer": "BigQuery ML",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery ML",
+                        "Vertex AI",
+                        "Cloud ML Engine",
+                        "TensorFlow"
+                    ],
+                    "explanation": "BigQuery ML permite crear y ejecutar modelos de ML directamente sobre los datos almacenados en BigQuery usando consultas SQL."
+                },
+                {
+                    "question": "Para procesar grandes volúmenes de datos en pipelines de ML antes de entrenar un modelo, ¿qué servicio es adecuado?",
+                    "answer": "Cloud Dataflow",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Dataflow",
+                        "Cloud Pub/Sub",
+                        "Cloud Functions",
+                        "BigQuery ML"
+                    ],
+                    "explanation": "Cloud Dataflow permite procesar y transformar datos de manera escalable, tanto en batch como en streaming, antes de usar ML."
+                },
+                {
+                    "question": "Una empresa quiere generar texto automáticamente a partir de instrucciones. ¿Qué servicio de Google Cloud puede usar?",
+                    "answer": "Vertex AI Generative AI",
+                    "type": "multiple",
+                    "options": [
+                        "Vertex AI Generative AI",
+                        "Cloud Natural Language API",
+                        "Cloud Vision AI",
+                        "Cloud Translation API"
+                    ],
+                    "explanation": "Vertex AI Generative AI permite generar texto o contenido a partir de prompts, utilizando modelos generativos avanzados."
+                },
+                {
+                    "question": "¿Qué servicio permite crear dashboards y visualizar resultados de modelos de ML para la toma de decisiones?",
+                    "answer": "Looker",
+                    "type": "multiple",
+                    "options": [
+                        "Looker",
+                        "Cloud Monitoring",
+                        "Cloud Logging",
+                        "BigQuery ML"
+                    ],
+                    "explanation": "Looker permite crear visualizaciones y dashboards para analizar datos y resultados de modelos de ML de manera interactiva."
+                }
+            ]
+        },
+        "3": {
+            "name": "Module 04 - Modernize Infrastructure and Applications with Google Cloud",
+            "questions": [
+                {
+                    "question": "¿Qué servicio permite gestión centralizada de claves de cifrado para cumplir requisitos de seguridad?",
+                    "answer": "Cloud Key Management Service (KMS)",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Identity-Aware Proxy (IAP)",
+                        "Cloud Key Management Service (KMS)",
+                        "Cloud Armor",
+                        "Cloud Security Command Center (SCC)"
+                    ],
+                    "explanation": "Cloud KMS permite gestionar, rotar y controlar claves de cifrado usadas en Google Cloud."
+                },
+                {
+                    "question": "Una empresa necesita controlar acceso a recursos basándose en identidad y sensibilidad de datos. ¿Qué servicio usar?",
+                    "answer": "BeyondCorp Enterprise",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "BeyondCorp Enterprise",
+                        "Cloud Interconnect",
+                        "Cloud Identity"
+                    ],
+                    "explanation": "BeyondCorp Enterprise permite acceso seguro sin VPN basado en identidad y contexto."
+                },
+                {
+                    "question": "Una empresa necesita conectar su infraestructura on-premises con Google Cloud de forma segura y con baja latencia. ¿Qué servicio de conectividad es el más adecuado?",
+                    "answer": "Cloud Interconnect",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "Cloud Interconnect",
+                        "Cloud CDN",
+                        "Cloud NAT"
+                    ],
+                    "explanation": "Cloud Interconnect proporciona conexiones dedicadas y de alta velocidad entre Google Cloud y la infraestructura on-premises."
+                },
+                {
+                    "question": "¿Qué servicio proporciona visibilidad centralizada sobre amenazas y vulnerabilidades en todos los proyectos?",
+                    "answer": "Cloud Security Command Center (SCC)",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM",
+                        "Cloud Security Command Center (SCC)",
+                        "Cloud Logging",
+                        "Cloud Audit Logs"
+                    ],
+                    "explanation": "SCC ayuda a detectar, analizar y responder a amenazas de seguridad."
+                },
+                {
+                    "question": "Para optimizar costos y rendimiento en el tráfico entre regiones dentro de Google Cloud, ¿qué servicio se recomienda?",
+                    "answer": "Cloud Network Tiers",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Load Balancing",
+                        "Cloud Network Tiers",
+                        "Cloud Interconnect",
+                        "Cloud VPN"
+                    ],
+                    "explanation": "Cloud Network Tiers permite elegir entre opciones de red Premium y Standard para optimizar costos y rendimiento."
+                },
+                {
+                    "question": "¿Qué técnica permite controlar cómo se usan y comparten datos sensibles?",
+                    "answer": "Data Loss Prevention (DLP)",
+                    "type": "multiple",
+                    "options": [
+                        "Identity and Access Management (IAM)",
+                        "Cloud Logging",
+                        "Data Loss Prevention (DLP)",
+                        "Cloud VPN"
+                    ],
+                    "explanation": "DLP identifica y protege datos sensibles mediante reglas de detección y anonimización."
+                },
+                {
+                    "question": "Una empresa necesita cumplir regulaciones estrictas y asegurar que los datos se almacenen en una región específica. ¿Qué servicio usar?",
+                    "answer": "Assured Workloads",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Armor",
+                        "Assured Workloads",
+                        "Cloud Data Loss Prevention",
+                        "Cloud KMS"
+                    ],
+                    "explanation": "Assured Workloads permite configurar entornos en Google Cloud cumpliendo requisitos regulatorios."
+                },
+                {
+                    "question": "Mejor práctica para garantizar que solo usuarios autorizados accedan a recursos críticos?",
+                    "answer": "Implementar autenticación multifactor (MFA) con Cloud Identity",
+                    "type": "multiple",
+                    "options": [
+                        "Implementar autenticación multifactor (MFA) con Cloud Identity",
+                        "Usar Cloud NAT para restringir accesos externos",
+                        "Permitir acceso con claves SSH sin restricciones",
+                        "Habilitar Cloud CDN para proteger recursos internos"
+                    ],
+                    "explanation": "La MFA reduce riesgos de accesos no autorizados."
+                },
+                {
+                    "question": "¿Qué servicio permite restringir tráfico entrante a aplicaciones basándose en reglas de seguridad personalizadas?",
+                    "answer": "Cloud Armor",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud CDN",
+                        "Cloud Armor",
+                        "Cloud DNS",
+                        "Cloud Run"
+                    ],
+                    "explanation": "Cloud Armor protege aplicaciones contra ataques DDoS y permite reglas de acceso por IP o geolocalización."
+                },
+                {
+                    "question": "Una empresa quiere prevenir la exfiltración de datos en su entorno de Google Cloud. ¿Qué servicio es el más adecuado para este caso?",
+                    "answer": "VPC Service Controls",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "VPC Service Controls",
+                        "Cloud Armor",
+                        "Cloud IAM"
+                    ],
+                    "explanation": "VPC Service Controls ayuda a prevenir la exfiltración de datos restringiendo el acceso a servicios y API en Google Cloud."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite la auditoría y monitoreo de actividades en proyectos y organizaciones?",
+                    "answer": "Cloud Audit Logs",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM",
+                        "Cloud Audit Logs",
+                        "Cloud Security Command Center",
+                        "BigQuery"
+                    ],
+                    "explanation": "Cloud Audit Logs proporciona registros detallados de actividades y eventos de seguridad en Google Cloud."
+                },
+                {
+                    "question": "Para cumplir con el principio de mínimo privilegio en la gestión de accesos en Google Cloud, ¿qué herramienta se debe utilizar?",
+                    "answer": "Cloud IAM con políticas de roles personalizados",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM con políticas de roles personalizados",
+                        "Cloud VPN",
+                        "Cloud NAT",
+                        "Cloud Functions"
+                    ],
+                    "explanation": "Cloud IAM con roles personalizados permite aplicar el principio de mínimo privilegio asignando permisos específicos a cada usuario."
+                },
+                {
+                    "question": "Una organización necesita cifrar datos sensibles almacenados en BigQuery. ¿Qué opción es la más recomendada?",
+                    "answer": "BigQuery Customer-Managed Encryption Keys (CMEK)",
+                    "type": "multiple",
+                    "options": [
+                        "BigQuery Customer-Managed Encryption Keys (CMEK)",
+                        "Cloud SQL",
+                        "Cloud NAT",
+                        "Cloud DNS"
+                    ],
+                    "explanation": "CMEK permite a las organizaciones gestionar sus propias claves de cifrado para proteger datos en BigQuery."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite ejecutar aplicaciones sin necesidad de gestionar servidores?",
+                    "answer": "Cloud Run",
+                    "type": "multiple",
+                    "options": [
+                        "Compute Engine",
+                        "Cloud Run",
+                        "App Engine Flexible",
+                        "Kubernetes Engine"
+                    ],
+                    "explanation": "Cloud Run permite desplegar aplicaciones en contenedores serverless, eliminando la necesidad de administrar la infraestructura subyacente."
+                },
+                {
+                    "question": "Una empresa quiere migrar aplicaciones legacy a la nube con mínimos cambios en el código. ¿Qué enfoque es más adecuado?",
+                    "answer": "Lift and Shift",
+                    "type": "multiple",
+                    "options": [
+                        "Refactor",
+                        "Replatform",
+                        "Lift and Shift",
+                        "Rebuild"
+                    ],
+                    "explanation": "El enfoque Lift and Shift permite mover aplicaciones existentes a la nube sin modificar su arquitectura ni código significativamente."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite orquestar contenedores de manera escalable y gestionada?",
+                    "answer": "Google Kubernetes Engine (GKE)",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Functions",
+                        "Cloud Run",
+                        "Google Kubernetes Engine (GKE)",
+                        "App Engine Standard"
+                    ],
+                    "explanation": "GKE permite desplegar y gestionar clústeres de Kubernetes en Google Cloud de forma escalable y automatizada."
+                },
+                {
+                    "question": "Para modernizar aplicaciones y aprovechar microservicios, ¿qué arquitectura se recomienda?",
+                    "answer": "Arquitectura basada en microservicios",
+                    "type": "multiple",
+                    "options": [
+                        "Arquitectura monolítica",
+                        "Arquitectura basada en microservicios",
+                        "Arquitectura cliente-servidor",
+                        "Arquitectura de escritorio"
+                    ],
+                    "explanation": "La arquitectura de microservicios permite dividir aplicaciones en componentes independientes, facilitando escalabilidad y mantenimiento."
+                },
+                {
+                    "question": "¿Qué servicio permite implementar funciones serverless que se ejecutan en respuesta a eventos?",
+                    "answer": "Cloud Functions",
+                    "type": "multiple",
+                    "options": [
+                        "Compute Engine",
+                        "Cloud Functions",
+                        "App Engine Flexible",
+                        "Cloud Run"
+                    ],
+                    "explanation": "Cloud Functions permite ejecutar código en respuesta a eventos, sin preocuparse por la gestión de servidores."
+                },
+                {
+                    "question": "Una empresa necesita automatizar el despliegue y la gestión de infraestructura en Google Cloud. ¿Qué servicio es más adecuado?",
+                    "answer": "Cloud Deployment Manager",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Build",
+                        "Cloud Deployment Manager",
+                        "Cloud Functions",
+                        "Cloud Run"
+                    ],
+                    "explanation": "Cloud Deployment Manager permite definir y desplegar recursos de Google Cloud mediante plantillas declarativas."
+                },
+                {
+                    "question": "Para mejorar la disponibilidad y resiliencia de una aplicación web, ¿qué estrategia de diseño se recomienda?",
+                    "answer": "Diseño multi-región y redundancia",
+                    "type": "multiple",
+                    "options": [
+                        "Diseño monolítico",
+                        "Diseño multi-región y redundancia",
+                        "Uso exclusivo de una zona",
+                        "Diseño single-server"
+                    ],
+                    "explanation": "Distribuir la aplicación en varias regiones y usar redundancia reduce riesgos de fallas y mejora la disponibilidad."
+                }
+            ]
+        },
+        "4": {
+            "name": "Module 05 - Trust and Security with Google Cloud",
+            "questions": [
+                {
+                    "question": "¿Qué servicio de Google Cloud permite proteger aplicaciones contra ataques DDoS a nivel de red?",
+                    "answer": "Cloud Armor",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Armor",
+                        "Cloud Firewall",
+                        "Cloud CDN",
+                        "Cloud VPN"
+                    ],
+                    "explanation": "Cloud Armor ofrece protección contra ataques DDoS y permite definir reglas de seguridad a nivel de red."
+                },
+                {
+                    "question": "Una empresa necesita que su red tenga direcciones IP públicas sin exponer sus recursos directamente a internet. ¿Qué servicio debería usar?",
+                    "answer": "Cloud NAT",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud NAT",
+                        "Cloud VPN",
+                        "Cloud Interconnect",
+                        "Cloud Armor"
+                    ],
+                    "explanation": "Cloud NAT permite que las instancias sin IP públicas accedan a internet sin ser accesibles directamente desde fuera."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud se recomienda para establecer una conexión segura y encriptada entre una red on-premises y Google Cloud?",
+                    "answer": "Cloud VPN",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "Cloud Interconnect",
+                        "Cloud NAT",
+                        "Cloud Load Balancing"
+                    ],
+                    "explanation": "Cloud VPN permite establecer conexiones seguras y encriptadas entre redes on-premises y Google Cloud."
+                },
+                {
+                    "question": "Una empresa quiere mejorar la latencia y reducir costos en la entrega de contenido estático a nivel global. ¿Qué servicio de Google Cloud es el más adecuado?",
+                    "answer": "Cloud CDN",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud CDN",
+                        "Cloud Load Balancing",
+                        "Cloud Interconnect",
+                        "Cloud NAT"
+                    ],
+                    "explanation": "Cloud CDN permite almacenar en caché contenido estático en ubicaciones distribuidas globalmente para mejorar la latencia y reducir costos."
+                },
+                {
+                    "question": "¿Cuál es la mejor opción para conectar múltiples VPCs en Google Cloud de forma eficiente y escalable?",
+                    "answer": "VPC Peering",
+                    "type": "multiple",
+                    "options": [
+                        "VPC Peering",
+                        "Cloud VPN",
+                        "Cloud Interconnect",
+                        "Cloud Armor"
+                    ],
+                    "explanation": "VPC Peering permite conectar redes VPC dentro de Google Cloud de manera eficiente sin necesidad de túneles o gateways."
+                },
+                {
+                    "question": "Una empresa necesita definir reglas avanzadas de firewall a nivel de red para proteger sus cargas de trabajo en Google Cloud. ¿Qué servicio debería usar?",
+                    "answer": "Google Cloud Firewall",
+                    "type": "multiple",
+                    "options": [
+                        "Google Cloud Firewall",
+                        "Cloud Armor",
+                        "Cloud NAT",
+                        "Cloud VPN"
+                    ],
+                    "explanation": "Google Cloud Firewall permite definir reglas avanzadas de control de tráfico para proteger los recursos de red."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite interconectar redes híbridas con latencias ultra bajas y alta disponibilidad?",
+                    "answer": "Dedicated Interconnect",
+                    "type": "multiple",
+                    "options": [
+                        "Dedicated Interconnect",
+                        "Cloud VPN",
+                        "Partner Interconnect",
+                        "Cloud NAT"
+                    ],
+                    "explanation": "Dedicated Interconnect proporciona conexiones de baja latencia y alta disponibilidad entre Google Cloud y redes on-premises."
+                },
+                {
+                    "question": "¿Cuál es el servicio de Google Cloud que permite gestionar identidades y permisos de acceso de manera centralizada?",
+                    "answer": "Cloud Identity & Access Management (IAM)",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Identity & Access Management (IAM)",
+                        "Cloud Security Command Center",
+                        "Cloud Firewall",
+                        "Cloud Armor"
+                    ],
+                    "explanation": "IAM permite gestionar identidades y permisos de acceso a los recursos en Google Cloud."
+                },
+                {
+                    "question": "¿Cuál es la mejor estrategia para minimizar el impacto de un incidente de seguridad en Google Cloud?",
+                    "answer": "Implementar el principio de privilegio mínimo y segmentar redes con VPC Service Controls",
+                    "type": "multiple",
+                    "options": [
+                        "Permitir acceso ilimitado a usuarios internos",
+                        "Usar una única cuenta de servicio para todos los recursos",
+                        "Implementar el principio de privilegio mínimo y segmentar redes con VPC Service Controls",
+                        "Evitar el uso de Cloud IAM para permisos granulares"
+                    ],
+                    "explanation": "El principio de privilegio mínimo y VPC Service Controls ayudan a limitar el acceso y reducir el impacto de incidentes."
+                },
+                {
+                    "question": "¿Qué servicio permite centralizar la gestión de identidades y accesos en Google Cloud para cumplir con normativas de seguridad?",
+                    "answer": "Cloud Identity",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Interconnect",
+                        "Cloud Identity",
+                        "Cloud NAT",
+                        "Cloud Functions"
+                    ],
+                    "explanation": "Cloud Identity facilita la administración de identidades y accesos en entornos empresariales."
+                },
+                {
+                    "question": "Una empresa quiere asegurar que solo dispositivos de confianza puedan acceder a recursos en Google Cloud. ¿Qué servicio debe usar?",
+                    "answer": "Endpoint Verification con BeyondCorp Enterprise",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "Endpoint Verification con BeyondCorp Enterprise",
+                        "Cloud Run",
+                        "Cloud Storage"
+                    ],
+                    "explanation": "Endpoint Verification permite validar dispositivos antes de conceder acceso a recursos en la nube."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite la gestión centralizada de claves de cifrado para cumplir con requisitos de seguridad y cumplimiento?",
+                    "answer": "Cloud Key Management Service (KMS)",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Identity-Aware Proxy (IAP)",
+                        "Cloud Key Management Service (KMS)",
+                        "Cloud Armor",
+                        "Cloud Security Command Center (SCC)"
+                    ],
+                    "explanation": "Cloud KMS permite la gestión, rotación y control de claves de cifrado usadas en otros servicios de Google Cloud."
+                },
+                {
+                    "question": "Una empresa necesita controlar el acceso a recursos en Google Cloud basándose en la identidad del usuario y la sensibilidad de los datos. ¿Qué servicio es más adecuado para este escenario?",
+                    "answer": "BeyondCorp Enterprise",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "BeyondCorp Enterprise",
+                        "Cloud Interconnect",
+                        "Cloud Identity"
+                    ],
+                    "explanation": "BeyondCorp Enterprise permite acceso seguro sin VPN, basado en identidad y contexto del usuario."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud proporciona visibilidad centralizada sobre amenazas de seguridad y vulnerabilidades en todos los proyectos?",
+                    "answer": "Cloud Security Command Center (SCC)",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM",
+                        "Cloud Security Command Center (SCC)",
+                        "Cloud Logging",
+                        "Cloud Audit Logs"
+                    ],
+                    "explanation": "SCC ayuda a detectar, analizar y responder a amenazas de seguridad en entornos de Google Cloud."
+                },
+                {
+                    "question": "¿Qué técnica permite a una organización controlar cómo se usan y comparten datos sensibles en Google Cloud?",
+                    "answer": "Data Loss Prevention (DLP)",
+                    "type": "multiple",
+                    "options": [
+                        "Identity and Access Management (IAM)",
+                        "Cloud Logging",
+                        "Data Loss Prevention (DLP)",
+                        "Cloud VPN"
+                    ],
+                    "explanation": "DLP ayuda a identificar y proteger datos sensibles mediante reglas de detección y anonimización."
+                },
+                {
+                    "question": "Una empresa necesita cumplir con regulaciones estrictas y asegurarse de que sus datos se almacenen en una región específica. ¿Qué servicio permite cumplir con este requisito?",
+                    "answer": "Assured Workloads",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Armor",
+                        "Assured Workloads",
+                        "Cloud Data Loss Prevention",
+                        "Cloud KMS"
+                    ],
+                    "explanation": "Assured Workloads permite configurar entornos en Google Cloud que cumplan con requisitos regulatorios específicos."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite definir políticas de gobernanza de datos para asegurar el cumplimiento normativo?",
+                    "answer": "Dataplex",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud DLP",
+                        "Dataplex",
+                        "Cloud Audit Logs",
+                        "BigQuery Data Governance"
+                    ],
+                    "explanation": "Dataplex facilita la gobernanza de datos mediante políticas de seguridad y control de acceso."
+                },
+                {
+                    "question": "Una empresa quiere prevenir la exfiltración de datos en su entorno de Google Cloud. ¿Qué servicio es el más adecuado para este caso?",
+                    "answer": "VPC Service Controls",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud VPN",
+                        "VPC Service Controls",
+                        "Cloud Armor",
+                        "Cloud IAM"
+                    ],
+                    "explanation": "VPC Service Controls ayuda a prevenir la exfiltración de datos restringiendo el acceso a servicios y API en Google Cloud."
+                },
+                {
+                    "question": "¿Qué servicio de Google Cloud permite la auditoría y monitoreo de actividades en proyectos y organizaciones?",
+                    "answer": "Cloud Audit Logs",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM",
+                        "Cloud Audit Logs",
+                        "Cloud Security Command Center",
+                        "BigQuery"
+                    ],
+                    "explanation": "Cloud Audit Logs proporciona registros detallados de actividades y eventos de seguridad en Google Cloud."
+                },
+                {
+                    "question": "Para cumplir con el principio de mínimo privilegio en la gestión de accesos en Google Cloud, ¿qué herramienta se debe utilizar?",
+                    "answer": "Cloud IAM con políticas de roles personalizados",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud IAM con políticas de roles personalizados",
+                        "Cloud VPN",
+                        "Cloud NAT",
+                        "Cloud Functions"
+                    ],
+                    "explanation": "Cloud IAM con roles personalizados permite aplicar el principio de mínimo privilegio asignando permisos específicos a cada usuario."
+                }
+            ]
+        },
+        "5": {
+            "name": "Module 06 - Scaling with Google Cloud Operations",
+            "questions": [
+                {
+                    "question": "En un proyecto greenfield, ¿qué enfoque es más recomendable al implementar infraestructura en Google Cloud?",
+                    "answer": "Diseñar la arquitectura desde cero según buenas prácticas de la nube",
+                    "type": "multiple",
+                    "options": [
+                        "Reutilizar infraestructura existente sin cambios",
+                        "Diseñar la arquitectura desde cero según buenas prácticas de la nube",
+                        "Migrar manualmente servidores físicos a VM sin planificación",
+                        "Evitar el uso de servicios administrados"
+                    ],
+                    "explanation": "Greenfield implica crear la infraestructura desde cero, siguiendo las mejores prácticas de la nube."
+                },
+                {
+                    "question": "Un proyecto brownfield se caracteriza por:",
+                    "answer": "Tener sistemas heredados que deben integrarse con la nube",
+                    "type": "multiple",
+                    "options": [
+                        "Tener sistemas heredados que deben integrarse con la nube",
+                        "Construir todo desde cero en la nube",
+                        "Usar únicamente servicios serverless",
+                        "No tener restricciones de presupuesto"
+                    ],
+                    "explanation": "Brownfield implica coexistir con sistemas existentes y planificar la integración con la nube."
+                },
+                {
+                    "question": "El enfoque Zero Trust en Google Cloud se basa en:",
+                    "answer": "Verificar siempre la identidad y contexto antes de otorgar acceso",
+                    "type": "multiple",
+                    "options": [
+                        "Confiar automáticamente en la red interna",
+                        "Verificar siempre la identidad y contexto antes de otorgar acceso",
+                        "Usar únicamente VPN para seguridad",
+                        "Eliminar todas las políticas de IAM"
+                    ],
+                    "explanation": "Zero Trust asume que ninguna red es segura y requiere verificación continua de identidad y contexto."
+                },
+                {
+                    "question": "¿Qué servicio permite centralizar la visibilidad de amenazas de seguridad en todos los proyectos de Google Cloud?",
+                    "answer": "Security Command Center",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Logging",
+                        "Cloud Monitoring",
+                        "Security Command Center",
+                        "Cloud Audit Logs"
+                    ],
+                    "explanation": "Security Command Center proporciona visibilidad centralizada de riesgos, vulnerabilidades y amenazas en GCP."
+                },
+                {
+                    "question": "¿Cuál es la principal función de Cloud Logging?",
+                    "answer": "Recolectar y almacenar logs de servicios y aplicaciones",
+                    "type": "multiple",
+                    "options": [
+                        "Monitorear métricas de desempeño",
+                        "Recolectar y almacenar logs de servicios y aplicaciones",
+                        "Gestionar identidades",
+                        "Definir políticas de firewall"
+                    ],
+                    "explanation": "Cloud Logging permite centralizar y analizar los registros de aplicaciones y servicios."
+                },
+                {
+                    "question": "Cloud Monitoring se utiliza para:",
+                    "answer": "Supervisar el desempeño de aplicaciones y servicios en tiempo real",
+                    "type": "multiple",
+                    "options": [
+                        "Almacenar logs históricos",
+                        "Supervisar el desempeño de aplicaciones y servicios en tiempo real",
+                        "Cifrar datos",
+                        "Crear políticas de IAM"
+                    ],
+                    "explanation": "Cloud Monitoring ofrece métricas, dashboards y alertas para operaciones en la nube."
+                },
+                {
+                    "question": "Data Loss Prevention (DLP) en Google Cloud sirve para:",
+                    "answer": "Detectar y proteger datos sensibles",
+                    "type": "multiple",
+                    "options": [
+                        "Monitorear la infraestructura",
+                        "Detectar y proteger datos sensibles",
+                        "Gestionar presupuestos",
+                        "Optimizar redes"
+                    ],
+                    "explanation": "DLP identifica datos confidenciales y aplica técnicas de anonimización o enmascaramiento."
+                },
+                {
+                    "question": "En términos de costos en GCP, ¿qué práctica ayuda a optimizar el gasto?",
+                    "answer": "Usar informes de costos y alertas de presupuesto",
+                    "type": "multiple",
+                    "options": [
+                        "Ignorar las métricas de facturación",
+                        "Usar informes de costos y alertas de presupuesto",
+                        "Configurar solo máquinas grandes",
+                        "Evitar el uso de servicios administrados"
+                    ],
+                    "explanation": "Los informes de costos y alertas permiten controlar gastos y optimizar recursos en la nube."
+                },
+                {
+                    "question": "Un SLA (Service Level Agreement) define:",
+                    "answer": "El nivel mínimo de servicio garantizado",
+                    "type": "multiple",
+                    "options": [
+                        "La arquitectura de la nube",
+                        "El nivel mínimo de servicio garantizado",
+                        "El presupuesto de un proyecto",
+                        "Los logs que se deben recolectar"
+                    ],
+                    "explanation": "El SLA establece formalmente la disponibilidad o desempeño que un servicio garantiza."
+                },
+                {
+                    "question": "SRE (Site Reliability Engineering) se centra en:",
+                    "answer": "Mantener la confiabilidad de servicios y aplicaciones",
+                    "type": "multiple",
+                    "options": [
+                        "Construir la nube desde cero",
+                        "Mantener la confiabilidad de servicios y aplicaciones",
+                        "Definir políticas de seguridad",
+                        "Crear dashboards de costos"
+                    ],
+                    "explanation": "SRE aplica principios de ingeniería para asegurar que los servicios sean confiables y escalables."
+                },
+                {
+                    "question": "Un SLO (Service Level Objective) es:",
+                    "answer": "Un objetivo medible de desempeño o disponibilidad de un servicio",
+                    "type": "multiple",
+                    "options": [
+                        "Un informe de costos",
+                        "Un objetivo medible de desempeño o disponibilidad de un servicio",
+                        "Una política de firewall",
+                        "Un tipo de VM"
+                    ],
+                    "explanation": "SLO define un objetivo específico que ayuda a medir si se cumple la confiabilidad esperada."
+                },
+                {
+                    "question": "Un SLI (Service Level Indicator) representa:",
+                    "answer": "La métrica usada para medir un SLO",
+                    "type": "multiple",
+                    "options": [
+                        "La política de IAM",
+                        "La métrica usada para medir un SLO",
+                        "El presupuesto del proyecto",
+                        "El tipo de storage"
+                    ],
+                    "explanation": "SLI es la métrica específica que permite evaluar si un SLO se está cumpliendo."
+                },
+                {
+                    "question": "Zero Trust recomienda segmentar redes y servicios usando:",
+                    "answer": "VPC Service Controls",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud NAT",
+                        "VPC Service Controls",
+                        "Cloud CDN",
+                        "Cloud Functions"
+                    ],
+                    "explanation": "VPC Service Controls ayudan a limitar accesos entre servicios y prevenir exfiltración de datos."
+                },
+                {
+                    "question": "Para monitorear costos y desempeño de múltiples servicios en GCP, se recomienda usar:",
+                    "answer": "Cloud Monitoring con dashboards personalizados",
+                    "type": "multiple",
+                    "options": [
+                        "Cloud Storage",
+                        "Cloud Monitoring con dashboards personalizados",
+                        "Cloud Functions",
+                        "Cloud Bigtable"
+                    ],
+                    "explanation": "Cloud Monitoring permite consolidar métricas y crear dashboards que facilitan la toma de decisiones."
+                },
+                {
+                    "question": "Un proyecto greenfield que implementa Zero Trust debe enfocarse en:",
+                    "answer": "Definir controles de acceso y segmentación desde el diseño inicial",
+                    "type": "multiple",
+                    "options": [
+                        "Ignorar políticas de seguridad",
+                        "Definir controles de acceso y segmentación desde el diseño inicial",
+                        "Migrar servidores antiguos tal cual",
+                        "Usar solo máquinas físicas"
+                    ],
+                    "explanation": "Zero Trust requiere pensar en seguridad y segmentación desde el inicio en proyectos nuevos."
+                },
+                {
+                    "question": "Cloud Logging puede integrarse con:",
+                    "answer": "Cloud Monitoring y Security Command Center",
+                    "type": "multiple",
+                    "options": [
+                        "Solo Cloud Storage",
+                        "Cloud Monitoring y Security Command Center",
+                        "Cloud Functions únicamente",
+                        "IAM"
+                    ],
+                    "explanation": "La integración permite alertas automáticas y visibilidad centralizada de logs y métricas."
+                },
+                {
+                    "question": "SRE utiliza SLOs y SLIs para:",
+                    "answer": "Gestionar la confiabilidad de los servicios",
+                    "type": "multiple",
+                    "options": [
+                        "Definir presupuestos",
+                        "Gestionar la confiabilidad de los servicios",
+                        "Monitorear solo costos",
+                        "Crear identidades de usuarios"
+                    ],
+                    "explanation": "SRE aplica SLOs y SLIs para medir desempeño y mantener la confiabilidad según los objetivos."
+                },
+                {
+                    "question": "Una práctica recomendada para reducir costos en GCP es:",
+                    "answer": "Ajustar tamaños de VM y apagar recursos no usados",
+                    "type": "multiple",
+                    "options": [
+                        "Mantener siempre máquinas grandes encendidas",
+                        "Ajustar tamaños de VM y apagar recursos no usados",
+                        "Usar únicamente servicios premium sin control",
+                        "Ignorar alertas de presupuesto"
+                    ],
+                    "explanation": "Optimizar recursos evita gastos innecesarios y mejora eficiencia."
+                },
+                {
+                    "question": "Data Loss Prevention (DLP) ayuda a cumplir con:",
+                    "answer": "Regulaciones de protección de datos",
+                    "type": "multiple",
+                    "options": [
+                        "SLAs de disponibilidad",
+                        "Regulaciones de protección de datos",
+                        "Optimización de redes",
+                        "Costo de proyectos"
+                    ],
+                    "explanation": "DLP identifica y protege información sensible para cumplir normativas de privacidad y seguridad."
+                },
+                {
+                    "question": "Para asegurar que un servicio cumpla su SLA, un SRE debe:",
+                    "answer": "Monitorear SLIs y ajustar operaciones según SLOs",
+                    "type": "multiple",
+                    "options": [
+                        "Ignorar métricas",
+                        "Monitorear SLIs y ajustar operaciones según SLOs",
+                        "Configurar solo alertas de costo",
+                        "Eliminar logs antiguos"
+                    ],
+                    "explanation": "Monitorear métricas específicas y comparar con SLOs permite garantizar que el SLA se cumpla."
+                }
+            ]
+        }
+    }
+}
