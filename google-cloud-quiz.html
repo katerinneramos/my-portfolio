@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Google Cloud Platform</title>
+    <style>
+        /* Reset y estilo general */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1d2630;
+            color: white;
+            text-align: center;
+        }
+
+        /* Pantallas */
+        /* Clean up padding conflict */
+        .screen {
+            display: none;
+            min-height: 100vh;
+            transition: opacity 0.3s ease;
+            /* Remove padding here if overridden below */
+            /* habilita flexbox */
+            justify-content: center;
+            /* centra horizontalmente */
+            align-items: center;
+            /* centra verticalmente */
+            flex-direction: column;
+            /* opcional, si quieres que los hijos estén en columna */
+        }
+
+        /* Ensure visibility */
+        .screen.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+            margin-top: 20ev;
+        }
+
+        /* -------------------- */
+        /* Pantalla de certificaciones */
+        /* -------------------- */
+        #screen-certificaciones .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 columnas */
+            grid-template-rows: repeat(2, 1fr);
+            /* 2 filas */
+            gap: 15px;
+            /* espacio entre botones */
+            justify-content: center;
+            /* centra la cuadrilla horizontalmente */
+            align-content: center;
+            /* centra la cuadrilla verticalmente */
+            width: fit-content;
+            /* ancho total ajustado al contenido */
+            margin: 0 auto;
+            /* centra la cuadrilla en la pantalla */
+        }
+
+        /* Botones de certificaciones */
+        #screen-certificaciones .button {
+            background-color: #2e3b4e;
+            border-radius: 10px;
+            padding: 25px 15px;
+            /* ajusta tamaño vertical y horizontal */
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 190px;
+            /* ancho del botón, cambia a tu gusto */
+            height: 200px;
+            /* alto del botón, cambia a tu gusto */
+        }
+
+        /* Para pantallas chicas (máx. 768px → tablets y móviles) */
+        @media (max-width: 768px) {
+            #screen-certificaciones .button-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columnas */
+                grid-template-rows: repeat(3, 1fr);
+                /* 3 filas */
+            }
+        }
+
+        #screen-certificaciones .button img {
+            width: 70px;
+            /* tamaño de la imagen dentro del botón */
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        #screen-certificaciones .button span:nth-child(3) {
+            color: cadetblue;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        #screen-certificaciones .button:hover {
+            background-color: #3a4c65;
+            transform: scale(1.05);
+        }
+
+        /* -------------------- */
+        /* Pantalla de módulos */
+        /* -------------------- */
+        /* Caja de los módulos (similar a quiz) */
+
+        #screen-modulos #module-list {
+            display: grid;
+            /* Número de columnas para los módulos (1 columna para vertical) */
+            grid-template-columns: 1fr;
+            gap: 5px;
+            /* espacio vertical entre botones */
+            justify-items: center;
+            /* centra horizontalmente cada botón */
+            margin-top: 15px;
+        }
+
+        #screen-modulos #module-list button {
+            width: 550px;
+            /* ancho del botón */
+            max-width: 70%;
+            padding: 20px 30px;
+            /* altura y relleno del botón */
+            border-radius: 10px;
+            background-color: #2e3b4e;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        #screen-modulos #module-list button:hover {
+            background-color: #3a4c65;
+            transform: scale(1.05);
+        }
+
+        /* -------------------- */
+        /* Pantalla de quiz */
+        /* -------------------- */
+        #screen-quiz {
+            background-color: white;
+            color: #1d2630;
+            border-radius: 10px;
+            padding: 30px 20px;
+            max-width: 800px;
+            /* ancho máximo */
+            width: 90%;
+            /* que se ajuste en pantallas chicas */
+            min-height: 300px;
+            /* altura mínima */
+            margin: 45px auto 20px auto;
+        }
+
+        /* Contenedor de la pregunta */
+        #question-text {
+            font-size: 1.1rem;
+            margin: 20px 0;
+            text-align: center;
+            /* Alinea la pregunta a la izquierda */
+        }
+
+        /* Contenedor de opciones: los botones debajo de la pregunta, uno debajo del otro */
+        #options-container {
+            display: flex;
+            flex-direction: column;
+            /* coloca cada botón debajo del otro */
+            align-items: center;
+            /* centra los botones horizontalmente 
+            gap: 10px;*/
+            /* espacio entre botones */
+            margin-top: 5px;
+        }
+
+        /* Estilo de los botones de opción */
+        #options-container button {
+            width: 100%;
+            /* ocupa todo el ancho del contenedor */
+            max-width: 550px;
+            /* ancho máximo para no quedar gigante */
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            background-color: #1d2630;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        /* Hover de los botones */
+        #options-container button:hover {
+            background-color: blueviolet;
+            transform: scale(1.03);
+        }
+
+        /* Estilo para opción seleccionada */
+        #options-container .option-btn.selected {
+            background: #e1f5fe !important;
+            color: #2e3b4e !important;
+        }
+
+        /* Mensajes y ranking */
+        #result-message {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        #timer {
+            font-weight: bold;
+            margin: 10px 0;
+            background: #e1f5fe;
+            padding: 8px 20px;
+            border-radius: 50px;
+        }
+
+        #ranking {
+            margin-top: 20px;
+        }
+
+        #ranking h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Botones generales */
+        button {
+            padding: 15px 50px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2e3b4e;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #3a4c65;
+            transform: scale(1.05);
+        }
+
+        button .next-btn {
+            display: none;
+            color: none;
+        }
+
+        /* Estilo para opción seleccionada */
+        .option-btn {
+            padding: 10px;
+            margin: 5px;
+            background: #f4f4f4;
+            border: 3px solid #ffffff;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .option-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-siguiente {
+            background: none;
+            color: blueviolet;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+
+        .btn-siguiente:hover {
+            background: none;
+            color: #2e3b4e;
+        }
+
+        .btn-volver {
+            /* background: #f44336;*/
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-volver:hover {
+            background: blueviolet
+        }
+
+        #cafecito-btn {
+            position: fixed;
+            top: 25px;
+            /* distancia desde arriba */
+            right: 25px;
+            /* distancia desde la derecha */
+            z-index: 1000;
+            /* que quede por encima del resto */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="cafecito-btn">
+        <a href='https://cafecito.app/techiekate' rel='noopener' target='_blank'><img
+                srcset='https://cdn.cafecito.app/imgs/buttons/button_4.png 1x, https://cdn.cafecito.app/imgs/buttons/button_4_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_4_3.75x.png 3.75x'
+                src='https://cdn.cafecito.app/imgs/buttons/button_4.png' alt='Invitame un café en cafecito.app' /></a>
+    </div>
+
+    <!-- Pantalla 1: Certificaciones -->
+    <div id="screen-certificaciones" class="screen active">
+        <h1>Desafíos de Google Cloud Platform</h1>
+        <div class="button-grid">
+            <div class="button cert-btn" data-cert="digital-leader">
+                <img src="icons/tech-icons/digitalLeader.png" alt="digitalLeader">
+                <span>Cloud Digital Leader</span>
+                <span style="font-size:medium; color:cadetblue;">Certification</span>
+            </div>
+            <div class="button cert-btn" data-cert="data-engineer">
+                <img src="icons/tech-icons/googleDataEngineer.png" alt="dataEngineer">
+                <span>Professional Data Engineer</span>
+                <span style="font-size:medium; color:cadetblue;">(En construcción)</span>
+            </div>
+            <div class="button cert-btn" data-cert="data-practitioner">
+                <img src="icons/tech-icons/dataPractitioner.png" alt="dataPractitioner">
+                <span>Data Practitioner</span>
+                <span style="font-size:medium; color:cadetblue;">(En construcción)</span>
+            </div>
+            <div class="button cert-btn" data-cert="data-practitioner">
+                <img src="icons\tech-icons\dataPractitioner.png" alt="Consultas">
+                <span>Cloud Developer</span>
+                <span style="font-size:medium; color:cadetblue;">(En construcción)</span>
+            </div>
+            <div class="button cert-btn" data-cert="data-practitioner">
+                <img src="icons\tech-icons\perfor.png" alt="Optimización">
+                <span>Optimización</span>
+                <span style="font-size:medium; color:cadetblue;">(En construcción)</span>
+            </div>
+            <div class="button cert-btn" data-cert="data-practitioner">
+                <img src="icons\tech-icons\seguridad.png" alt="Seguridad">
+                <span>Seguridad</span>
+                <span style="font-size:medium; color:cadetblue;">(En construcción)</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pantalla 2: Módulos -->
+    <div id="screen-modulos" class="screen">
+        <h1 id="cert-title"></h1>
+        <div id="module-list"></div>
+        <button class="btn-volver" onclick="goBackToCerts()">Volver</button>
+    </div>
+
+    <!-- Pantalla 3: Quiz -->
+    <div id="screen-quiz" class="screen">
+        <h1 id="quiz-title"></h1>
+        <p id="question-counter"></p>
+        <p id="timer">Tiempo: 90s</p>
+        <p id="question-text"></p>
+        <div id="options-container"></div>
+        <p id="result-message"></p>
+        <button id="next-btn" class="btn-siguiente" style="display:none;">Siguiente</button>
+        <p id="score" style="display:none;"></p>
+        <button class="btn-volver" onclick="goBackToModules()">Volver</button>
+    </div>
+
+
+    <script src="js/gcp/google-cloud-quiz.js"></script>
+</body>
+
+</html>
